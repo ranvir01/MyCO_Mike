@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrier Partnership Sales Playbook | Gadget Fix</title>
+    <style>
+        :root {
+            --primary: #1B7F4E;
+            --primary-dark: #0F5A35;
+            --primary-light: #56B365;
+            --accent: #FFC107;
+            --text: #2C3E50;
+            --text-light: #6B7280;
+            --bg: #ffffff;
+            --bg-alt: #f8faf8;
+            --border: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Preview Banner */
+        .preview-banner {
+            background: linear-gradient(90deg, #ff9800 0%, #ffc107 50%, #ff9800 100%);
+            color: #000;
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .preview-badge {
+            background: #000;
+            color: #ffc107;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-right: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(145deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-dark) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .header-cta {
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .header .meta {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--bg-alt);
+            border-bottom: 1px solid var(--border);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .nav a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 5px 12px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .nav a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section-header {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 0;
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .section-header .section-num {
+            opacity: 0.8;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .section-content {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            padding: 30px;
+        }
+
+        h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        h3:first-child {
+            margin-top: 0;
+        }
+
+        h4 {
+            color: var(--text);
+            font-size: 1.1rem;
+            margin: 25px 0 10px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tr:nth-child(even) {
+            background: var(--bg-alt);
+        }
+
+        tr:hover {
+            background: #e8f5e9;
+        }
+
+        /* Callout Boxes */
+        .callout {
+            background: var(--bg-alt);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .callout.highlight {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-left-color: var(--accent);
+        }
+
+        .callout.warning {
+            background: #fff8e1;
+            border-left-color: #ff9800;
+        }
+
+        .callout h4 {
+            margin-top: 0;
+            color: var(--primary-dark);
+        }
+
+        /* Script Boxes */
+        .script-box {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .script-box .label {
+            font-family: 'Segoe UI', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Checklists */
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .checklist li {
+            padding: 10px 0 10px 35px;
+            position: relative;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .checklist li:before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        /* Stats Box */
+        .stats-box {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        /* Math Example Box */
+        .math-box {
+            background: #1a1a1a;
+            color: #00ff88;
+            font-family: 'Consolas', 'Monaco', monospace;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+
+        .math-box .label {
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        .math-box .result {
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Objection Cards */
+        .objection-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .objection-header {
+            background: #ffebee;
+            padding: 15px 20px;
+            font-weight: 600;
+            color: #c62828;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .objection-response {
+            padding: 20px;
+            background: #e8f5e9;
+        }
+
+        .objection-response:before {
+            content: "Response:";
+            display: block;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        /* Agreement Template */
+        .agreement-box {
+            background: white;
+            border: 2px solid var(--text);
+            padding: 30px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .agreement-box h4 {
+            text-align: center;
+            border-bottom: 1px solid var(--text);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .agreement-line {
+            border-bottom: 1px solid #999;
+            display: inline-block;
+            min-width: 200px;
+            margin: 5px 0;
+        }
+
+        /* Flyer Preview */
+        .flyer-preview {
+            background: white;
+            border: 3px solid var(--primary);
+            border-radius: 8px;
+            padding: 30px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .flyer-preview h3 {
+            color: var(--primary);
+            border: none;
+            margin: 0 0 20px 0;
+        }
+
+        /* Quick Reference Card */
+        .ref-card {
+            background: var(--accent);
+            color: #000;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .ref-card h4 {
+            margin-top: 0;
+            color: #000;
+        }
+
+        /* Print Styles */
+        @media print {
+            .nav {
+                display: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .header {
+                padding: 30px;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-content {
+                padding: 20px;
+            }
+            
+            table {
+                font-size: 0.85rem;
+            }
+            
+            th, td {
+                padding: 8px 10px;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+
+        .footer .brand {
+            font-size: 1.2rem;
+            font-weight: 600;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Preview Banner -->
+<div class="preview-banner">
+    <span class="preview-badge">PREVIEW</span>
+    <span>This is a sample deliverable showing what MyCo Consulting can build for your business</span>
+</div>
+
+<!-- Header -->
+<header class="header">
+    <h1>Carrier Partnership Sales Playbook</h1>
+    <p class="subtitle">A Replicable System for Building Referral Partnerships</p>
+    <p class="meta">Gadget Fix | Created by MyCo Consulting Network | December 2024</p>
+    <div class="header-cta">
+        <p style="margin-top:25px;font-size:1rem;opacity:0.95;">Want a custom playbook like this for your business?</p>
+        <a href="mailto:ethan@myconsulting.network" class="cta-button">Let's Talk</a>
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="#section-1">Executive Summary</a>
+        <a href="#section-2">The Strategy</a>
+        <a href="#section-3">Pre-Visit Prep</a>
+        <a href="#section-4">Pitch Script</a>
+        <a href="#section-5">Objection Handling</a>
+        <a href="#section-6">Agreements</a>
+        <a href="#section-7">Follow-Up</a>
+        <a href="#section-8">Training</a>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+
+    <!-- Section 1: Executive Summary -->
+    <section class="section" id="section-1">
+        <div class="section-header">
+            <div class="section-num">Section 1</div>
+            <h2>Executive Summary</h2>
+        </div>
+        <div class="section-content">
+            
+            <h3>The Opportunity</h3>
+            <p>Every day, customers walk into carrier stores wanting to upgrade their phones. But there's a problem: <strong>their screens are cracked</strong>. The carrier either rejects the trade-in or offers a fraction of the phone's real value. The customer leaves frustrated. The store loses the sale.</p>
+            
+            <p><strong>This is your opportunity.</strong></p>
+            
+            <p>Gadget Fix solves this problem. A quick 15-30 minute screen repair transforms a rejected trade-in into a full-value transaction. Everyone wins.</p>
+
+            <div class="stats-box">
+                <h4 style="margin:0 0 10px 0;">The Numbers That Matter</h4>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">$502</div>
+                        <div class="stat-label">Trade-in Value Swing</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">$323</div>
+                        <div class="stat-label">Max Customer Profit</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">15-30</div>
+                        <div class="stat-label">Minutes to Repair</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">90</div>
+                        <div class="stat-label">Day Warranty</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Real Example: iPhone 16 Pro Max</h3>
+            
+            <div class="math-box">
+                <div class="label">Trade-In Calculation</div>
+                <br>
+                CRACKED SCREEN TRADE-IN: <span style="color:#ff6b6b;">$168</span> (at Apple)<br>
+                SCREEN REPAIR COST:      -$179<br>
+                FIXED SCREEN TRADE-IN:   +$670 (at Apple)<br>
+                ─────────────────────────────────────────<br>
+                <span class="result">CUSTOMER PROFIT: $323</span>
+            </div>
+
+            <h3>Expected Results</h3>
+            <table>
+                <tr><th>Timeline</th><th>Target</th></tr>
+                <tr><td>Week 1</td><td>Visit 6-8 stores, leave materials at 5+</td></tr>
+                <tr><td>Week 2</td><td>Get 3+ manager contacts, 1+ verbal commitment</td></tr>
+                <tr><td>Month 1</td><td>5+ stores actively displaying flyers</td></tr>
+                <tr><td>Month 2</td><td>2+ stores with referral bonus agreements</td></tr>
+                <tr><td>Month 3</td><td>First referred customers tracked and converted</td></tr>
+            </table>
+
+            <h3>Who This Playbook Is For</h3>
+            <ul>
+                <li><strong>Mike</strong> (Owner) — To understand the full strategy</li>
+                <li><strong>Taylor</strong> (Sales Rep) — To execute store visits</li>
+                <li><strong>Future Team Members</strong> — To replicate the system</li>
+                <li><strong>Partner Stores</strong> — To understand the value proposition</li>
+            </ul>
+
+        </div>
+    </section>
+
+    <!-- Section 2: The Strategy -->
+    <section class="section" id="section-2">
+        <div class="section-header">
+            <div class="section-num">Section 2</div>
+            <h2>The Strategy</h2>
+        </div>
+        <div class="section-content">
+            
+            <h3>The Win-Win-Win Framework</h3>
+            <p>Every successful partnership creates value for all parties. Here's how this works:</p>
+
+            <h4>For the Carrier Store</h4>
+            <table>
+                <tr><th>Benefit</th><th>Why It Matters</th></tr>
+                <tr><td>Complete more upgrade sales</td><td>Don't lose customers to cracked screens</td></tr>
+                <tr><td>Happier customers</td><td>They feel you helped them get a better deal</td></tr>
+                <tr><td>No cost to store</td><td>Zero risk partnership</td></tr>
+                <tr><td>Optional referral bonus</td><td>Extra income for employees</td></tr>
+            </table>
+
+            <h4>For the Customer</h4>
+            <table>
+                <tr><th>Benefit</th><th>Why It Matters</th></tr>
+                <tr><td>Higher trade-in value</td><td>$100-$500 more in their pocket</td></tr>
+                <tr><td>Quick repair</td><td>15-30 minutes, same day</td></tr>
+                <tr><td>Professional service</td><td>Quality parts, real warranty</td></tr>
+                <tr><td>Easy process</td><td>Walk to Gadget Fix, walk back</td></tr>
+            </table>
+
+            <h4>For Gadget Fix</h4>
+            <table>
+                <tr><th>Benefit</th><th>Why It Matters</th></tr>
+                <tr><td>Steady customer stream</td><td>Pre-qualified, ready-to-buy customers</td></tr>
+                <tr><td>Higher conversion rate</td><td>They already understand the value</td></tr>
+                <tr><td>Partnership validation</td><td>Builds credibility and trust</td></tr>
+                <tr><td>Predictable revenue</td><td>Recurring referral channel</td></tr>
+            </table>
+
+            <h3>Target Stores</h3>
+
+            <h4>Priority 1: Carrier Stores (Highest Value)</h4>
+            <table>
+                <tr><th>Store</th><th>Priority</th><th>Notes</th></tr>
+                <tr><td>T-Mobile Kent Station</td><td><strong>HIGH</strong></td><td>High traffic, upgrade-focused</td></tr>
+                <tr><td>Verizon Kent</td><td><strong>HIGH</strong></td><td>Corporate store, may have more rules</td></tr>
+                <tr><td>AT&T Kent</td><td><strong>HIGH</strong></td><td>Often has authorized retailers nearby</td></tr>
+                <tr><td>Xfinity Mobile Kent</td><td>MEDIUM</td><td>Newer to market, may be more open</td></tr>
+            </table>
+
+            <h4>Priority 2: Big Box Retailers</h4>
+            <table>
+                <tr><th>Store</th><th>Priority</th><th>Notes</th></tr>
+                <tr><td>Best Buy Kent</td><td>MEDIUM</td><td>Has Geek Squad but different service</td></tr>
+                <tr><td>Costco Kent</td><td>MEDIUM</td><td>Membership-based, loyal customers</td></tr>
+                <tr><td>Walmart Kent</td><td>LOW</td><td>High volume, harder to reach decision-maker</td></tr>
+                <tr><td>Target Kent</td><td>LOW</td><td>Mobile kiosk, often staffed by carrier reps</td></tr>
+            </table>
+
+            <h3>Visit Schedule Template (Week 1)</h3>
+            <table>
+                <tr><th>Day</th><th>Stores to Visit</th><th>Goal</th></tr>
+                <tr><td>Tuesday</td><td>T-Mobile, Verizon</td><td>2 carrier stores</td></tr>
+                <tr><td>Wednesday</td><td>AT&T, Xfinity</td><td>2 carrier stores</td></tr>
+                <tr><td>Thursday</td><td>Best Buy, Costco</td><td>2 big box</td></tr>
+                <tr><td>Friday</td><td>Follow-up calls</td><td>Confirm any pending decisions</td></tr>
+            </table>
+
+        </div>
+    </section>
+
+    <!-- Section 3: Pre-Visit Preparation -->
+    <section class="section" id="section-3">
+        <div class="section-header">
+            <div class="section-num">Section 3</div>
+            <h2>Pre-Visit Preparation</h2>
+        </div>
+        <div class="section-content">
+            
+            <h3>Materials Checklist</h3>
+            <p>Before leaving for store visits, ensure you have:</p>
+
+            <h4>Essential Materials</h4>
+            <ul class="checklist">
+                <li><strong>Flyers:</strong> 5-10 per store, plus extras (print on quality cardstock)</li>
+                <li><strong>Business cards:</strong> Mike's AND your own</li>
+                <li><strong>Referral cards:</strong> 20+ per store</li>
+                <li><strong>Partnership agreements:</strong> 3-5 printed copies</li>
+                <li><strong>Calculator loaded:</strong> Trade-in calculator open on phone, ready to demo</li>
+                <li><strong>Notepad & pen:</strong> For contact info and notes</li>
+            </ul>
+
+            <h4>Professional Appearance</h4>
+            <ul class="checklist">
+                <li><strong>Dress code:</strong> Business casual minimum</li>
+                <li><strong>Clean appearance:</strong> Hair, clothes, shoes presentable</li>
+                <li><strong>Confident posture:</strong> Stand tall, make eye contact</li>
+                <li><strong>Friendly demeanor:</strong> Smile, be approachable</li>
+            </ul>
+
+            <h3>Best Times to Visit</h3>
+
+            <div class="callout highlight">
+                <h4>DO Visit:</h4>
+                <ul>
+                    <li><strong>Tuesday - Thursday</strong>, between <strong>10am-11am</strong> or <strong>2pm-4pm</strong></li>
+                    <li>After the morning rush, before the afternoon picks up</li>
+                    <li>Mid-week when managers are more likely to be present</li>
+                </ul>
+            </div>
+
+            <div class="callout warning">
+                <h4>DON'T Visit:</h4>
+                <ul>
+                    <li><strong>Monday mornings</strong> (busiest, staff catching up)</li>
+                    <li><strong>Saturday afternoons</strong> (peak customer time)</li>
+                    <li><strong>Lunch rush</strong> (12pm-1pm, staff is busy or on break)</li>
+                    <li><strong>Last hour before closing</strong> (staff wrapping up)</li>
+                </ul>
+            </div>
+
+            <h3>Mindset Before Walking In</h3>
+
+            <div class="callout">
+                <h4>Your Attitude</h4>
+                <p style="font-size:1.2rem;font-style:italic;margin:0;">"I'm here to help you close more sales. That's it."</p>
+            </div>
+
+            <p>You're not selling something they don't need. You're offering a solution to a problem they already have. Every store loses sales because of cracked screens. You're offering to fix that.</p>
+
+            <h4>Key Reminders</h4>
+            <ol>
+                <li><strong>You have value to offer</strong> — This isn't cold calling, it's problem-solving</li>
+                <li><strong>They can say no</strong> — And that's okay. Move on to the next</li>
+                <li><strong>You're building relationships</strong> — Even a "no" today can be a "yes" later</li>
+                <li><strong>Be genuinely helpful</strong> — Don't be pushy, be useful</li>
+            </ol>
+
+        </div>
+    </section>
+
+    <!-- Section 4: The 5-Minute Pitch Script -->
+    <section class="section" id="section-4">
+        <div class="section-header">
+            <div class="section-num">Section 4</div>
+            <h2>The 5-Minute Pitch Script</h2>
+        </div>
+        <div class="section-content">
+            
+            <h3>Step 1: The Approach (30 seconds)</h3>
+            <p><em>Walk in confidently. Look for the manager or most senior employee on the floor. Make eye contact and smile.</em></p>
+
+            <div class="script-box">
+                <div class="label">Say This:</div>
+                "Hi there! Is the manager available? I'm [YOUR NAME] from MyCo Consulting — I work with Gadget Fix, the phone repair shop just down the road.<br><br>
+                I've got a quick idea that could help you close more upgrade sales. Do you have 3 minutes?"
+            </div>
+
+            <div class="script-box">
+                <div class="label">If Manager Isn't Available:</div>
+                "No problem! When's a good time to catch them? I've got something that helps stores close more sales."<br><br>
+                <em>Get their name and best time. Leave a flyer. Note it down. Move on.</em>
+            </div>
+
+            <h3>Step 2: The Hook (30 seconds)</h3>
+            <p><em>Once you have their attention, identify the problem they already know exists.</em></p>
+
+            <div class="script-box">
+                <div class="label">Say This:</div>
+                "Quick question — how often do customers come in wanting to trade in their phone for an upgrade, but the screen is cracked?"<br><br>
+                <em>[Pause — let them answer]</em><br><br>
+                "Right? And you either have to turn them away or offer a much lower trade-in value. Frustrating for everyone — especially when they walk out without buying."
+            </div>
+
+            <h3>Step 3: The Solution (60 seconds)</h3>
+            <p><em>Now present the solution. Pull out your phone with the calculator ready.</em></p>
+
+            <div class="script-box">
+                <div class="label">Say This:</div>
+                "What if you could send those customers to get their screen fixed in 15-20 minutes, and they come back ready for full trade-in value?<br><br>
+                Gadget Fix is literally [X] minutes from here. They specialize in iPhone screen repairs. Most are done while the customer waits.<br><br>
+                Here's the cool part..."<br><br>
+                <em>[Show calculator on phone — walk through an example]</em><br><br>
+                "Let's say someone comes in with a cracked iPhone 16. Right now they'd get maybe $180 on trade-in. But watch this:<br><br>
+                • They pay $139 for the screen repair<br>
+                • They come back, trade in for $400<br>
+                • That's $81 extra in their pocket — AFTER paying for the repair!<br><br>
+                You get to complete the sale. They get a better deal. Mike at Gadget Fix gets a customer. Everyone wins."
+            </div>
+
+            <h3>Step 4: The Ask (60 seconds)</h3>
+            <p><em>Make it easy to say yes. No big commitment.</em></p>
+
+            <div class="script-box">
+                <div class="label">Say This:</div>
+                "I'm not asking for anything complicated. Just:<br><br>
+                1. Keep a few of our flyers at the counter or in the break room<br>
+                2. When a customer has a cracked screen affecting their trade-in, mention Gadget Fix<br>
+                3. That's it.<br><br>
+                We can also set up a referral bonus — $5 to $10 for each customer you send who completes a repair. Totally optional, whatever works for you.<br><br>
+                Can I leave some flyers with you?"
+            </div>
+
+            <h3>Step 5: The Close (60 seconds)</h3>
+
+            <div class="script-box">
+                <div class="label">If They Say YES:</div>
+                "Awesome! Here are some flyers. And here's Mike's card if anyone has questions — he's the owner, super responsive.<br><br>
+                I'll check back in a couple weeks to see how it's going and if you need more materials.<br><br>
+                What's the best way to reach you? Email or text?"<br><br>
+                <em>[Write down their contact info]</em><br><br>
+                "Thanks so much! Looking forward to a great partnership."
+            </div>
+
+            <div class="script-box">
+                <div class="label">If They Need to "Check With Someone":</div>
+                "Totally understand. Here's info you can share with your manager. Can I get your email to follow up in a few days?"
+            </div>
+
+            <h3>Key Numbers to Memorize</h3>
+            <table>
+                <tr>
+                    <th>iPhone Model</th>
+                    <th>Cracked Trade-In</th>
+                    <th>Repair Cost</th>
+                    <th>Fixed Trade-In</th>
+                    <th>Customer Profit</th>
+                </tr>
+                <tr>
+                    <td><strong>iPhone 16 Pro Max</strong></td>
+                    <td>$250</td>
+                    <td>$179</td>
+                    <td>$550</td>
+                    <td><strong style="color:var(--primary);">+$121</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>iPhone 16 Pro</strong></td>
+                    <td>$200</td>
+                    <td>$159</td>
+                    <td>$480</td>
+                    <td><strong style="color:var(--primary);">+$121</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>iPhone 16</strong></td>
+                    <td>$180</td>
+                    <td>$139</td>
+                    <td>$400</td>
+                    <td><strong style="color:var(--primary);">+$81</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>iPhone 15 Pro Max</strong></td>
+                    <td>$180</td>
+                    <td>$149</td>
+                    <td>$380</td>
+                    <td><strong style="color:var(--primary);">+$51</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>iPhone 15 Pro</strong></td>
+                    <td>$150</td>
+                    <td>$129</td>
+                    <td>$320</td>
+                    <td><strong style="color:var(--primary);">+$41</strong></td>
+                </tr>
+            </table>
+
+            <div class="ref-card">
+                <h4>The Magic Phrase</h4>
+                <p style="font-size:1.3rem;font-weight:600;margin:0;">"We just want to help you close more sales. That's really it."</p>
+                <p style="margin:15px 0 0 0;font-size:0.9rem;">This works because it's about THEM, not you. It's simple, honest, and removes the "what's the catch?" suspicion.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 5: Objection Handling -->
+    <section class="section" id="section-5">
+        <div class="section-header">
+            <div class="section-num">Section 5</div>
+            <h2>Objection Handling Guide</h2>
+        </div>
+        <div class="section-content">
+            
+            <h3>Common Objections & Word-for-Word Responses</h3>
+
+            <div class="objection-card">
+                <div class="objection-header">"We already have a repair partner."</div>
+                <div class="objection-response">
+                    "That's great! We're not looking to replace anyone. We just want to be an additional option for your customers — specifically for trade-in situations. Think of it as giving your customers more choices. Can we be a backup option?"
+                </div>
+            </div>
+
+            <div class="objection-card">
+                <div class="objection-header">"I need to check with my manager / corporate."</div>
+                <div class="objection-response">
+                    "Totally understand — chain of command matters. Here's some info you can share with them. It's really just about keeping some flyers available, nothing official.<br><br>
+                    What's the best way for me to follow up? I can send an email with all the details."
+                </div>
+            </div>
+
+            <div class="objection-card">
+                <div class="objection-header">"We don't do referrals."</div>
+                <div class="objection-response">
+                    "No problem at all — the referral bonus is completely optional. Even just having our flyers available when a customer has a cracked screen helps. It's really about giving your customers a solution and helping you close more sales. Can I leave some flyers?"
+                </div>
+            </div>
+
+            <div class="objection-card">
+                <div class="objection-header">"Customers won't want to leave and come back."</div>
+                <div class="objection-response">
+                    "That's a fair point. But here's what we've found: most repairs take just 15-20 minutes. Some customers browse around while they wait. And when they realize they'll get an extra $80-150 on their trade-in? That 20-minute trip becomes totally worth it.<br><br>
+                    Plus, they come back happier and ready to buy."
+                </div>
+            </div>
+
+            <div class="objection-card">
+                <div class="objection-header">"What's in it for us?"</div>
+                <div class="objection-response">
+                    "Great question. Three things:<br><br>
+                    1. <strong>You close more upgrade sales.</strong> Instead of losing that customer, they come back ready to buy.<br>
+                    2. <strong>Happier customers.</strong> They feel like you helped them get a better deal.<br>
+                    3. <strong>Optional bonus.</strong> If you want, we can do $5-10 per referral who completes a repair.<br><br>
+                    But really, it's about not losing those upgrade sales."
+                </div>
+            </div>
+
+            <div class="objection-card">
+                <div class="objection-header">"How do I know you're legit?"</div>
+                <div class="objection-response">
+                    "Great question — you should ask that! Here's our website... <em>[show on phone]</em><br><br>
+                    We offer a 90-day warranty on all repairs. Mike, the owner, has been in phone repair for years and has great Google reviews. Feel free to call him directly — he's happy to answer any questions.<br><br>
+                    We're just a small local business trying to help other local businesses."
+                </div>
+            </div>
+
+            <div class="objection-card">
+                <div class="objection-header">"We're really busy right now."</div>
+                <div class="objection-response">
+                    "I totally get it — I'll be quick. Can I just leave some flyers and my card? I'll swing by another time when it's calmer. When's usually a slower time for you?"
+                </div>
+            </div>
+
+            <div class="objection-card">
+                <div class="objection-header">"The carrier has policies against this."</div>
+                <div class="objection-response">
+                    "I understand — you have to follow corporate guidelines. We're not asking for an official partnership or to be endorsed. It's really just... if a customer asks what they can do about their cracked screen, you might mention there's a repair shop nearby. Totally informal.<br><br>
+                    But I get it if that doesn't work. Can I at least leave my card in case things change?"
+                </div>
+            </div>
+
+            <h3>When to Walk Away</h3>
+            <p>Not every store will be a good fit. Walk away gracefully if:</p>
+            <ul>
+                <li>They're clearly not interested and getting annoyed</li>
+                <li>They have a corporate policy that genuinely prohibits it</li>
+                <li>The manager is hostile or dismissive</li>
+            </ul>
+
+            <div class="script-box">
+                <div class="label">What to Say:</div>
+                "I totally understand. Thanks for your time! If things ever change, here's my card. Have a great day!"
+            </div>
+
+            <p><em>Always leave on a positive note. Situations change, and you might be back.</em></p>
+
+        </div>
+    </section>
+
+    <!-- Section 6: Partnership Agreements & Tracking -->
+    <section class="section" id="section-6">
+        <div class="section-header">
+            <div class="section-num">Section 6</div>
+            <h2>Partnership Agreements & Tracking</h2>
+        </div>
+        <div class="section-content">
+            
+            <h3>Simple Partnership Agreement</h3>
+            <p><em>Use this for stores that want something formal. Keep it simple — intimidating contracts kill deals.</em></p>
+
+            <div class="agreement-box">
+                <h4>REFERRAL PARTNERSHIP AGREEMENT</h4>
+                
+                <p><strong>Between:</strong> GADGET FIX ("Repair Shop")<br>
+                Kent, WA | Phone: (253) 639-4343</p>
+                
+                <p><strong>And:</strong> <span class="agreement-line"></span> ("Partner Store")<br>
+                Location: <span class="agreement-line"></span></p>
+                
+                <p><strong>Date:</strong> <span class="agreement-line" style="min-width:150px;"></span></p>
+                
+                <hr style="margin:20px 0;">
+                
+                <p><strong>1. REFERRAL RELATIONSHIP</strong><br>
+                Partner Store agrees to recommend Gadget Fix to customers who have damaged phones affecting trade-in value. This is an informal, goodwill partnership.</p>
+                
+                <p><strong>2. REFERRAL BONUS (Optional)</strong><br>
+                ☐ No bonus — goodwill partnership only<br>
+                ☐ $5 per referred customer who completes a repair<br>
+                ☐ $10 per referred customer who completes a repair</p>
+                
+                <p><strong>3. TRACKING METHOD</strong><br>
+                ☐ Customer mentions store name<br>
+                ☐ Referral card system<br>
+                ☐ Unique code: <span class="agreement-line" style="min-width:100px;"></span></p>
+                
+                <p><strong>4. DURATION</strong><br>
+                Month-to-month. Either party may end anytime.</p>
+                
+                <hr style="margin:20px 0;">
+                
+                <p><strong>GADGET FIX</strong><br>
+                Signature: <span class="agreement-line"></span> Date: <span class="agreement-line" style="min-width:100px;"></span></p>
+                
+                <p><strong>PARTNER STORE</strong><br>
+                Signature: <span class="agreement-line"></span> Date: <span class="agreement-line" style="min-width:100px;"></span><br>
+                Name: <span class="agreement-line"></span><br>
+                Contact: <span class="agreement-line"></span></p>
+            </div>
+
+            <h3>Referral Tracking System</h3>
+
+            <h4>Option A: Simple Tracking Codes</h4>
+            <table>
+                <tr><th>Store</th><th>Code</th></tr>
+                <tr><td>T-Mobile Kent Station</td><td><strong>TMO-KS</strong></td></tr>
+                <tr><td>Verizon Kent</td><td><strong>VZW-K</strong></td></tr>
+                <tr><td>AT&T Kent</td><td><strong>ATT-K</strong></td></tr>
+                <tr><td>Best Buy Kent</td><td><strong>BBY-K</strong></td></tr>
+                <tr><td>Xfinity Mobile Kent</td><td><strong>XFI-K</strong></td></tr>
+                <tr><td>Costco Kent</td><td><strong>COS-K</strong></td></tr>
+            </table>
+
+            <p><strong>How it works:</strong></p>
+            <ol>
+                <li>Customer comes in</li>
+                <li>Ask: "How did you hear about us?"</li>
+                <li>If they mention a store, note the code</li>
+                <li>At end of month, tally codes and pay bonuses</li>
+            </ol>
+
+            <h4>Monthly Summary Template</h4>
+            <table>
+                <tr>
+                    <th>Partner Store</th>
+                    <th>Total Referrals</th>
+                    <th>Bonus Rate</th>
+                    <th>Total Owed</th>
+                    <th>Paid Date</th>
+                </tr>
+                <tr>
+                    <td>T-Mobile Kent</td>
+                    <td></td>
+                    <td>$5/each</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Verizon Kent</td>
+                    <td></td>
+                    <td>$10/each</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Best Buy Kent</td>
+                    <td></td>
+                    <td>$0 (goodwill)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+        </div>
+    </section>
+
+    <!-- Section 7: Follow-Up & Relationship Building -->
+    <section class="section" id="section-7">
+        <div class="section-header">
+            <div class="section-num">Section 7</div>
+            <h2>Follow-Up & Relationship Building</h2>
+        </div>
+        <div class="section-content">
+            
+            <h3>Post-Visit Checklist</h3>
+            <p>Complete this after EVERY store visit:</p>
+
+            <h4>Immediately After the Visit</h4>
+            <ul class="checklist">
+                <li>Note the store name, address, and date visited</li>
+                <li>Record the manager's name (even if not available)</li>
+                <li>Note the best time to return if follow-up needed</li>
+                <li>Log whether materials were left</li>
+                <li>Get contact info (email/phone) if possible</li>
+                <li>Note any objections or concerns raised</li>
+                <li>Rate the visit: Hot / Warm / Cold / Not Interested</li>
+            </ul>
+
+            <h4>Within 24 Hours</h4>
+            <ul class="checklist">
+                <li>Enter visit details into tracking spreadsheet</li>
+                <li>Send follow-up email if promised</li>
+                <li>Text Mike with any hot leads</li>
+                <li>Schedule follow-up reminder in calendar</li>
+            </ul>
+
+            <h3>Follow-Up Email Templates</h3>
+
+            <div class="callout">
+                <h4>Template 1: After a Positive Meeting</h4>
+                <p><strong>Subject:</strong> Great meeting you today — Gadget Fix partnership</p>
+                <p>Hi [NAME],<br><br>
+                Thanks for taking a few minutes to chat today! As I mentioned, Gadget Fix is right here in Kent Station, and we specialize in quick iPhone screen repairs.<br><br>
+                Quick recap:<br>
+                • Most repairs take 15-30 minutes<br>
+                • Customers typically profit $80-150 after paying for the repair<br>
+                • We can set up a referral bonus if you're interested<br><br>
+                I'll check back in a couple of weeks. Questions? Call Mike at (253) 639-4343.<br><br>
+                [YOUR NAME]</p>
+            </div>
+
+            <div class="callout">
+                <h4>Template 2: Following Up on a "Maybe"</h4>
+                <p><strong>Subject:</strong> Quick follow-up — Gadget Fix partnership</p>
+                <p>Hi [NAME],<br><br>
+                I stopped by [STORE NAME] a couple of weeks ago. You mentioned you'd want to check with your manager first.<br><br>
+                Just following up to see if there's any interest in moving forward. Happy to answer any questions.<br><br>
+                Let me know if there's a better time to stop by again!<br><br>
+                [YOUR NAME]<br>
+                Gadget Fix | (253) 639-4343</p>
+            </div>
+
+            <h3>Monthly Check-In Strategy</h3>
+            <table>
+                <tr><th>Week</th><th>Action</th></tr>
+                <tr><td>Week 1</td><td>Text/email: "How's it going? Need more flyers?"</td></tr>
+                <tr><td>Week 2</td><td>Stop by in person if possible</td></tr>
+                <tr><td>Week 3</td><td>Process any referral bonus payments</td></tr>
+                <tr><td>Week 4</td><td>Send monthly thank-you note with results</td></tr>
+            </table>
+
+        </div>
+    </section>
+
+    <!-- Section 8: Training New Team Members -->
+    <section class="section" id="section-8">
+        <div class="section-header">
+            <div class="section-num">Section 8</div>
+            <h2>Training New Team Members</h2>
+        </div>
+        <div class="section-content">
+            
+            <h3>Onboarding a New Salesperson</h3>
+
+            <h4>Week 1: Foundation</h4>
+            <table>
+                <tr><th>Day</th><th>Activity</th><th>Goal</th></tr>
+                <tr><td>Day 1</td><td>Read this entire playbook</td><td>Understand the strategy</td></tr>
+                <tr><td>Day 2</td><td>Memorize the 5-minute pitch script</td><td>Practice out loud</td></tr>
+                <tr><td>Day 3</td><td>Memorize key numbers (trade-in values)</td><td>Know them cold</td></tr>
+                <tr><td>Day 4</td><td>Role-play with Mike or experienced rep</td><td>Get comfortable</td></tr>
+                <tr><td>Day 5</td><td>Shadow an experienced rep on visits</td><td>Observe in action</td></tr>
+            </table>
+
+            <h4>Week 2: Supervised Execution</h4>
+            <table>
+                <tr><th>Day</th><th>Activity</th><th>Goal</th></tr>
+                <tr><td>Day 1</td><td>Do first solo visit (low-priority store)</td><td>Get real experience</td></tr>
+                <tr><td>Day 2</td><td>Debrief with manager, identify improvements</td><td>Learn from mistakes</td></tr>
+                <tr><td>Days 3-5</td><td>3-4 visits per day with check-ins</td><td>Build confidence</td></tr>
+            </table>
+
+            <h3>Role-Play Scenarios</h3>
+            <p>Practice these scenarios before going into the field:</p>
+            <ol>
+                <li><strong>The Interested Manager</strong> — They're curious and asking questions. Practice answering smoothly.</li>
+                <li><strong>The Skeptic</strong> — They don't believe the numbers. Practice using the calculator demo.</li>
+                <li><strong>The "Too Busy" Brush-Off</strong> — They don't want to talk. Practice leaving gracefully with materials.</li>
+                <li><strong>The Corporate Policy Objection</strong> — They say it's against rules. Practice the informal workaround.</li>
+                <li><strong>The "What's In It For Me?" Employee</strong> — They want to know about the referral bonus.</li>
+            </ol>
+
+            <h3>Success Metrics & KPIs</h3>
+
+            <h4>Weekly Targets</h4>
+            <table>
+                <tr><th>Metric</th><th>Target</th><th>Stretch Goal</th></tr>
+                <tr><td>Store visits</td><td>6</td><td>10</td></tr>
+                <tr><td>Materials left</td><td>5</td><td>8</td></tr>
+                <tr><td>Manager conversations</td><td>3</td><td>5</td></tr>
+                <tr><td>Contact info collected</td><td>2</td><td>4</td></tr>
+            </table>
+
+            <h4>Monthly Targets</h4>
+            <table>
+                <tr><th>Metric</th><th>Target</th><th>Stretch Goal</th></tr>
+                <tr><td>Active partnerships</td><td>3</td><td>5</td></tr>
+                <tr><td>Referred customers</td><td>5</td><td>10</td></tr>
+                <tr><td>Revenue from referrals</td><td>$500</td><td>$1,000</td></tr>
+            </table>
+
+            <div class="ref-card">
+                <h4>Quick Reference Card (Print This!)</h4>
+                <p><strong>KEY STAT:</strong> "iPhone 16 + $139 repair = $81 extra in customer's pocket"</p>
+                <p><strong>THE ASK:</strong><br>
+                1. Keep flyers at counter<br>
+                2. Mention us when customer has cracked screen<br>
+                3. Optional: $5-10 referral bonus</p>
+                <p><strong>MAGIC PHRASE:</strong> "We just want to help you close more sales."</p>
+                <p><strong>MIKE'S NUMBER:</strong> (253) 639-4343</p>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+<!-- CTA Section -->
+<section style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 60px 20px; text-align: center;">
+    <div style="max-width: 700px; margin: 0 auto;">
+        <h2 style="color: var(--primary-dark); font-size: 2rem; margin-bottom: 15px;">Like What You See?</h2>
+        <p style="font-size: 1.1rem; color: var(--text); margin-bottom: 25px;">
+            This is just a preview of what MyCo Consulting Network can build for your business. 
+            We create custom playbooks, marketing strategies, and growth systems tailored to your specific goals.
+        </p>
+        <a href="mailto:ethan@myconsulting.network" style="display: inline-block; background: var(--primary); color: white; padding: 16px 40px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(27, 127, 78, 0.3);">
+            Schedule a Call
+        </a>
+        <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-light);">
+            Or call Ethan directly: <a href="tel:253-802-6759" style="color: var(--primary);">253-802-6759</a>
+        </p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p class="brand">MyCo Consulting Network</p>
+    <p>"We do the thinking. You get results."</p>
+    <p style="margin-top:20px;font-size:0.85rem;">Carrier Partnership Sales Playbook v1.0 | December 2024</p>
+    <p style="font-size:0.85rem;">Sample Deliverable for Gadget Fix, Kent, WA</p>
+    <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7;">This preview demonstrates our deliverable quality. Full implementation available upon partnership.</p>
+</footer>
+
+</body>
+</html>
