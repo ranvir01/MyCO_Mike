@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Outreach Playbook | MyCo Portfolio Example</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-paper: #ffffff;
+      --bg-subtle: #f8fafc;
+      --bg-section: #f1f5f9;
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-dark: #cbd5e1;
+      --accent: #0369a1;
+      --accent-light: #0284c7;
+      --accent-bg: #f0f9ff;
+      --accent-border: #bae6fd;
+      --success: #166534;
+      --warning: #ca8a04;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page {
+      size: letter;
+      margin: 0.75in;
+    }
+
+    body {
+      font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f1f5f9;
+      color: var(--text-primary);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .document {
+      max-width: 850px;
+      margin: 40px auto;
+      background: var(--bg-paper);
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .watermark-banner {
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .letterhead {
+      background: linear-gradient(135deg, var(--accent) 0%, #075985 100%);
+      padding: 35px 50px;
+      color: white;
+    }
+
+    .letterhead h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .letterhead p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .content {
+      padding: 40px 50px;
+    }
+
+    .portfolio-note {
+      background: #fef3c7;
+      border: 2px solid #f59e0b;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .portfolio-note h3 {
+      color: #92400e;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .portfolio-note p {
+      color: #78350f;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .section {
+      margin-bottom: 35px;
+    }
+
+    .section-title {
+      font-family: 'Merriweather', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    .redacted {
+      background: #1e293b;
+      color: #1e293b;
+      padding: 2px 8px;
+      border-radius: 3px;
+      user-select: none;
+      font-weight: 600;
+    }
+
+    .redacted-block {
+      background: repeating-linear-gradient(
+        45deg,
+        #1e293b,
+        #1e293b 10px,
+        #334155 10px,
+        #334155 20px
+      );
+      color: white;
+      padding: 15px 20px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: 600;
+      margin: 15px 0;
+    }
+
+    .playbook-card {
+      background: var(--bg-section);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 25px;
+      margin: 20px 0;
+    }
+
+    .playbook-card h3 {
+      color: var(--accent);
+      font-size: 18px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .playbook-card .icon {
+      font-size: 24px;
+    }
+
+    .step-list {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+    }
+
+    .step-list li {
+      counter-increment: step;
+      padding: 12px 0 12px 50px;
+      position: relative;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .step-list li:last-child {
+      border-bottom: none;
+    }
+
+    .step-list li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .template-box {
+      background: white;
+      border: 2px dashed var(--accent-border);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .template-box h4 {
+      color: var(--accent);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .template-preview {
+      background: var(--bg-subtle);
+      border-radius: 6px;
+      padding: 15px;
+      font-family: monospace;
+      font-size: 13px;
+      color: var(--text-secondary);
+      white-space: pre-wrap;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin: 25px 0;
+    }
+
+    .metric-card {
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .metric-card .value {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .metric-card .label {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 5px;
+    }
+
+    .channel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .channel-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .channel-card h4 {
+      color: var(--text-primary);
+      font-size: 16px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .channel-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text-secondary);
+      font-size: 13px;
+    }
+
+    .channel-card li {
+      margin-bottom: 5px;
+    }
+
+    .results-banner {
+      background: linear-gradient(135deg, #166534 0%, #15803d 100%);
+      color: white;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    .results-banner h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .results-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .results-stats .stat {
+      text-align: center;
+    }
+
+    .results-stats .stat-value {
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .results-stats .stat-label {
+      font-size: 12px;
+      opacity: 0.9;
+      text-transform: uppercase;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    th {
+      background: var(--accent-bg);
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .footer {
+      background: var(--bg-section);
+      border-top: 1px solid var(--border);
+      padding: 20px 50px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    @media print {
+      body { background: white; }
+      .document { margin: 0; box-shadow: none; border: none; }
+      .watermark-banner { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="document">
+  <div class="watermark-banner">
+    ⚠️ PORTFOLIO SAMPLE — CONFIDENTIAL CLIENT DETAILS REDACTED ⚠️
+  </div>
+
+  <div class="letterhead">
+    <h1>📘 Sales & Outreach Playbook</h1>
+    <p>MyCo Consulting Services | Portfolio Example — Complete Sales Enablement System</p>
+  </div>
+
+  <div class="content">
+    <div class="portfolio-note">
+      <h3>📋 Portfolio Example Document</h3>
+      <p>This is a sample of a comprehensive outreach playbook created for a previous client. All identifying information, proprietary scripts, and confidential details have been redacted. This demonstrates the structure and methodology of our sales enablement deliverables.</p>
+    </div>
+
+    <!-- Overview -->
+    <div class="section">
+      <h2 class="section-title">Playbook Overview</h2>
+      <p>This outreach playbook was developed for <span class="redacted">CLIENT NAME</span> to systematize their sales process and enable consistent, scalable outreach across their team. The playbook covers multi-channel prospecting, lead qualification, and conversion optimization.</p>
+      
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="value">5</div>
+          <div class="label">Channels</div>
+        </div>
+        <div class="metric-card">
+          <div class="value">12+</div>
+          <div class="label">Templates</div>
+        </div>
+        <div class="metric-card">
+          <div class="value">8</div>
+          <div class="label">Sequences</div>
+        </div>
+        <div class="metric-card">
+          <div class="value">25+</div>
+          <div class="label">Pages</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Target Audience -->
+    <div class="section">
+      <h2 class="section-title">Ideal Customer Profile</h2>
+      
+      <div class="playbook-card">
+        <h3><span class="icon">🎯</span> Target Audience Definition</h3>
+        <table>
+          <tr>
+            <th>Attribute</th>
+            <th>Primary Target</th>
+            <th>Secondary Target</th>
+          </tr>
+          <tr>
+            <td>Industry</td>
+            <td><span class="redacted">INDUSTRY A</span></td>
+            <td><span class="redacted">INDUSTRY B</span></td>
+          </tr>
+          <tr>
+            <td>Company Size</td>
+            <td>10-50 employees</td>
+            <td>50-200 employees</td>
+          </tr>
+          <tr>
+            <td>Decision Maker</td>
+            <td>Owner / CEO</td>
+            <td>Operations Manager</td>
+          </tr>
+          <tr>
+            <td>Pain Points</td>
+            <td>Efficiency, Cost, Growth</td>
+            <td>Scaling, Process</td>
+          </tr>
+          <tr>
+            <td>Geography</td>
+            <td><span class="redacted">REGION</span></td>
+            <td><span class="redacted">REGION</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Outreach Channels -->
+    <div class="section">
+      <h2 class="section-title">Outreach Channels & Strategy</h2>
+      
+      <div class="channel-grid">
+        <div class="channel-card">
+          <h4>📧 Email Outreach</h4>
+          <ul>
+            <li>Cold email sequences (3-5 touch)</li>
+            <li>Follow-up templates</li>
+            <li>Re-engagement campaigns</li>
+            <li>Referral request templates</li>
+          </ul>
+        </div>
+        <div class="channel-card">
+          <h4>📞 Phone/Cold Calling</h4>
+          <ul>
+            <li>Opening scripts</li>
+            <li>Objection handling guides</li>
+            <li>Voicemail scripts</li>
+            <li>Discovery call frameworks</li>
+          </ul>
+        </div>
+        <div class="channel-card">
+          <h4>💼 LinkedIn Outreach</h4>
+          <ul>
+            <li>Connection request templates</li>
+            <li>InMail sequences</li>
+            <li>Content engagement strategy</li>
+            <li>Profile optimization guide</li>
+          </ul>
+        </div>
+        <div class="channel-card">
+          <h4>🤝 Networking & Referrals</h4>
+          <ul>
+            <li>Partner outreach templates</li>
+            <li>Referral program framework</li>
+            <li>Event follow-up sequences</li>
+            <li>Strategic alliance scripts</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sample Sequence -->
+    <div class="section">
+      <h2 class="section-title">Sample Outreach Sequence</h2>
+      
+      <div class="playbook-card">
+        <h3><span class="icon">📬</span> Cold Email Sequence Structure</h3>
+        <ul class="step-list">
+          <li><strong>Day 1 — Initial Outreach:</strong> Value-first introduction, reference pain point, soft CTA</li>
+          <li><strong>Day 3 — Value Add:</strong> Share relevant resource/case study, reinforce expertise</li>
+          <li><strong>Day 7 — Social Proof:</strong> Client success story, specific results mentioned</li>
+          <li><strong>Day 14 — Direct Ask:</strong> Clear meeting request with calendar link</li>
+          <li><strong>Day 21 — Breakup Email:</strong> Friendly close, leave door open for future</li>
+        </ul>
+      </div>
+
+      <div class="template-box">
+        <h4>📝 Sample Template Structure (Email #1)</h4>
+        <div class="template-preview">Subject: Quick question about [PAIN POINT]
+
+Hi [FIRST NAME],
+
+I noticed [PERSONALIZED OBSERVATION]...
+
+[VALUE PROPOSITION - 1-2 sentences]
+
+[CREDIBILITY INDICATOR]
+
+[SOFT CTA - question, not demand]
+
+Best,
+[SIGNATURE]</div>
+      </div>
+
+      <div class="redacted-block">
+        ✉️ FULL EMAIL TEMPLATES AND SCRIPTS — CONFIDENTIAL CLIENT CONTENT
+      </div>
+    </div>
+
+    <!-- Objection Handling -->
+    <div class="section">
+      <h2 class="section-title">Objection Handling Framework</h2>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Objection</th>
+            <th>Response Framework</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"We're not interested"</td>
+            <td>Acknowledge → Curiosity question → Pivot to value</td>
+          </tr>
+          <tr>
+            <td>"We don't have budget"</td>
+            <td>Validate → ROI reframe → Offer flexible options</td>
+          </tr>
+          <tr>
+            <td>"We're already working with someone"</td>
+            <td>Compliment → Differentiate → Plant seed for future</td>
+          </tr>
+          <tr>
+            <td>"Send me information"</td>
+            <td>Agree → Qualify interest → Schedule brief call</td>
+          </tr>
+          <tr>
+            <td>"Now's not a good time"</td>
+            <td>Empathize → Define future timing → Schedule follow-up</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Results -->
+    <div class="section">
+      <h2 class="section-title">Playbook Results</h2>
+      
+      <div class="results-banner">
+        <h3>📈 Client Outcomes After Implementation</h3>
+        <div class="results-stats">
+          <div class="stat">
+            <div class="stat-value">3.2x</div>
+            <div class="stat-label">Response Rate Increase</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">47%</div>
+            <div class="stat-label">More Meetings Booked</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">28%</div>
+            <div class="stat-label">Conversion Rate Improvement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deliverables -->
+    <div class="section">
+      <h2 class="section-title">What This Engagement Included</h2>
+      
+      <div class="playbook-card">
+        <h3><span class="icon">📦</span> Complete Deliverables Package</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: 8px 0;">✅ Comprehensive playbook document (25+ pages)</li>
+          <li style="padding: 8px 0;">✅ 12+ email templates with A/B variations</li>
+          <li style="padding: 8px 0;">✅ Cold calling scripts with objection handlers</li>
+          <li style="padding: 8px 0;">✅ LinkedIn outreach sequence</li>
+          <li style="padding: 8px 0;">✅ Lead qualification scorecard</li>
+          <li style="padding: 8px 0;">✅ CRM setup and workflow recommendations</li>
+          <li style="padding: 8px 0;">✅ KPI tracking dashboard template</li>
+          <li style="padding: 8px 0;">✅ Team training session (2 hours)</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p><strong>MyCo Consulting Services</strong> — Sales Enablement & Growth Strategy</p>
+    <p style="margin-top: 5px;">This is a portfolio example. Actual client details protected under NDA.</p>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Project Scopes | MyCo Portfolio Examples</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-paper: #ffffff;
+      --bg-subtle: #f8fafc;
+      --bg-section: #f1f5f9;
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --teal: #0d9488;
+      --teal-light: #14b8a6;
+      --teal-dark: #0f766e;
+      --navy: #1e3a5f;
+      --coral: #f87171;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #e5e7eb;
+      color: var(--text-primary);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .page-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .watermark-banner {
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      border-radius: 8px;
+    }
+
+    .portfolio-note {
+      background: #fef3c7;
+      border: 2px solid #f59e0b;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .portfolio-note h3 {
+      color: #92400e;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .portfolio-note p {
+      color: #78350f;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .page-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    /* Project Scope Card */
+    .scope-card {
+      background: var(--bg-subtle);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .scope-header {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+      color: white;
+      padding: 25px 35px;
+      text-align: center;
+    }
+
+    .scope-header h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .scope-meta {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 20px 35px;
+      background: white;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .meta-badge {
+      background: var(--teal);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .meta-value {
+      background: var(--bg-section);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .scope-body {
+      padding: 30px 35px;
+    }
+
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .phase-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      position: relative;
+    }
+
+    .phase-card::before {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 15px solid #94a3b8;
+    }
+
+    .phase-card:last-child::before {
+      display: none;
+    }
+
+    .phase-header {
+      background: var(--teal);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .phase-hours {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .phase-hours .number {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .phase-hours .label {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .phase-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .phase-dots .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--teal);
+      border-radius: 50%;
+    }
+
+    .phase-tasks {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .phase-tasks ul {
+      margin: 0;
+      padding-left: 16px;
+    }
+
+    .phase-tasks li {
+      margin-bottom: 6px;
+    }
+
+    .redacted-inline {
+      background: #1e293b;
+      color: #1e293b;
+      padding: 1px 6px;
+      border-radius: 3px;
+      user-select: none;
+    }
+
+    .deliverables-box {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin-top: 20px;
+    }
+
+    .deliverables-box h4 {
+      color: var(--teal);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .deliverables-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .deliverable-item {
+      background: var(--bg-section);
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .deliverable-item strong {
+      color: var(--text-primary);
+    }
+
+    /* Footer */
+    .page-footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    @media print {
+      body { background: white; }
+      .scope-card { page-break-inside: avoid; }
+    }
+
+    @media (max-width: 768px) {
+      .phase-card::before { display: none; }
+      .scope-meta { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-container">
+
+  <div class="watermark-banner">
+    ⚠️ PORTFOLIO SAMPLES — CONFIDENTIAL CLIENT DETAILS REDACTED ⚠️
+  </div>
+
+  <h1 class="page-title">📊 Project Scope Examples</h1>
+
+  <div class="portfolio-note">
+    <h3>📋 Portfolio Example Documents</h3>
+    <p>These are samples of project scope documents created for previous clients. All identifying information including client names, team member names, specific rates, and proprietary details have been redacted. These demonstrate the structure and professionalism of our project planning deliverables.</p>
+  </div>
+
+  <!-- Salesforce Project -->
+  <div class="scope-card">
+    <div class="scope-header">
+      <h2>Salesforce System Transformation + Scope</h2>
+    </div>
+    
+    <div class="scope-meta">
+      <span class="meta-badge">Timeline</span>
+      <span class="meta-value">On Call</span>
+      <span class="meta-badge">Hours</span>
+      <span class="meta-value">≤ 30</span>
+      <span class="meta-badge">Rate</span>
+      <span class="meta-value">$XX/hr</span>
+      <span class="meta-badge">Consultant</span>
+      <span class="meta-value"><span class="redacted-inline">NAME</span></span>
+    </div>
+    
+    <div class="scope-body">
+      <p style="text-align: center; margin-bottom: 20px; color: var(--text-secondary);">
+        <strong>Goal:</strong> Integrate and implement until leads convert to opportunities properly
+      </p>
+      
+      <div class="phase-grid">
+        <div class="phase-card">
+          <div class="phase-header">Automation & Optimization</div>
+          <div class="phase-hours">
+            <div class="number">22 hrs</div>
+            <div class="label">Estimated</div>
+          </div>
+          <div class="phase-dots">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="phase-tasks">
+            <ul>
+              <li>AI tools implementation</li>
+              <li>Automated task flows</li>
+              <li>Data cleanup between objects</li>
+              <li>Data model updates</li>
+              <li>Testing & bug fixing</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="phase-card">
+          <div class="phase-header">Discovery & Planning</div>
+          <div class="phase-hours">
+            <div class="number">8 hrs</div>
+            <div class="label">Estimated</div>
+          </div>
+          <div class="phase-dots">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="phase-tasks">
+            <ul>
+              <li>Salesforce development learning</li>
+              <li>Sandbox testing</li>
+              <li>Stakeholder communication</li>
+              <li>Field requirements gathering</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="phase-card">
+          <div class="phase-header">Future Roadmap</div>
+          <div class="phase-hours">
+            <div class="number">20-40 hrs</div>
+            <div class="label">Ongoing</div>
+          </div>
+          <div class="phase-dots">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="phase-tasks">
+            <ul>
+              <li>Continuous data model updates</li>
+              <li>Advanced automation</li>
+              <li>Custom reports & dashboards</li>
+              <li>Maintenance & backups</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="deliverables-box">
+        <h4>🎯 Deliverables</h4>
+        <div class="deliverables-list">
+          <div class="deliverable-item"><strong>#1</strong> - Automated lead workflows</div>
+          <div class="deliverable-item"><strong>#2</strong> - Data model optimization</div>
+          <div class="deliverable-item"><strong>#3</strong> - Custom field mappings</div>
+          <div class="deliverable-item"><strong>#4</strong> - Process documentation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO Project -->
+  <div class="scope-card">
+    <div class="scope-header">
+      <h2>Organic Search Engine Optimization</h2>
+    </div>
+    
+    <div class="scope-meta">
+      <span class="meta-badge">Timeline</span>
+      <span class="meta-value">2 Weeks</span>
+      <span class="meta-badge">Hours</span>
+      <span class="meta-value">≤ 19</span>
+      <span class="meta-badge">Rate</span>
+      <span class="meta-value">$XX/hr</span>
+      <span class="meta-badge">Team</span>
+      <span class="meta-value"><span class="redacted-inline">TEAM</span></span>
+      <span class="meta-badge">PM</span>
+      <span class="meta-value"><span class="redacted-inline">NAME</span></span>
+    </div>
+    
+    <div class="scope-body">
+      <div class="phase-grid">
+        <div class="phase-card">
+          <div class="phase-header">Research & Analysis</div>
+          <div class="phase-hours">
+            <div class="number">10 hrs</div>
+            <div class="label">Estimated</div>
+          </div>
+          <div class="phase-dots">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="phase-tasks">
+            <ul>
+              <li>Website analysis</li>
+              <li>Keyword research</li>
+              <li>Site mapping</li>
+              <li>Competitor analysis</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="phase-card">
+          <div class="phase-header">Implementation</div>
+          <div class="phase-hours">
+            <div class="number">5 hrs</div>
+            <div class="label">Estimated</div>
+          </div>
+          <div class="phase-dots">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="phase-tasks">
+            <ul>
+              <li>Website changes</li>
+              <li>Google Business Profile</li>
+              <li>Meta tag optimization</li>
+              <li>Content updates</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="phase-card">
+          <div class="phase-header">Management</div>
+          <div class="phase-hours">
+            <div class="number">4 hrs</div>
+            <div class="label">Estimated</div>
+          </div>
+          <div class="phase-dots">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="phase-tasks">
+            <ul>
+              <li>Project management</li>
+              <li>General meetings</li>
+              <li>Progress reporting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="deliverables-box">
+        <h4>🎯 Deliverables</h4>
+        <div class="deliverables-list">
+          <div class="deliverable-item"><strong>#1</strong> - SEO analysis document</div>
+          <div class="deliverable-item"><strong>#2</strong> - Website improvements</div>
+          <div class="deliverable-item"><strong>#3</strong> - Keyword strategy</div>
+          <div class="deliverable-item"><strong>#4</strong> - Progress report</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Google Ads Project -->
+  <div class="scope-card">
+    <div class="scope-header">
+      <h2>Google Ads SEO Phase 1</h2>
+    </div>
+    
+    <div class="scope-meta">
+      <span class="meta-badge">Timeline</span>
+      <span class="meta-value">5-6 Weeks</span>
+      <span class="meta-badge">Hours</span>
+      <span class="meta-value">≤ 15.5</span>
+      <span class="meta-badge">Rate</span>
+      <span class="meta-value">$XX/hr</span>
+      <span class="meta-badge">Team</span>
+      <span class="meta-value"><span class="redacted-inline">TEAM</span></span>
+      <span class="meta-badge">PM</span>
+      <span class="meta-value"><span class="redacted-inline">NAME</span></span>
+    </div>
+    
+    <div class="scope-body">
+      <div class="phase-grid">
+        <div class="phase-card">
+          <div class="phase-header">Ad Creation</div>
+          <div class="phase-hours">
+            <div class="number">5.5 hrs</div>
+            <div class="label">Estimated</div>
+          </div>
+          <div class="phase-dots">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="phase-tasks">
+            <ul>
+              <li>Ad creation</li>
+              <li>Ad copywriting</li>
+              <li>Performance monitoring</li>
+              <li>A/B testing</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="phase-card">
+          <div class="phase-header">Landing Optimization</div>
+          <div class="phase-hours">
+            <div class="number">4 hrs</div>
+            <div class="label">Estimated</div>
+          </div>
+          <div class="phase-dots">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="phase-tasks">
+            <ul>
+              <li>Landing page updates</li>
+              <li>Conversion tracking</li>
+              <li>Landing optimization</li>
+              <li>Google Ads oversight</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="phase-card">
+          <div class="phase-header">Project Management</div>
+          <div class="phase-hours">
+            <div class="number">6 hrs</div>
+            <div class="label">Estimated</div>
+          </div>
+          <div class="phase-dots">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="phase-tasks">
+            <ul>
+              <li>General meetings</li>
+              <li>Progress tracking</li>
+              <li>Reporting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="deliverables-box">
+        <h4>🎯 Deliverables</h4>
+        <div class="deliverables-list">
+          <div class="deliverable-item"><strong>#1</strong> - Google paid ads campaign</div>
+          <div class="deliverable-item"><strong>#2</strong> - Ranking enhancement</div>
+          <div class="deliverable-item"><strong>#3</strong> - Lead generation (target: 4-8 leads)</div>
+          <div class="deliverable-item"><strong>#4</strong> - Performance report</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <p><strong>MyCo Consulting Services</strong> — Professional Project Scoping & Delivery</p>
+    <p style="margin-top: 5px;">These are portfolio examples. Actual client details protected under NDA.</p>
+  </div>
+
+</div>
+
+</body>
+</html>

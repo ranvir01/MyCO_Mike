@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Business Plan | MyCo Portfolio Example</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-paper: #ffffff;
+      --bg-subtle: #f8fafc;
+      --bg-section: #f1f5f9;
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-dark: #cbd5e1;
+      --accent: #166534;
+      --accent-light: #15803d;
+      --accent-bg: #f0fdf4;
+      --accent-border: #bbf7d0;
+      --navy: #1e3a8a;
+      --profit: #166534;
+      --loss: #dc2626;
+      --warning: #ca8a04;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page {
+      size: letter;
+      margin: 0.75in;
+    }
+
+    body {
+      font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f1f5f9;
+      color: var(--text-primary);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .document {
+      max-width: 850px;
+      margin: 40px auto;
+      background: var(--bg-paper);
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .letterhead {
+      background: var(--bg-paper);
+      border-bottom: 3px solid var(--text-primary);
+      padding: 30px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .letterhead-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .letterhead-logo {
+      width: 60px;
+      height: 60px;
+      background: var(--text-primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Merriweather', serif;
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .letterhead-title h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--text-primary);
+      margin: 0;
+      letter-spacing: -0.5px;
+    }
+
+    .letterhead-title p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 2px 0 0 0;
+    }
+
+    .content {
+      padding: 40px 50px;
+    }
+
+    .watermark-banner {
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .portfolio-note {
+      background: #fef3c7;
+      border: 2px solid #f59e0b;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .portfolio-note h3 {
+      color: #92400e;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .portfolio-note p {
+      color: #78350f;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .section {
+      margin-bottom: 35px;
+    }
+
+    .section-title {
+      font-family: 'Merriweather', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    .redacted {
+      background: #1e293b;
+      color: #1e293b;
+      padding: 2px 8px;
+      border-radius: 3px;
+      user-select: none;
+      font-weight: 600;
+    }
+
+    .redacted-block {
+      background: repeating-linear-gradient(
+        45deg,
+        #1e293b,
+        #1e293b 10px,
+        #334155 10px,
+        #334155 20px
+      );
+      color: white;
+      padding: 15px 20px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: 600;
+      margin: 15px 0;
+    }
+
+    .highlight-box {
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .highlight-box h4 {
+      color: var(--accent);
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .highlight-box ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .highlight-box li {
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .stat-card {
+      background: var(--bg-section);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .stat-card .label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .stat-card .value {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .timeline {
+      border-left: 3px solid var(--accent);
+      padding-left: 25px;
+      margin: 20px 0;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -32px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      background: var(--accent);
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+
+    .timeline-item h4 {
+      color: var(--text-primary);
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .timeline-item p {
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    th {
+      background: var(--bg-section);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .footer {
+      background: var(--bg-section);
+      border-top: 1px solid var(--border);
+      padding: 20px 50px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    @media print {
+      body { background: white; }
+      .document { margin: 0; box-shadow: none; border: none; }
+      .watermark-banner { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="document">
+  <div class="watermark-banner">
+    ⚠️ PORTFOLIO SAMPLE — CONFIDENTIAL CLIENT DETAILS REDACTED ⚠️
+  </div>
+
+  <div class="letterhead">
+    <div class="letterhead-left">
+      <div class="letterhead-logo">MC</div>
+      <div class="letterhead-title">
+        <h1>Strategic Business Plan</h1>
+        <p>MyCo Consulting Services | Portfolio Example</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="portfolio-note">
+      <h3>📋 Portfolio Example Document</h3>
+      <p>This is a sample of a comprehensive business plan created for a previous client. All identifying information, proprietary data, and confidential details have been redacted. This demonstrates the structure, depth, and quality of our strategic planning deliverables.</p>
+    </div>
+
+    <!-- Executive Summary -->
+    <div class="section">
+      <h2 class="section-title">Executive Summary</h2>
+      <p>This strategic business plan was developed for <span class="redacted">CLIENT NAME</span>, a growing company in the <span class="redacted">INDUSTRY SECTOR</span> industry. The plan addresses key challenges in market expansion, operational efficiency, and revenue optimization.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="label">Projected Growth</div>
+          <div class="value">35-45%</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Time Horizon</div>
+          <div class="value">12-18 Mo</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">ROI Target</div>
+          <div class="value">3.2x</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Market Analysis -->
+    <div class="section">
+      <h2 class="section-title">Market Analysis</h2>
+      <p>Our comprehensive market analysis examined:</p>
+      
+      <div class="highlight-box">
+        <h4>Key Analysis Areas</h4>
+        <ul>
+          <li>Competitive landscape assessment with 12+ direct competitors identified</li>
+          <li>Target market segmentation and customer persona development</li>
+          <li>Pricing strategy optimization and margin analysis</li>
+          <li>Geographic expansion opportunities in <span class="redacted">TARGET REGIONS</span></li>
+          <li>Industry trend analysis and future projections</li>
+        </ul>
+      </div>
+
+      <div class="redacted-block">
+        📊 DETAILED MARKET DATA AND COMPETITIVE ANALYSIS — CONFIDENTIAL
+      </div>
+    </div>
+
+    <!-- Strategic Recommendations -->
+    <div class="section">
+      <h2 class="section-title">Strategic Recommendations</h2>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Priority</th>
+            <th>Initiative</th>
+            <th>Timeline</th>
+            <th>Impact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1</strong></td>
+            <td>Revenue stream diversification</td>
+            <td>Q1-Q2</td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td><strong>2</strong></td>
+            <td>Operational process optimization</td>
+            <td>Q2</td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td><strong>3</strong></td>
+            <td>Customer acquisition funnel improvements</td>
+            <td>Q2-Q3</td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td><strong>4</strong></td>
+            <td>Partnership and B2B channel development</td>
+            <td>Q3-Q4</td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td><strong>5</strong></td>
+            <td>Technology infrastructure upgrades</td>
+            <td>Ongoing</td>
+            <td>Medium</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Implementation Timeline -->
+    <div class="section">
+      <h2 class="section-title">Implementation Roadmap</h2>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Phase 1: Foundation (Months 1-3)</h4>
+          <p>Initial assessment, team alignment, and quick-win implementations. Focus on low-hanging fruit opportunities for immediate revenue impact.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Phase 2: Growth (Months 4-6)</h4>
+          <p>Launch major initiatives, expand marketing efforts, and implement new operational processes. Begin measuring KPIs against targets.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Phase 3: Optimization (Months 7-12)</h4>
+          <p>Fine-tune strategies based on data, scale successful initiatives, and prepare for next-phase expansion opportunities.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Phase 4: Expansion (Months 12-18)</h4>
+          <p>Geographic/market expansion, advanced automation, and long-term sustainability planning.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Financial Projections -->
+    <div class="section">
+      <h2 class="section-title">Financial Projections</h2>
+      
+      <div class="redacted-block">
+        💰 DETAILED FINANCIAL PROJECTIONS AND REVENUE MODELS — CONFIDENTIAL
+      </div>
+      
+      <p style="margin-top: 20px;">The financial model includes:</p>
+      <ul style="margin-left: 20px; color: var(--text-secondary);">
+        <li>12-month and 36-month revenue projections</li>
+        <li>Break-even analysis and cash flow modeling</li>
+        <li>Investment requirements and ROI calculations</li>
+        <li>Scenario planning (conservative, moderate, aggressive)</li>
+        <li>Key performance indicators and success metrics</li>
+      </ul>
+    </div>
+
+    <!-- Deliverables Summary -->
+    <div class="section">
+      <h2 class="section-title">What This Engagement Included</h2>
+      
+      <div class="highlight-box">
+        <h4>Complete Deliverables Package</h4>
+        <ul>
+          <li>✓ 25+ page comprehensive business plan document</li>
+          <li>✓ Financial model with interactive projections (Excel)</li>
+          <li>✓ Competitive analysis report</li>
+          <li>✓ Marketing strategy framework</li>
+          <li>✓ Implementation action plan with milestones</li>
+          <li>✓ Executive presentation deck</li>
+          <li>✓ 2x strategy review sessions</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p><strong>MyCo Consulting Services</strong> — Strategic Planning & Business Growth</p>
+    <p style="margin-top: 5px;">This is a portfolio example. Actual client details protected under NDA.</p>
+  </div>
+</div>
+
+</body>
+</html>
