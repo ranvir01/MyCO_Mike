@@ -17,29 +17,29 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Gadget Fix",
-        "description": "Kent's trusted phone repair shop specializing in iPhone screen repairs and battery replacements",
+        "description": "Tukwila's trusted phone repair shop specializing in iPhone screen repairs and battery replacements",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "621 Strander Blvd",
-            "addressLocality": "Kent",
+            "addressLocality": "Tukwila",
             "addressRegion": "WA",
-            "postalCode": "98032",
+            "postalCode": "98188",
             "addressCountry": "US"
         },
-        "telephone": "+1-555-123-4567",
+        "telephone": "+1-425-666-9090",
         "openingHoursSpecification": [
             {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                "opens": "10:00",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "11:00",
                 "closes": "19:00"
             }
         ],
-        "priceRange": "$79-$179",
+        "priceRange": "$49-$179",
         "aggregateRating": {
             "@type": "AggregateRating",
-"ratingValue": "4.4",
-        "reviewCount": "91"
+            "ratingValue": "4.4",
+            "reviewCount": "91"
         }
     }
     </script>
@@ -942,6 +942,143 @@
             }
         }
         
+        /* ===== NAVIGATION ===== */
+        .nav-header {
+            background: var(--surface);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .nav-logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-logo svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--primary);
+        }
+        
+        .nav-links {
+            display: none;
+            gap: 24px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        .nav-phone svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--primary);
+        }
+        
+        /* ===== FAQ ACCORDION ===== */
+        .faq {
+            background: var(--surface);
+        }
+        
+        .faq-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--background);
+            border-radius: var(--radius-md);
+            margin-bottom: 16px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            border-color: var(--primary-light);
+        }
+        
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            cursor: pointer;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--text);
+        }
+        
+        .faq-question svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--primary);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .faq-item.open .faq-question svg {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer-content {
+            padding: 0 24px 20px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+        
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+        }
+        
         /* ===== MOBILE STYLES ===== */
         @media (max-width: 599px) {
             .sticky-cta {
@@ -960,10 +1097,44 @@
             .math-operator {
                 transform: rotate(90deg);
             }
+            
+            .nav-phone span {
+                display: none;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
         }
     </style>
 </head>
 <body>
+    
+    <!-- ===== NAVIGATION HEADER ===== -->
+    <nav class="nav-header">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+                Gadget Fix
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#trade-in">Trade-In Value</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <a href="tel:+14256669090" class="nav-phone">
+                <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+                <span>(425) 666-9090</span>
+            </a>
+        </div>
+    </nav>
     
     <!-- ===== SECTION 1: HERO ===== -->
     <header class="hero">
@@ -1065,11 +1236,18 @@
         <div class="container">
             <div class="pricing-header">
                 <span class="section-label">💎 Transparent Pricing</span>
-                <h2>Screen Repair Pricing</h2>
+                <h2>Screen & Battery Repair Pricing</h2>
                 <p style="color: var(--text-muted); max-width: 500px; margin: 16px auto 0;">Quality parts, expert repairs, fair prices. No hidden fees.</p>
+                
+                <!-- Pricing Tabs -->
+                <div style="display: flex; justify-content: center; gap: 8px; margin-top: 24px;">
+                    <button onclick="showPricing('screen')" id="tab-screen" class="pricing-tab active" style="padding: 10px 24px; border: 2px solid var(--primary); border-radius: 50px; background: var(--primary); color: white; font-family: 'Outfit', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Screen Repair</button>
+                    <button onclick="showPricing('battery')" id="tab-battery" class="pricing-tab" style="padding: 10px 24px; border: 2px solid var(--primary); border-radius: 50px; background: white; color: var(--primary); font-family: 'Outfit', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Battery Replacement</button>
+                </div>
             </div>
             
-            <div class="pricing-grid">
+            <!-- Screen Repair Pricing -->
+            <div class="pricing-grid" id="screen-pricing">
                 <!-- Prices based on Nov 2024 Market Research -->
                 <div class="pricing-card featured">
                     <div class="pricing-device">
@@ -1169,6 +1347,106 @@
                 </div>
             </div>
             
+            <!-- Battery Replacement Pricing -->
+            <div class="pricing-grid" id="battery-pricing" style="display: none;">
+                <div class="pricing-card featured">
+                    <div class="pricing-device">
+                        <div class="device-icon" style="background: var(--gradient-gold);">
+                            <svg viewBox="0 0 24 24" fill="var(--text)"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                        </div>
+                        <div>
+                            <div class="device-name">iPhone 15/16 Series</div>
+                            <div class="device-tag">Same-Day Service</div>
+                        </div>
+                    </div>
+                    <div class="pricing-price">$69</div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-device">
+                        <div class="device-icon" style="background: var(--gradient-gold);">
+                            <svg viewBox="0 0 24 24" fill="var(--text)"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                        </div>
+                        <div>
+                            <div class="device-name">iPhone 14 Pro / Pro Max</div>
+                        </div>
+                    </div>
+                    <div class="pricing-price">$65</div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-device">
+                        <div class="device-icon" style="background: var(--gradient-gold);">
+                            <svg viewBox="0 0 24 24" fill="var(--text)"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                        </div>
+                        <div>
+                            <div class="device-name">iPhone 13 Pro / Pro Max</div>
+                        </div>
+                    </div>
+                    <div class="pricing-price">$59</div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-device">
+                        <div class="device-icon" style="background: var(--gradient-gold);">
+                            <svg viewBox="0 0 24 24" fill="var(--text)"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                        </div>
+                        <div>
+                            <div class="device-name">iPhone 12 Series</div>
+                        </div>
+                    </div>
+                    <div class="pricing-price">$55</div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-device">
+                        <div class="device-icon" style="background: var(--gradient-gold);">
+                            <svg viewBox="0 0 24 24" fill="var(--text)"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                        </div>
+                        <div>
+                            <div class="device-name">iPhone 11 Series</div>
+                        </div>
+                    </div>
+                    <div class="pricing-price">$49</div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-device">
+                        <div class="device-icon" style="background: var(--gradient-gold);">
+                            <svg viewBox="0 0 24 24" fill="var(--text)"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                        </div>
+                        <div>
+                            <div class="device-name">iPhone X / XS / XR</div>
+                        </div>
+                    </div>
+                    <div class="pricing-price">$45</div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-device">
+                        <div class="device-icon" style="background: var(--gradient-gold);">
+                            <svg viewBox="0 0 24 24" fill="var(--text)"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                        </div>
+                        <div>
+                            <div class="device-name">iPhone 8 / 8 Plus</div>
+                        </div>
+                    </div>
+                    <div class="pricing-price">$39</div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-device">
+                        <div class="device-icon" style="background: var(--gradient-gold);">
+                            <svg viewBox="0 0 24 24" fill="var(--text)"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                        </div>
+                        <div>
+                            <div class="device-name">iPhone 7 / 7 Plus</div>
+                        </div>
+                    </div>
+                    <div class="pricing-price">$35</div>
+                </div>
+            </div>
+            
             <div class="pricing-features">
                 <div class="feature">
                     <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -1249,11 +1527,16 @@
             <div class="location-content">
                 <!-- Map Embed -->
                 <div class="map-container">
-                    <div class="map-placeholder" aria-label="Map placeholder - Google Maps embed will go here">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        <span style="font-weight: 600;">Google Maps Embed</span>
-                        <span style="font-size: 0.9rem; opacity: 0.8;">Seattle Exchange @ Southcenter</span>
-                    </div>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.8901849573385!2d-122.26442572358387!3d47.45651849707478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54905c1a85b9e7d3%3A0x1c3a0a0a0a0a0a0a!2s621%20Strander%20Blvd%2C%20Tukwila%2C%20WA%2098188!5e0!3m2!1sen!2sus!4v1699900000000!5m2!1sen!2sus"
+                        width="100%" 
+                        height="300" 
+                        style="border:0; border-radius: var(--radius-lg);" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Gadget Fix Location - 621 Strander Blvd, Tukwila, WA">
+                    </iframe>
                 </div>
                 
                 <div class="location-info">
@@ -1298,6 +1581,18 @@
             <div class="reviews-header">
                 <span class="section-label">⭐ Customer Love</span>
                 <h2>What Our Customers Say</h2>
+                
+                <!-- Google Rating Badge -->
+                <div style="display: inline-flex; align-items: center; gap: 16px; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 16px 24px; border-radius: var(--radius-lg); margin-top: 24px;">
+                    <div style="text-align: center;">
+                        <div style="font-family: 'Outfit', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--accent);">4.4</div>
+                        <div style="color: var(--accent); font-size: 1.1rem;">★★★★☆</div>
+                    </div>
+                    <div style="text-align: left; border-left: 1px solid rgba(255,255,255,0.3); padding-left: 16px;">
+                        <div style="font-weight: 600; font-size: 1.1rem;">Google Reviews</div>
+                        <div style="opacity: 0.9; font-size: 0.9rem;">Based on 91 reviews</div>
+                    </div>
+                </div>
             </div>
             
             <div class="reviews-grid">
@@ -1330,7 +1625,91 @@
         </div>
     </section>
     
-    <!-- ===== SECTION 7: CONTACT ===== -->
+    <!-- ===== SECTION 7: FAQ ===== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq-header">
+                <span class="section-label">❓ Common Questions</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does a screen repair take?</span>
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Most iPhone screen repairs are completed in just 15-30 minutes while you wait. For more complex repairs or older models, it may take up to an hour. We'll give you an accurate time estimate when you bring in your device.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you use original Apple parts?</span>
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We use high-quality aftermarket parts that match OEM specifications. These parts look, feel, and perform like original Apple components but at a much lower cost. All parts come with our 90-day warranty.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will fixing my screen really increase trade-in value?</span>
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! We've researched every major carrier and Apple's trade-in program. A cracked screen can reduce your trade-in value by $300-$500. A $99-$179 repair can literally put hundreds of dollars back in your pocket. We're happy to show you the exact numbers for your specific phone model.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What's covered under your warranty?</span>
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Our 90-day warranty covers any defects in the replacement parts or workmanship. If your new screen develops issues like dead pixels, touch problems, or display glitches that aren't caused by new damage, we'll fix it for free.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do I need an appointment?</span>
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            No appointment needed! Walk-ins are always welcome. We're open 7 days a week from 11am to 7pm. For the fastest service, feel free to call ahead at (425) 666-9090 and we can have your parts ready when you arrive.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will I lose my data during the repair?</span>
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            No! Screen and battery replacements do not affect your data at all. Your photos, messages, apps, and settings will remain exactly as they were. We never need your passcode for these repairs.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== SECTION 8: CONTACT ===== -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact-header">
@@ -1421,7 +1800,6 @@
         // Simple form submission handler
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Form submission handler
             alert('Thank you! We\'ll contact you shortly with your free quote.');
             this.reset();
         });
@@ -1442,6 +1820,48 @@
             }, { threshold: 0.1 });
             
             observer.observe(contactSection);
+        }
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const item = this.parentElement;
+                const isOpen = item.classList.contains('open');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('open');
+                });
+                
+                // Toggle current item
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+        
+        // Pricing Tab Switcher
+        function showPricing(type) {
+            const screenPricing = document.getElementById('screen-pricing');
+            const batteryPricing = document.getElementById('battery-pricing');
+            const tabScreen = document.getElementById('tab-screen');
+            const tabBattery = document.getElementById('tab-battery');
+            
+            if (type === 'screen') {
+                screenPricing.style.display = 'grid';
+                batteryPricing.style.display = 'none';
+                tabScreen.style.background = 'var(--primary)';
+                tabScreen.style.color = 'white';
+                tabBattery.style.background = 'white';
+                tabBattery.style.color = 'var(--primary)';
+            } else {
+                screenPricing.style.display = 'none';
+                batteryPricing.style.display = 'grid';
+                tabBattery.style.background = 'var(--primary)';
+                tabBattery.style.color = 'white';
+                tabScreen.style.background = 'white';
+                tabScreen.style.color = 'var(--primary)';
+            }
         }
     </script>
     

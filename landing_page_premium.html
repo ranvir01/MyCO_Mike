@@ -1,0 +1,2325 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gadget Fix | Tukwila's Trusted Phone & Device Repair</title>
+    <meta name="author" content="Gadget Fix">
+    <meta name="description" content="Tukwila's trusted phone repair shop. iPhone screen repairs in 20 minutes. Get up to $500 MORE on Apple trade-in. 90-day warranty.">
+    <meta name="keywords" content="gadget fix, phone repair, iphone repair, screen repair, battery replacement, tukwila, seattle, trade-in, apple, samsung">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>" type="image/svg+xml">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800|Open+Sans:400,600,700" rel="stylesheet">
+    
+    <!-- Bootstrap 3.3.7 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <!-- FontAwesome 4.7.0 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Schema.org LocalBusiness Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Gadget Fix",
+        "description": "Tukwila's trusted phone repair shop specializing in iPhone screen repairs and battery replacements",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "621 Strander Blvd",
+            "addressLocality": "Tukwila",
+            "addressRegion": "WA",
+            "postalCode": "98188",
+            "addressCountry": "US"
+        },
+        "telephone": "+1-425-666-9090",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "11:00",
+                "closes": "19:00"
+            }
+        ],
+        "priceRange": "$49-$179",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.4",
+            "reviewCount": "91"
+        }
+    }
+    </script>
+    
+    <style>
+        /* ===== CSS VARIABLES (QuickFix Style) ===== */
+        :root {
+            --color-theme: #2E7D32;
+            --color-theme-dark: #1B5E20;
+            --color-theme-light: #4CAF50;
+            --color-accent: #FFC107;
+            --color-accent-dark: #FFA000;
+            --color-dark: #222222;
+            --color-darkgray: #333333;
+            --color-lightgray: #f5f5f5;
+            --color-text: #555555;
+            --color-text-dark: #333333;
+        }
+        
+        /* ===== BASE STYLES ===== */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--color-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Raleway', sans-serif;
+            color: var(--color-text-dark);
+            font-weight: 700;
+            margin-top: 0;
+        }
+        
+        a {
+            color: var(--color-theme);
+            transition: all 0.3s;
+        }
+        
+        a:hover, a:focus {
+            color: var(--color-theme-dark);
+            text-decoration: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* ===== BUTTON STYLES ===== */
+        .btn-default {
+            background-color: var(--color-theme);
+            color: #fff;
+            border-color: var(--color-theme);
+            border-radius: 30px;
+            padding: 12px 30px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+        }
+        
+        .btn-default:hover, .btn-default:focus, .btn-default:active {
+            background-color: var(--color-theme-dark);
+            border-color: var(--color-theme-dark);
+            color: #fff;
+        }
+        
+        .btn-accent {
+            background-color: var(--color-accent);
+            border-color: var(--color-accent);
+            color: var(--color-text-dark);
+        }
+        
+        .btn-accent:hover, .btn-accent:focus {
+            background-color: var(--color-accent-dark);
+            border-color: var(--color-accent-dark);
+            color: var(--color-text-dark);
+        }
+        
+        .btn-lg {
+            padding: 15px 40px;
+            font-size: 16px;
+        }
+        
+        /* ===== HELPER CLASSES ===== */
+        .text--primary { color: var(--color-theme) !important; }
+        .text--accent { color: var(--color-accent) !important; }
+        .text--white { color: #fff !important; }
+        .bg--color-theme { background-color: var(--color-theme) !important; }
+        .bg--color-dark { background-color: var(--color-dark) !important; }
+        .bg--color-darkgray { background-color: var(--color-darkgray) !important; }
+        .bg--color-lightgray { background-color: var(--color-lightgray) !important; }
+        .pd--100-0 { padding: 100px 0; }
+        .pd--80-0 { padding: 80px 0; }
+        .pd--60-0 { padding: 60px 0; }
+        .mt--30 { margin-top: 30px; }
+        .mb--30 { margin-bottom: 30px; }
+        
+        /* ===== HEADER TOPBAR ===== */
+        .header--topbar {
+            padding: 10px 0;
+            font-size: 13px;
+        }
+        
+        .header--topbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .header--topbar ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        
+        .header--topbar a {
+            color: #aaa;
+        }
+        
+        .header--topbar a:hover {
+            color: #fff;
+        }
+        
+        .header--topbar .social li {
+            margin-right: 10px;
+            margin-left: 0;
+        }
+        
+        .header--topbar .social a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .header--topbar .social a:hover {
+            background: var(--color-theme);
+            color: #fff;
+        }
+        
+        /* ===== HEADER NAVBAR TOP ===== */
+        .header--navbar-top {
+            padding: 20px 0;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .header--navbar-top .logo {
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+        
+        .header--navbar-top .logo a {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--color-theme);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .header--navbar-top .logo a i {
+            font-size: 32px;
+        }
+        
+        .header--navbar-top-info {
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+        
+        .header--navbar-top-info ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .header--navbar-top-info ul li {
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+            padding-left: 30px;
+            border-left: 1px solid #eee;
+        }
+        
+        .header--navbar-top-info ul li:first-child {
+            border-left: none;
+            padding-left: 0;
+        }
+        
+        .header--navbar-top-info .icon {
+            font-size: 28px;
+            margin-right: 15px;
+            color: var(--color-theme);
+        }
+        
+        .header--navbar-top-info .content p {
+            margin: 0;
+            line-height: 1.4;
+            font-size: 14px;
+        }
+        
+        .header--navbar-top-info .content a {
+            color: var(--color-text-dark);
+            font-weight: 600;
+        }
+        
+        /* ===== NAVIGATION ===== */
+        .header--navbar {
+            background: #fff;
+            margin-bottom: 0;
+            border: none;
+            border-radius: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .header--navbar.sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            animation: slideDown 0.3s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        
+        .header--nav-links > li > a {
+            padding: 20px 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: var(--color-text-dark);
+            transition: all 0.3s;
+        }
+        
+        .header--nav-links > li.active > a,
+        .header--nav-links > li > a:hover {
+            color: var(--color-theme);
+            background: transparent;
+        }
+        
+        /* ===== BANNER/HERO SLIDER ===== */
+        .banner--section {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .banner--item {
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 150px 0;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .banner--item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(27,94,32,0.9) 0%, rgba(46,125,50,0.85) 50%, rgba(56,142,60,0.8) 100%);
+        }
+        
+        .banner--content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+        
+        .banner--content h1 {
+            color: #fff;
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .banner--content h1 strong {
+            color: var(--color-accent);
+        }
+        
+        .banner--content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 600px;
+        }
+        
+        .banner--content .btn {
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .banner--trust {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .banner--trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .banner--trust-item i {
+            color: var(--color-accent);
+            font-size: 20px;
+        }
+        
+        /* Banner Slider Navigation */
+        .banner--section .owl-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .banner--section .owl-dot span {
+            width: 12px;
+            height: 12px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+        
+        .banner--section .owl-dot.active span {
+            background: var(--color-accent);
+        }
+        
+        /* ===== FLOATING QUOTE FORM ===== */
+        .banner--form {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 100%;
+            max-width: 380px;
+            padding: 0 15px;
+        }
+        
+        .banner--form form {
+            background: #fff;
+            padding: 35px 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.2);
+        }
+        
+        .banner--form h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 22px;
+        }
+        
+        .banner--form .form-control {
+            height: 45px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+        
+        .banner--form .form-control:focus {
+            border-color: var(--color-theme);
+            box-shadow: none;
+        }
+        
+        .banner--form textarea.form-control {
+            height: 80px;
+        }
+        
+        .banner--form .btn {
+            width: 100%;
+        }
+        
+        /* ===== APPOINTMENT/STEPS SECTION ===== */
+        .appointment--section {
+            padding: 100px 0 60px;
+        }
+        
+        .appointment--form form {
+            background: #fff;
+            padding: 35px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+        }
+        
+        .appointment--form h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 22px;
+        }
+        
+        .appointment--item {
+            text-align: center;
+            padding: 30px 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .appointment--item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .appointment--item .step {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-theme);
+            color: #fff;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .appointment--item .icon {
+            font-size: 50px;
+            color: var(--color-theme);
+            margin-bottom: 20px;
+        }
+        
+        .appointment--item h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .appointment--item p {
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        /* ===== TRADE-IN SECTION ===== */
+        .trade-in--section {
+            background: var(--color-theme);
+            color: #fff;
+            padding: 80px 0;
+        }
+        
+        .trade-in--box {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .math-equation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 25px 0;
+        }
+        
+        .math-item {
+            padding: 12px 20px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .math-result {
+            background: var(--color-accent) !important;
+            color: var(--color-text-dark);
+            font-size: 24px;
+        }
+        
+        .math-operator {
+            font-size: 28px;
+        }
+        
+        /* ===== SERVICES SECTION ===== */
+        .services--section {
+            padding: 100px 0;
+        }
+        
+        .section--title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section--title h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .section--title p {
+            color: var(--color-theme);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+        
+        .service--item {
+            background: #fff;
+            padding: 35px 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .service--item:hover {
+            border-bottom-color: var(--color-theme);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.1);
+        }
+        
+        .service--item .icon {
+            font-size: 55px;
+            color: var(--color-theme);
+            margin-bottom: 20px;
+        }
+        
+        .service--item h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .service--item p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        /* ===== FEATURES/WHY CHOOSE US ===== */
+        .features--section {
+            padding: 100px 0 60px;
+        }
+        
+        .feature--item {
+            text-align: center;
+            padding: 30px 20px;
+            margin-bottom: 40px;
+        }
+        
+        .feature--item .icon {
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            background: linear-gradient(135deg, var(--color-theme) 0%, var(--color-theme-light) 100%);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 35px;
+            margin: 0 auto 25px;
+        }
+        
+        .feature--item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .feature--item p {
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        /* ===== COUNTER SECTION ===== */
+        .counter--section {
+            background: linear-gradient(rgba(27,94,32,0.9), rgba(27,94,32,0.9)), url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 80px 0;
+            color: #fff;
+        }
+        
+        .counter--item {
+            text-align: center;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+        }
+        
+        .counter--item .icon {
+            font-size: 50px;
+            color: var(--color-accent);
+            margin-bottom: 20px;
+        }
+        
+        .counter--item .number {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        .counter--item .title {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        /* ===== PRICING SECTION ===== */
+        .pricing--section {
+            padding: 100px 0 60px;
+        }
+        
+        .pricing--item {
+            background: #fff;
+            text-align: center;
+            padding: 40px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .pricing--item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        
+        .pricing--item.active {
+            border: 2px solid var(--color-theme);
+            transform: scale(1.05);
+            z-index: 2;
+        }
+        
+        .pricing--item.active::before {
+            content: "POPULAR";
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--color-accent);
+            color: var(--color-text-dark);
+            padding: 5px 45px;
+            transform: rotate(45deg);
+            font-size: 11px;
+            font-weight: 700;
+        }
+        
+        .pricing--icon {
+            font-size: 55px;
+            color: var(--color-theme);
+            margin-bottom: 20px;
+        }
+        
+        .pricing--title h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .pricing--price {
+            margin: 20px 0;
+        }
+        
+        .pricing--price p {
+            font-size: 14px;
+            color: var(--color-text);
+            margin-bottom: 5px;
+        }
+        
+        .pricing--price h4 {
+            color: var(--color-theme);
+            font-size: 42px;
+            font-weight: 800;
+        }
+        
+        .pricing--features ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        
+        .pricing--features ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+        
+        .pricing--features ul li:last-child {
+            border-bottom: none;
+        }
+        
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonial--section {
+            background: linear-gradient(rgba(27,94,32,0.95), rgba(27,94,32,0.95)), url('https://images.unsplash.com/photo-1551836022-4c4c79ecde51?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: #fff;
+        }
+        
+        .testimonial--item {
+            background: rgba(255,255,255,0.1);
+            padding: 35px 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            margin: 15px;
+        }
+        
+        .testimonial--content blockquote {
+            font-size: 16px;
+            font-style: italic;
+            line-height: 1.8;
+            margin: 0 0 20px;
+            padding: 0;
+            border: none;
+        }
+        
+        .testimonial--rating {
+            margin-bottom: 20px;
+        }
+        
+        .testimonial--rating ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .testimonial--rating ul li {
+            display: inline-block;
+            color: var(--color-accent);
+            font-size: 18px;
+        }
+        
+        .testimonial--info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .testimonial--info .img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: var(--color-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--color-text-dark);
+            font-weight: 700;
+        }
+        
+        .testimonial--info h3 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial--info p {
+            font-size: 14px;
+            opacity: 0.8;
+            margin: 0;
+        }
+        
+        .testimonial--section .section--title h2,
+        .testimonial--section .section--title p {
+            color: #fff;
+        }
+        
+        /* Google Rating Badge */
+        .google-badge {
+            background: rgba(255,255,255,0.15);
+            padding: 20px 30px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .google-badge .rating {
+            font-size: 36px;
+            font-weight: 800;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        .google-badge .stars {
+            color: var(--color-accent);
+            font-size: 20px;
+        }
+        
+        .google-badge .text {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* ===== CTA SECTION ===== */
+        .cta--section {
+            background: var(--color-darkgray);
+            padding: 60px 0;
+        }
+        
+        .cta--content h2 {
+            color: #fff;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .cta--content p {
+            color: #aaa;
+            margin: 0;
+        }
+        
+        .cta--btn {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            height: 100%;
+        }
+        
+        /* ===== LOCATION SECTION ===== */
+        .location--section {
+            padding: 100px 0;
+        }
+        
+        .location--map {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+        }
+        
+        .location--map iframe {
+            width: 100%;
+            height: 350px;
+            border: none;
+        }
+        
+        .location--info {
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+        }
+        
+        .location--info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .location--info-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .location--info-item .icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, rgba(46,125,50,0.1) 0%, rgba(76,175,80,0.1) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: var(--color-theme);
+            flex-shrink: 0;
+        }
+        
+        .location--info-item h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        .location--info-item p {
+            font-size: 14px;
+            margin: 0;
+            color: var(--color-text);
+        }
+        
+        /* ===== FAQ SECTION ===== */
+        .faq--section {
+            padding: 100px 0;
+        }
+        
+        .faq--item {
+            background: #fff;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .faq--item:hover,
+        .faq--item.active {
+            border-color: var(--color-theme-light);
+        }
+        
+        .faq--question {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 16px;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        .faq--question i {
+            color: var(--color-theme);
+            transition: transform 0.3s;
+        }
+        
+        .faq--item.active .faq--question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq--answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq--answer-content {
+            padding: 0 25px 20px;
+            color: var(--color-text);
+            line-height: 1.7;
+        }
+        
+        .faq--item.active .faq--answer {
+            max-height: 300px;
+        }
+        
+        /* ===== FOOTER ===== */
+        .footer--section {
+            background: var(--color-dark);
+            padding: 80px 0 30px;
+            color: #aaa;
+        }
+        
+        .footer--about {
+            background: var(--color-theme);
+            padding: 40px 30px;
+            border-radius: 10px;
+            color: #fff;
+            height: 100%;
+        }
+        
+        .footer--about .logo {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer--about .logo i {
+            font-size: 32px;
+        }
+        
+        .footer--about p {
+            font-size: 14px;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+        
+        .footer--about .info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer--about .info ul li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .footer--about .info ul li::before {
+            font-family: 'FontAwesome';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            color: var(--color-accent);
+        }
+        
+        .footer--about .info ul li.fa-home::before { content: '\f015'; }
+        .footer--about .info ul li.fa-envelope::before { content: '\f0e0'; }
+        .footer--about .info ul li.fa-phone::before { content: '\f095'; }
+        .footer--about .info ul li.fa-clock-o::before { content: '\f017'; }
+        
+        .footer--widget {
+            padding: 20px 0;
+        }
+        
+        .footer--widget h2 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer--widget h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--color-theme);
+        }
+        
+        .footer--widget ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer--widget ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer--widget ul li a {
+            color: #aaa;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .footer--widget ul li a:hover {
+            color: var(--color-theme);
+            padding-left: 10px;
+        }
+        
+        .footer--widget ul li a i {
+            margin-right: 10px;
+            color: var(--color-theme);
+        }
+        
+        .footer--social ul {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .footer--social ul li {
+            margin: 0;
+        }
+        
+        .footer--social ul li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 16px;
+        }
+        
+        .footer--social ul li a:hover {
+            background: var(--color-theme);
+            padding-left: 0;
+        }
+        
+        .footer--copyright {
+            border-top: 1px solid #333;
+            padding-top: 30px;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        /* ===== BACK TO TOP ===== */
+        .back-to-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .back-to-top-btn.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top-btn a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--color-theme);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 20px;
+            box-shadow: 0 5px 20px rgba(46,125,50,0.4);
+        }
+        
+        .back-to-top-btn a:hover {
+            background: var(--color-theme-dark);
+        }
+        
+        /* ===== MOBILE STICKY CTA ===== */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            padding: 15px 20px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+            z-index: 9999;
+        }
+        
+        .sticky-cta a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background: var(--color-accent);
+            color: var(--color-text-dark);
+            font-weight: 700;
+            font-size: 18px;
+            padding: 15px;
+            border-radius: 50px;
+            text-decoration: none;
+        }
+        
+        /* ===== RESPONSIVE STYLES ===== */
+        @media (max-width: 991px) {
+            .banner--form {
+                position: relative;
+                transform: none;
+                max-width: 100%;
+                margin-top: 50px;
+            }
+            
+            .banner--content h1 {
+                font-size: 36px;
+            }
+            
+            .header--navbar-top-info {
+                display: none;
+            }
+            
+            .cta--btn {
+                justify-content: flex-start;
+                margin-top: 20px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .header--topbar {
+                display: none;
+            }
+            
+            .banner--content h1 {
+                font-size: 28px;
+            }
+            
+            .banner--content p {
+                font-size: 16px;
+            }
+            
+            .banner--item {
+                padding: 100px 0;
+                min-height: auto;
+            }
+            
+            .section--title h2 {
+                font-size: 28px;
+            }
+            
+            .sticky-cta {
+                display: block;
+            }
+            
+            .footer--section {
+                padding-bottom: 100px;
+            }
+            
+            .math-equation {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .pricing--item.active {
+                transform: none;
+            }
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- ===== HEADER TOPBAR ===== -->
+    <div class="header--topbar bg--color-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-8">
+                    <ul>
+                        <li><i class="fa fa-map-marker"></i> 621 Strander Blvd, Tukwila, WA 98188</li>
+                        <li><i class="fa fa-clock-o"></i> Mon - Sun: 11:00am - 7:00pm</li>
+                        <li><i class="fa fa-envelope"></i> info@gadgetfix.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-4 text-right">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google"></i></a></li>
+                        <li><a href="#"><i class="fa fa-yelp"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== HEADER MAIN ===== -->
+    <div class="header--navbar-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                    <div class="logo">
+                        <a href="#">
+                            <i class="fa fa-wrench"></i> GADGET FIX
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-9 hidden-sm hidden-xs">
+                    <div class="header--navbar-top-info pull-right">
+                        <ul>
+                            <li>
+                                <div class="icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="content">
+                                    <p>Call Us Now</p>
+                                    <p><a href="tel:+14256669090">(425) 666-9090</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <div class="content">
+                                    <p>Open 7 Days</p>
+                                    <p>11:00am - 7:00pm</p>
+                                </div>
+                            </li>
+                            <li style="border: none;">
+                                <a href="#contact" class="btn btn-default">Get a Quote</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar header--navbar" id="mainNav">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar" style="background: #333;"></span>
+                    <span class="icon-bar" style="background: #333;"></span>
+                    <span class="icon-bar" style="background: #333;"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav header--nav-links">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#trade-in">Trade-In Value</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ===== BANNER/HERO SLIDER ===== -->
+    <div class="banner--section" id="home">
+        <div class="banner--slider owl-carousel">
+            <!-- Slide 1 -->
+            <div class="banner--item" style="background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 banner--content">
+                            <h1>Cracked Screen? Get up to <strong>$500 MORE</strong> at Apple Trade-In</h1>
+                            <p>We researched every carrier. A $179 repair = $323 profit. Don't trade in your broken phone for pennies when we can fix it fast.</p>
+                            <a href="tel:+14256669090" class="btn btn-default btn-lg btn-accent"><i class="fa fa-phone"></i> Call Now: (425) 666-9090</a>
+                            <a href="#pricing" class="btn btn-default btn-lg">View Pricing</a>
+                            <div class="banner--trust">
+                                <div class="banner--trust-item">
+                                    <i class="fa fa-check-circle"></i>
+                                    <span>15-30 Min Repairs</span>
+                                </div>
+                                <div class="banner--trust-item">
+                                    <i class="fa fa-check-circle"></i>
+                                    <span>90-Day Warranty</span>
+                                </div>
+                                <div class="banner--trust-item">
+                                    <i class="fa fa-check-circle"></i>
+                                    <span>No Appointment Needed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="banner--item" style="background-image: url('https://images.unsplash.com/photo-1592833159155-c62df1b65634?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 banner--content">
+                            <h1>iPhone Screen Repair in <strong>20 Minutes</strong></h1>
+                            <p>Expert technicians, quality parts, fair prices. Walk in to our Tukwila shop and leave with a perfect screen.</p>
+                            <a href="#services" class="btn btn-default btn-lg btn-accent"><i class="fa fa-wrench"></i> Our Services</a>
+                            <a href="#contact" class="btn btn-default btn-lg">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="banner--item" style="background-image: url('https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 banner--content">
+                            <h1>Battery Dying Fast? We Can <strong>Fix That</strong></h1>
+                            <p>Same-day battery replacement starting at $49. Restore your phone's all-day power.</p>
+                            <a href="tel:+14256669090" class="btn btn-default btn-lg btn-accent"><i class="fa fa-phone"></i> Call Now</a>
+                            <a href="#pricing" class="btn btn-default btn-lg">See Battery Prices</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== HOW IT WORKS SECTION ===== -->
+    <div class="appointment--section" id="appointment">
+        <div class="container">
+            <div class="section--title">
+                <p>Simple Process</p>
+                <h2>How It Works</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="appointment--item animate-on-scroll">
+                        <span class="step">Step 01</span>
+                        <div class="icon">
+                            <i class="fa fa-mobile"></i>
+                        </div>
+                        <h2>Bring It In</h2>
+                        <p>No appointment needed. Walk in to our Tukwila store anytime we're open.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="appointment--item animate-on-scroll">
+                        <span class="step">Step 02</span>
+                        <div class="icon">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <h2>Free Diagnosis</h2>
+                        <p>We'll assess your device and give you an honest quote — no obligation.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="appointment--item animate-on-scroll">
+                        <span class="step">Step 03</span>
+                        <div class="icon">
+                            <i class="fa fa-wrench"></i>
+                        </div>
+                        <h2>Fast Repair</h2>
+                        <p>Most screen and battery repairs take just 15-30 minutes while you wait.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="appointment--item animate-on-scroll">
+                        <span class="step">Step 04</span>
+                        <div class="icon">
+                            <i class="fa fa-shield"></i>
+                        </div>
+                        <h2>Warranty</h2>
+                        <p>Leave with a working device backed by our 90-day warranty.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== TRADE-IN VALUE SECTION ===== -->
+    <div class="trade-in--section" id="trade-in">
+        <div class="container">
+            <div class="section--title">
+                <p style="color: rgba(255,255,255,0.8);">📊 The Research Is In</p>
+                <h2 style="color: #fff;">Your Cracked Screen Is Costing You $500</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="trade-in--box animate-on-scroll">
+                        <h3 style="color: #fff; margin-bottom: 20px;">📱 iPhone 16 Pro Max — Real Numbers</h3>
+                        <div class="math-equation">
+                            <span class="math-item">$168 (cracked)</span>
+                            <span class="math-operator">+</span>
+                            <span class="math-item">$179 repair</span>
+                            <span class="math-operator">=</span>
+                            <span class="math-item">$670 (fixed)</span>
+                        </div>
+                        <div class="math-equation" style="margin-top: 15px;">
+                            <span class="math-item math-result">YOUR PROFIT: $323</span>
+                        </div>
+                        <p style="margin: 25px 0 20px; opacity: 0.9;">Apple pays the most for trade-ins — but penalizes damage the most. That's YOUR opportunity.</p>
+                        <a href="trade_in_calculator.html" class="btn btn-default" style="background: #fff; color: var(--color-theme);">
+                            <i class="fa fa-calculator"></i> Check Your Phone's Value
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== SERVICES SECTION ===== -->
+    <div class="services--section bg--color-lightgray" id="services">
+        <div class="container">
+            <div class="section--title">
+                <p>What We Do</p>
+                <h2>Our Services</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="service--item animate-on-scroll">
+                        <div class="icon">
+                            <i class="fa fa-mobile"></i>
+                        </div>
+                        <h3>Screen Repair</h3>
+                        <p>Cracked glass or LCD damage? We replace screens for all iPhone models in 15-20 minutes.</p>
+                        <a href="#pricing" class="btn btn-default btn-sm">View Pricing</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="service--item animate-on-scroll">
+                        <div class="icon">
+                            <i class="fa fa-battery-full"></i>
+                        </div>
+                        <h3>Battery Replacement</h3>
+                        <p>Phone dying fast? Get a fresh battery and restore your all-day power. Starting at $49.</p>
+                        <a href="#pricing" class="btn btn-default btn-sm">View Pricing</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="service--item animate-on-scroll">
+                        <div class="icon">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <h3>Free Diagnostics</h3>
+                        <p>Not sure what's wrong? We offer free diagnostics to pinpoint the issue. No obligation.</p>
+                        <a href="#contact" class="btn btn-default btn-sm">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="service--item animate-on-scroll">
+                        <div class="icon">
+                            <i class="fa fa-tint"></i>
+                        </div>
+                        <h3>Water Damage</h3>
+                        <p>Dropped it in water? We have specialized tools to clean and revive wet phones.</p>
+                        <a href="#contact" class="btn btn-default btn-sm">Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="service--item animate-on-scroll">
+                        <div class="icon">
+                            <i class="fa fa-tablet"></i>
+                        </div>
+                        <h3>iPad Repair</h3>
+                        <p>We also fix iPads and tablets. Screens, batteries, and charging ports.</p>
+                        <a href="#contact" class="btn btn-default btn-sm">Get Quote</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="service--item animate-on-scroll">
+                        <div class="icon">
+                            <i class="fa fa-exchange"></i>
+                        </div>
+                        <h3>Trade-In Consulting</h3>
+                        <p>We'll help you do the math to see if repairing is worth it for trade-in value.</p>
+                        <a href="#trade-in" class="btn btn-default btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== FEATURES/WHY CHOOSE US ===== -->
+    <div class="features--section" id="features">
+        <div class="container">
+            <div class="section--title">
+                <p>Why Choose Us</p>
+                <h2>The Gadget Fix Difference</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature--item animate-on-scroll">
+                        <div class="icon">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                        <h3>Fast Turnaround</h3>
+                        <p>Most repairs completed in just 15-30 minutes while you wait.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature--item animate-on-scroll">
+                        <div class="icon">
+                            <i class="fa fa-check-circle"></i>
+                        </div>
+                        <h3>Quality Parts</h3>
+                        <p>Premium replacement screens that look and feel like original.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature--item animate-on-scroll">
+                        <div class="icon">
+                            <i class="fa fa-shield"></i>
+                        </div>
+                        <h3>90-Day Warranty</h3>
+                        <p>Every repair backed by our comprehensive warranty.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature--item animate-on-scroll">
+                        <div class="icon">
+                            <i class="fa fa-dollar"></i>
+                        </div>
+                        <h3>Fair Pricing</h3>
+                        <p>Transparent pricing. No hidden fees. No surprises.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature--item animate-on-scroll">
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <h3>Locally Owned</h3>
+                        <p>Proud to serve the Tukwila community with personalized service.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature--item animate-on-scroll">
+                        <div class="icon">
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h3>5-Star Reviews</h3>
+                        <p>Trusted by customers across the Seattle area.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature--item animate-on-scroll">
+                        <div class="icon">
+                            <i class="fa fa-calendar-times-o"></i>
+                        </div>
+                        <h3>No Appointment</h3>
+                        <p>Walk-ins welcome. Open 7 days a week.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature--item animate-on-scroll">
+                        <div class="icon">
+                            <i class="fa fa-handshake-o"></i>
+                        </div>
+                        <h3>Honest Advice</h3>
+                        <p>We'll tell you if a repair isn't worth it. Your trust matters.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== COUNTER SECTION ===== -->
+    <div class="counter--section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter--item">
+                        <div class="icon">
+                            <i class="fa fa-smile-o"></i>
+                        </div>
+                        <div class="number" data-count="2500">0</div>
+                        <div class="title">Happy Customers</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter--item">
+                        <div class="icon">
+                            <i class="fa fa-mobile"></i>
+                        </div>
+                        <div class="number" data-count="5000">0</div>
+                        <div class="title">Devices Repaired</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter--item">
+                        <div class="icon">
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="number" data-count="91">0</div>
+                        <div class="title">Google Reviews</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter--item">
+                        <div class="icon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <div class="number" data-count="5">0</div>
+                        <div class="title">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== PRICING SECTION ===== -->
+    <div class="pricing--section bg--color-lightgray" id="pricing">
+        <div class="container">
+            <div class="section--title">
+                <p>Transparent Pricing</p>
+                <h2>Screen Repair Pricing</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="pricing--item animate-on-scroll">
+                        <div class="pricing--icon">
+                            <i class="fa fa-mobile"></i>
+                        </div>
+                        <div class="pricing--title">
+                            <h3>iPhone 16 Pro Max</h3>
+                        </div>
+                        <div class="pricing--price">
+                            <p>Screen Repair</p>
+                            <h4>$179</h4>
+                        </div>
+                        <div class="pricing--features">
+                            <ul>
+                                <li>Premium OLED Panel</li>
+                                <li>20 Min Service</li>
+                                <li>90-Day Warranty</li>
+                                <li>Quality Parts</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-default">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="pricing--item active animate-on-scroll">
+                        <div class="pricing--icon">
+                            <i class="fa fa-mobile"></i>
+                        </div>
+                        <div class="pricing--title">
+                            <h3>iPhone 15 Pro</h3>
+                        </div>
+                        <div class="pricing--price">
+                            <p>Screen Repair</p>
+                            <h4>$129</h4>
+                        </div>
+                        <div class="pricing--features">
+                            <ul>
+                                <li>Premium OLED Panel</li>
+                                <li>20 Min Service</li>
+                                <li>90-Day Warranty</li>
+                                <li>Quality Parts</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-default">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="pricing--item animate-on-scroll">
+                        <div class="pricing--icon">
+                            <i class="fa fa-mobile"></i>
+                        </div>
+                        <div class="pricing--title">
+                            <h3>iPhone 14</h3>
+                        </div>
+                        <div class="pricing--price">
+                            <p>Screen Repair</p>
+                            <h4>$99</h4>
+                        </div>
+                        <div class="pricing--features">
+                            <ul>
+                                <li>High Quality LCD/OLED</li>
+                                <li>20 Min Service</li>
+                                <li>90-Day Warranty</li>
+                                <li>Quality Parts</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-default">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="pricing--item animate-on-scroll">
+                        <div class="pricing--icon">
+                            <i class="fa fa-battery-full"></i>
+                        </div>
+                        <div class="pricing--title">
+                            <h3>Battery Swap</h3>
+                        </div>
+                        <div class="pricing--price">
+                            <p>Most Models</p>
+                            <h4>$49+</h4>
+                        </div>
+                        <div class="pricing--features">
+                            <ul>
+                                <li>New High Capacity Cell</li>
+                                <li>15 Min Service</li>
+                                <li>90-Day Warranty</li>
+                                <li>All-Day Power</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-default">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt--30">
+                <p>See <a href="landing_page.html#pricing" style="font-weight: 700;">full pricing list</a> for all iPhone and Samsung models.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <div class="testimonial--section" id="reviews">
+        <div class="container">
+            <div class="section--title">
+                <p style="color: rgba(255,255,255,0.8);">Customer Love</p>
+                <h2>What Our Customers Say</h2>
+                <div class="google-badge">
+                    <div class="rating">4.4</div>
+                    <div>
+                        <div class="stars">★★★★☆</div>
+                        <div class="text">Based on 91 Google Reviews</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial--slider owl-carousel">
+                <div class="testimonial--item">
+                    <div class="testimonial--content">
+                        <blockquote>
+                            <p>"Fixed my iPhone 16 Pro Max in 20 minutes. Traded in at Apple for $670 instead of $168. That's $323 extra in my pocket! These guys know what they're doing."</p>
+                        </blockquote>
+                    </div>
+                    <div class="testimonial--rating">
+                        <ul>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                        </ul>
+                    </div>
+                    <div class="testimonial--info">
+                        <div class="img">SM</div>
+                        <div class="content">
+                            <h3>Sarah M.</h3>
+                            <p>Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial--item">
+                    <div class="testimonial--content">
+                        <blockquote>
+                            <p>"They showed me the carrier comparison and told me to trade in at Apple instead of Verizon. Best advice ever — saved me over $300! Honest and helpful service."</p>
+                        </blockquote>
+                    </div>
+                    <div class="testimonial--rating">
+                        <ul>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                        </ul>
+                    </div>
+                    <div class="testimonial--info">
+                        <div class="img">JK</div>
+                        <div class="content">
+                            <h3>James K.</h3>
+                            <p>Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial--item">
+                    <div class="testimonial--content">
+                        <blockquote>
+                            <p>"They actually told me my old iPhone 12 wasn't worth fixing for trade-in. Love the honesty! Will definitely come back when I need repairs on my new phone."</p>
+                        </blockquote>
+                    </div>
+                    <div class="testimonial--rating">
+                        <ul>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star-half-o"></i></li>
+                        </ul>
+                    </div>
+                    <div class="testimonial--info">
+                        <div class="img">ML</div>
+                        <div class="content">
+                            <h3>Maria L.</h3>
+                            <p>Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial--item">
+                    <div class="testimonial--content">
+                        <blockquote>
+                            <p>"Super fast screen repair — I was in and out in 25 minutes. The new screen looks perfect and the price was fair. Highly recommend Gadget Fix!"</p>
+                        </blockquote>
+                    </div>
+                    <div class="testimonial--rating">
+                        <ul>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                        </ul>
+                    </div>
+                    <div class="testimonial--info">
+                        <div class="img">DT</div>
+                        <div class="content">
+                            <h3>David T.</h3>
+                            <p>Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== FAQ SECTION ===== -->
+    <div class="faq--section" id="faq">
+        <div class="container">
+            <div class="section--title">
+                <p>Common Questions</p>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="faq--item active">
+                        <div class="faq--question">
+                            <span>How long does a screen repair take?</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="faq--answer">
+                            <div class="faq--answer-content">
+                                Most iPhone screen repairs are completed in just 15-30 minutes while you wait. For more complex repairs or older models, it may take up to an hour. We'll give you an accurate time estimate when you bring in your device.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq--item">
+                        <div class="faq--question">
+                            <span>Do you use original Apple parts?</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="faq--answer">
+                            <div class="faq--answer-content">
+                                We use high-quality aftermarket parts that match OEM specifications. These parts look, feel, and perform like original Apple components but at a much lower cost. All parts come with our 90-day warranty.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq--item">
+                        <div class="faq--question">
+                            <span>Will fixing my screen really increase trade-in value?</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="faq--answer">
+                            <div class="faq--answer-content">
+                                Yes! We've researched every major carrier and Apple's trade-in program. A cracked screen can reduce your trade-in value by $300-$500. A $99-$179 repair can literally put hundreds of dollars back in your pocket. We're happy to show you the exact numbers for your specific phone model.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq--item">
+                        <div class="faq--question">
+                            <span>What's covered under your warranty?</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="faq--answer">
+                            <div class="faq--answer-content">
+                                Our 90-day warranty covers any defects in the replacement parts or workmanship. If your new screen develops issues like dead pixels, touch problems, or display glitches that aren't caused by new damage, we'll fix it for free.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq--item">
+                        <div class="faq--question">
+                            <span>Do I need an appointment?</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="faq--answer">
+                            <div class="faq--answer-content">
+                                No appointment needed! Walk-ins are always welcome. We're open 7 days a week from 11am to 7pm. For the fastest service, feel free to call ahead at (425) 666-9090 and we can have your parts ready when you arrive.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq--item">
+                        <div class="faq--question">
+                            <span>Will I lose my data during the repair?</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="faq--answer">
+                            <div class="faq--answer-content">
+                                No! Screen and battery replacements do not affect your data at all. Your photos, messages, apps, and settings will remain exactly as they were. We never need your passcode for these repairs.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== LOCATION SECTION ===== -->
+    <div class="location--section bg--color-lightgray" id="location">
+        <div class="container">
+            <div class="section--title">
+                <p>Find Us</p>
+                <h2>Visit Gadget Fix</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="location--map animate-on-scroll">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.8901849573385!2d-122.26442572358387!3d47.45651849707478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54905c1a85b9e7d3%3A0x1c3a0a0a0a0a0a0a!2s621%20Strander%20Blvd%2C%20Tukwila%2C%20WA%2098188!5e0!3m2!1sen!2sus!4v1699900000000!5m2!1sen!2sus"
+                            allowfullscreen="" 
+                            loading="lazy"
+                            title="Gadget Fix Location">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="location--info animate-on-scroll">
+                        <div class="location--info-item">
+                            <div class="icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div>
+                                <h4>Address</h4>
+                                <p>621 Strander Blvd<br>Tukwila, WA 98188</p>
+                            </div>
+                        </div>
+                        <div class="location--info-item">
+                            <div class="icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+14256669090">(425) 666-9090</a></p>
+                            </div>
+                        </div>
+                        <div class="location--info-item">
+                            <div class="icon">
+                                <i class="fa fa-clock-o"></i>
+                            </div>
+                            <div>
+                                <h4>Hours</h4>
+                                <p>Monday - Sunday: 11:00am - 7:00pm</p>
+                            </div>
+                        </div>
+                        <div class="location--info-item">
+                            <div class="icon">
+                                <i class="fa fa-car"></i>
+                            </div>
+                            <div>
+                                <h4>Parking</h4>
+                                <p>Free parking available right in front.<br>Walk-ins always welcome!</p>
+                            </div>
+                        </div>
+                        <a href="https://maps.google.com/?q=621+Strander+Blvd,+Tukwila,+WA+98188" target="_blank" class="btn btn-default" style="margin-top: 20px;">
+                            <i class="fa fa-map"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== CTA SECTION ===== -->
+    <div class="cta--section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="cta--content">
+                        <h2>Ready to Fix Your Screen?</h2>
+                        <p>Call now for a free quote or just walk in — no appointment needed!</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cta--btn">
+                        <a href="tel:+14256669090" class="btn btn-default btn-lg btn-accent">
+                            <i class="fa fa-phone"></i> Call: (425) 666-9090
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer--section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer--about">
+                        <div class="logo">
+                            <i class="fa fa-wrench"></i> GADGET FIX
+                        </div>
+                        <p>Tukwila's trusted choice for fast, affordable phone repairs. We specialize in helping you maximize your device's trade-in value.</p>
+                        <div class="info">
+                            <ul>
+                                <li class="fa-home">621 Strander Blvd, Tukwila, WA 98188</li>
+                                <li class="fa-envelope">info@gadgetfix.com</li>
+                                <li class="fa-phone">(425) 666-9090</li>
+                                <li class="fa-clock-o">Mon - Sun: 11:00am - 7:00pm</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="footer--widget">
+                                <h2>Quick Links</h2>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                                    <li><a href="#services"><i class="fa fa-angle-double-right"></i>Services</a></li>
+                                    <li><a href="#pricing"><i class="fa fa-angle-double-right"></i>Pricing</a></li>
+                                    <li><a href="#trade-in"><i class="fa fa-angle-double-right"></i>Trade-In Value</a></li>
+                                    <li><a href="#reviews"><i class="fa fa-angle-double-right"></i>Reviews</a></li>
+                                    <li><a href="#contact"><i class="fa fa-angle-double-right"></i>Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="footer--widget">
+                                <h2>Our Services</h2>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i>iPhone Screen Repair</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Battery Replacement</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i>iPad Repair</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Water Damage</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Free Diagnostics</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Trade-In Consulting</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="footer--widget">
+                                <h2>Connect With Us</h2>
+                                <p style="color: #aaa; font-size: 14px; margin-bottom: 20px;">Follow us on social media for tips, deals, and updates!</p>
+                                <div class="footer--social">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-yelp"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer--copyright">
+                <p>&copy; 2024 Gadget Fix. All Rights Reserved. | Serving Tukwila, Seattle, Kent, Renton & Surrounding Areas</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ===== BACK TO TOP BUTTON ===== -->
+    <div class="back-to-top-btn">
+        <a href="#"><i class="fa fa-angle-up"></i></a>
+    </div>
+    
+    <!-- ===== MOBILE STICKY CTA ===== -->
+    <div class="sticky-cta">
+        <a href="tel:+14256669090">
+            <i class="fa fa-phone"></i> Call Now: (425) 666-9090
+        </a>
+    </div>
+    
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            
+            // ===== BANNER SLIDER =====
+            $(".banner--slider").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 6000,
+                autoplayHoverPause: true,
+                dots: true,
+                nav: false,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn'
+            });
+            
+            // ===== TESTIMONIAL SLIDER =====
+            $(".testimonial--slider").owlCarousel({
+                items: 3,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                dots: true,
+                nav: false,
+                margin: 30,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    992: { items: 3 }
+                }
+            });
+            
+            // ===== SMOOTH SCROLL =====
+            $("a[href^='#']").on('click', function(e) {
+                if (this.hash !== "" && this.hash !== "#") {
+                    e.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 80
+                    }, 800);
+                }
+            });
+            
+            // ===== STICKY NAVBAR =====
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 200) {
+                    $('#mainNav').addClass('sticky');
+                    $('.back-to-top-btn').addClass('visible');
+                } else {
+                    $('#mainNav').removeClass('sticky');
+                    $('.back-to-top-btn').removeClass('visible');
+                }
+            });
+            
+            // ===== FAQ ACCORDION =====
+            $(".faq--question").on('click', function() {
+                var item = $(this).parent();
+                if (item.hasClass('active')) {
+                    item.removeClass('active');
+                } else {
+                    $(".faq--item").removeClass('active');
+                    item.addClass('active');
+                }
+            });
+            
+            // ===== COUNTER ANIMATION =====
+            var counted = false;
+            $(window).scroll(function() {
+                var counters = $(".counter--item .number");
+                if (counters.length && !counted) {
+                    var oTop = counters.offset().top - window.innerHeight;
+                    if ($(window).scrollTop() > oTop) {
+                        counters.each(function() {
+                            var $this = $(this),
+                                countTo = $this.attr('data-count');
+                            $({ countNum: 0 }).animate({
+                                countNum: countTo
+                            }, {
+                                duration: 2000,
+                                easing: 'swing',
+                                step: function() {
+                                    $this.text(Math.floor(this.countNum).toLocaleString());
+                                },
+                                complete: function() {
+                                    $this.text(parseInt(this.countNum).toLocaleString() + "+");
+                                }
+                            });
+                        });
+                        counted = true;
+                    }
+                }
+            });
+            
+            // ===== SCROLL ANIMATIONS =====
+            function checkAnimations() {
+                $(".animate-on-scroll").each(function() {
+                    var elementTop = $(this).offset().top;
+                    var viewportBottom = $(window).scrollTop() + $(window).height();
+                    if (elementTop < viewportBottom - 100) {
+                        $(this).addClass('visible');
+                    }
+                });
+            }
+            
+            $(window).scroll(checkAnimations);
+            checkAnimations(); // Check on load
+            
+        });
+    </script>
+    
+</body>
+</html>
