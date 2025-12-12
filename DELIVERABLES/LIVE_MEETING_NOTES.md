@@ -1,126 +1,94 @@
-# 🚀 Mike Meeting – Live Master Doc (Fri 3:00 PM)
+# 🧠 GADGET FIX: MASTER STRATEGY & MEETING DASHBOARD
+> **Live Status:** PRE-LAUNCH | **Meeting:** Friday, 3:00 PM @ Kent
 
-**Team Instructions:**
-1.  **Read:** This doc contains ALL context (Business Plan, Slides, Strategy).
-2.  **Edit:** Click the **Pencil Icon** (Edit) on GitHub Mobile/Web to take notes live.
-3.  **Save:** Commit changes at the end of the meeting.
+**Instructions:** This is the project's "brain." Use it to reference our strategy, show data to Mike, and log pivots live.
 
 ---
 
-# 1. 📅 LOGISTICS & AGENDA
-*   **Time:** Friday, 3:00 PM
-*   **Location:** Mike's Shop (Kent)
-*   **Attendees:** Mike, Ben, Taylor, Ethan, Ranvir
-*   **Goal:** Confirm progress, align pricing/ops, unlock next phase.
+# 1. 🎯 THE NORTH STAR (Goals)
+We are not just building a website. We are building a **growth engine** based on one core insight: **Trade-In Arbitrage**.
 
-**Agenda Checklist (Check off as we go):**
-- [ ] **Quick Updates (10m):** Form status, wins, blockers.
-- [ ] **Progress Review (10m):** Metrics & "done" list.
-- [ ] **Pricing Alignment (15m):** Confirm trade-in arbitrage model.
-- [ ] **Ops Checklist (15m):** Intake, tracking, compliance.
-- [ ] **Marketplace Compliance (15m):** eBay ban strategy.
-- [ ] **Hiring/Marketing (10m):** SOPs & local outreach.
-- [ ] **Wrap Up (5m):** Decisions & deadlines.
+*   **Current Reality:** ~3 repairs/week | ~$1,300/mo revenue | Sole Prop.
+*   **90-Day Target:** 10+ repairs/week | ~$4,800/mo revenue | Partnership-driven.
+*   **The Big Win:** Establish Gadget Fix as the "Pre-Trade-In" destination for Kent.
 
 ---
 
-# 2. 📝 LIVE NOTES & DECISIONS (Fill This Out!)
+# 2. 💡 THE CORE STRATEGY: "FIX IT TO FLIP IT"
+*Why customers will care (and why Mike wins).*
 
-### A. Quick Updates
-*   **Google Form Completed?** [ ] Yes [ ] No
-*   **New Hire Status:** _______________________
-*   **Key Wins Since Last Check-in:**
-    *   _______________________
-    *   _______________________
+### The Logic (Show this to Mike)
+Most people trade in cracked phones for pennies. We show them the math:
 
-### B. Key Decisions (Required)
-
-| Topic | Decision / Action | Owner | Due Date |
-| :--- | :--- | :--- | :--- |
-| **Pricing Model** | [ ] Monthly Sub ($400/mo)<br>[ ] Project Bundle (One-time) | ________ | ________ |
-| **eBay Appeal** | [ ] Appeal Existing Account<br>[ ] Start New Account | ________ | ________ |
-| **Carrier Targets** | [ ] T-Mobile<br>[ ] Verizon<br>[ ] AT&T<br>[ ] Best Buy | ________ | ________ |
-| **Google Profile** | [ ] Update Hours<br>[ ] Add Photos | ________ | ________ |
-
-### C. Risks & Blockers
-*   **Risk:** eBay Account Ban
-    *   **Plan:** _______________________
-*   **Risk:** Hiring Ramp-up / Quality Control
-    *   **Plan:** _______________________
-
----
-
-# 3. 🧠 CONTEXT & STRATEGY (Reference Material)
-
-## 👥 The MyCo Team (Bios)
-*   **Ethan (CEO):** Strategy & Sales.
-*   **Ranvir (CFO):** Financials & Operations.
-*   **Ben (Marketing):** Strategy Consultant.
-*   **Taylor (Analyst):** Carrier Outreach & Partnerships.
-*   **Support:** Pim (Design), Mia (Marketing Design), Ha Tien (UX), Jonathan/Tawsif (Engineering), Henos (SEO), Ulysses (Business Analyst).
-
-## 📊 Business Snapshot (Agent 2 Data)
-*   **Client:** Mike (Gadget Fix) | **Location:** Kent, WA
-*   **Current State:** ~3 repairs/week | ~$1,300/mo revenue | Sole Prop
-*   **Goal State:** 10+ repairs/week | ~$4,800/mo revenue | Partnership-driven
-*   **Core Strategy:** **Trade-In Arbitrage.** Position repair as a way to unlock $200+ in trade-in value.
-
-## 💰 The "Arbitrage" Pitch (Data for Mike)
-*Show this to prove the value:*
-
-| Scenario | iPhone 16 Pro Max Value | Net Result |
+| Device Scenario (iPhone 16 Pro Max) | Value | Outcome |
 | :--- | :--- | :--- |
-| **Trade-in Cracked** | $168 (Low carrier offer) | Customer loses value |
-| **Trade-in Fixed** | $670 (Full carrier offer) | **+$502 Value** |
-| **Repair Cost** | -$179 (Paid to Mike) | **Revenue for Mike** |
-| **CUSTOMER PROFIT** | **+$323 (Net Gain)** | **Win-Win** |
+| **Option A: Trade in Cracked** | **$168** | Customer loses huge value. |
+| **Option B: Fix with Mike ($179)** | **$670** | Trade-in value jumps +$502. |
+| **NET CUSTOMER PROFIT** | **+$323** | **Customer KEEPS $323 after paying Mike.** |
 
-## 📱 Carrier Partnership Strategy (Agent 4)
-*   **The Pitch to Managers:** "Don't turn away cracked phones. Send them to us for a 15-min fix, and they come back to you ready to upgrade. You save the sale."
-*   **Target List (Taylor):**
-    1.  T-Mobile (Kent Station)
-    2.  Verizon (Kent)
-    3.  AT&T (Kent)
+**Our Job:** Get this message in front of people *before* they walk into Verizon.
+
+---
+
+# 3. ⚔️ BATTLE PLAN: EXECUTION TRACKS
+
+### 🅰️ TRACK 1: DIGITAL PRESENCE (Ranvir/Ben)
+*   **Website:** Mobile-first landing page. **Status:** Ready for launch.
+    *   *Key Feature:* "Click to Call" & "Check Your Savings" calculator.
+*   **SEO/Reviews:** Optimizing "iPhone Repair Kent" to capture high-intent searchers.
+*   **Social:** "Did you know?" posts showing the trade-in math.
+
+### 🅱️ TRACK 2: CARRIER PARTNERSHIPS (Taylor)
+*   **The Pitch:** "Don't lose the upgrade sale because of a cracked screen. Send them to us (15 mins away), we fix it, they come back to you to buy the new phone."
+*   **Target List (Kent Area):**
+    1.  T-Mobile (Kent Station) - *Primary Target*
+    2.  Verizon (Central Ave)
+    3.  AT&T (Mall)
     4.  Best Buy / Costco (Secondary)
+*   **Incentive:** Optional $5-10 referral bonus per head (if Mike agrees).
 
-## 💲 Proposal & Pricing Options (Agent 6)
-*We recommend the Subscription, but have a One-Time option ready.*
-
-### Option A: Bronze Subscription (Recommended)
-*   **Cost:** $400/mo (12-month commit)
-*   **Includes:**
-    *   Dedicated PM (Ethan/Ranvir)
-    *   1 Major Project/month (e.g., Website, Plan, Outreach)
-    *   Monthly Strategy Call
-    *   Access to full Expert Network
-*   **Why:** Best for long-term growth and adapting to changes.
-
-### Option B: Starter Project Bundle (One-Time)
-*   **Cost:** ~$1,600 one-time
-*   **Includes:**
-    *   Website Build ($100 + $20/mo hosting)
-    *   Business Plan Doc ($500)
-    *   Marketing Strategy ($500)
-    *   Partnership Ops (Taylor's time: $560)
-*   **Why:** Good if he just wants the assets and no ongoing coaching.
-
-## 🛡️ Marketplace Compliance Guide
-*   **Root Issue:** eBay ban for Legal Business Name mismatch.
-*   **Immediate Fix:**
-    1.  Legal Name/EIN doc.
-    2.  Matching Bank Info.
-    3.  Supplier Invoices (recent).
-    4.  Photo ID.
-*   **Strategy:** Appeal first. If denied, clean slate (new IP/device/account) ONLY after rigorous prep.
+### 🆎 TRACK 3: OPS & COMPLIANCE (Ethan/Ranvir)
+*   **eBay Ban:** Immediate appeal using legal entity docs.
+    *   *Plan B:* New clean account if appeal fails.
+*   **Hiring:** New front-desk hire needs SOPs for intake/hand-off.
 
 ---
 
-# 4. ✅ OPS CHECKLIST (For Mike)
-- [ ] **Intake:** Labels printed? Serials logged?
-- [ ] **Chain of Custody:** Who touched the phone? When?
-- [ ] **Parts:** PO system for ordering screens?
-- [ ] **Warranty:** 90-day policy posted clearly?
-- [ ] **Daily Close:** Cash counted? Tickets closed?
+# 4. 💰 THE OFFER (Proposal to Mike)
+*We recommend the Subscription to handle the chaos. One-time is the backup.*
+
+| Feature | **Option A: Bronze Subscription** (Recommended) | **Option B: Starter Bundle** (Backup) |
+| :--- | :--- | :--- |
+| **Cost** | **$400 / month** (12-mo commit) | **~$1,660 one-time** |
+| **Concept** | "Project Management as a Service" | "Pay for Deliverables" |
+| **Includes** | ✅ Dedicated PM (Ethan/Ranvir)<br>✅ 1 Major Project/mo<br>✅ Monthly Strategy Call<br>✅ Full Network Access | ❌ No PM<br>❌ Website Build ($100)<br>❌ Business Plan ($500)<br>❌ Outreach ($560)<br>❌ Marketing Plan ($500) |
+| **Why?** | **Adaptability.** If partnerships fail, we pivot to ads without new fees. | **Fixed Scope.** You get the files, you do the work. |
 
 ---
-*End of Master Doc. Commit changes to save.*
+
+# 5. 📝 LIVE MEETING DECISIONS (Edit Here)
+*Log what we decide TODAY so we don't forget.*
+
+| Topic | Decision Made | New Owner |
+| :--- | :--- | :--- |
+| **Pricing Selection** | [ ] Sub ($400/mo) [ ] One-Time ($1.6k) | ________ |
+| **Referral Bonus?** | [ ] Yes ($___) [ ] No | ________ |
+| **eBay Strategy** | [ ] Appeal [ ] Restart | ________ |
+| **Next Meeting** | Date: __________ | ________ |
+
+### 🚨 Emerging Risks / New Info
+*   *(Type here if Mike mentions something new, e.g., "Lease expiring soon")*
+*   _________________________
+*   _________________________
+
+---
+
+# 6. 👥 TEAM ROLES (Who is who)
+*   **Ethan (CEO):** Strategy & Sales Lead.
+*   **Ranvir (CFO):** Operations, Finance, Tech Build.
+*   **Ben:** Marketing Strategy & Content.
+*   **Taylor:** Analyst & "Boots on the Ground" (Carrier Visits).
+*   **Support Network:** Pim (Design), Mia (Graphics), Ha Tien (UX), Dev Team.
+
+---
+*Sync Instructions: Edit this file directly in GitHub. Commit changes to save.*
