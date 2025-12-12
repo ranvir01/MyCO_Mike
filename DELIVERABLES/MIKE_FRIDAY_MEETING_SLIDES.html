@@ -3,427 +3,367 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mike Meeting – Fri 3:00 PM</title>
+  <title>MyCo x Gadget Fix – Master Meeting Deck</title>
   <style>
-    :root {
-      --green-dark: #0F5A35;
-      --green-mid: #1B7F4E;
-      --green-light: #56B365;
-      --text: #1f2933;
-      --muted: #4b5563;
-      --bg: #f5f7f5;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-    }
-    .deck {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 28px 18px 48px;
-    }
-    .slide {
-      background: #fff;
-      border-radius: 14px;
-      padding: 26px 28px;
-      box-shadow: 0 10px 30px rgba(15, 90, 53, 0.12);
-      margin-bottom: 18px;
-      page-break-after: always;
-    }
+    :root { --green-dark: #0F5A35; --green-mid: #1B7F4E; --green-light: #56B365; --text: #1f2933; --muted: #4b5563; --bg: #f5f7f5; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Segoe UI", Tahoma, sans-serif; background: var(--bg); color: var(--text); font-size: 13px; line-height: 1.5; }
+    .deck { max-width: 900px; margin: 0 auto; padding: 20px 15px; }
+    .slide { background: #fff; border-radius: 12px; padding: 18px 20px; box-shadow: 0 6px 20px rgba(15,90,53,0.1); margin-bottom: 14px; page-break-after: always; }
     .slide:last-child { page-break-after: auto; }
-    h1, h2 {
-      margin: 0 0 14px 0;
-      color: var(--green-dark);
-      letter-spacing: -0.3px;
-    }
-    h1 { font-size: 30px; }
-    h2 { font-size: 22px; }
-    .pill {
-      display: inline-block;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--green-mid), var(--green-light));
-      color: #fff;
-      font-size: 13px;
-      font-weight: 600;
-      margin: 0 0 10px 0;
-    }
-    ul {
-      margin: 10px 0 0 0;
-      padding-left: 20px;
-      line-height: 1.6;
-      color: var(--muted);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 12px;
-    }
-    .card {
-      background: #f8faf8;
-      border: 1px solid #e3e8e3;
-      border-radius: 10px;
-      padding: 14px 16px;
-    }
-    .tag-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
-    .tag {
-      background: #e8f5ed;
-      color: var(--green-dark);
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 12px;
-      font-size: 14px;
-    }
-    th, td {
-      border: 1px solid #e5e7eb;
-      padding: 10px;
-      text-align: left;
-    }
-    th {
-      background: #f0f4f2;
-      color: var(--green-dark);
-      font-weight: 700;
-    }
-    .note {
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: 10px;
-    }
-    .hero {
-      background: linear-gradient(135deg, var(--green-mid), var(--green-light));
-      color: #fff;
-      border-radius: 16px;
-      padding: 20px 22px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      box-shadow: 0 12px 28px rgba(15, 90, 53, 0.18);
-      margin-bottom: 18px;
-    }
-    .hero h1 {
-      color: #fff;
-      margin: 0;
-      font-size: 28px;
-    }
-    .hero p {
-      margin: 4px 0 0 0;
-      color: rgba(255,255,255,0.9);
-      font-size: 14px;
-    }
-    .hero-logo {
-      width: 140px;
-      min-width: 140px;
-    }
+    h1 { font-size: 20px; color: var(--green-dark); margin-bottom: 10px; }
+    h2 { font-size: 15px; color: var(--green-dark); margin: 12px 0 6px 0; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; }
+    .pill { display: inline-block; padding: 4px 10px; border-radius: 999px; background: linear-gradient(135deg, var(--green-mid), var(--green-light)); color: #fff; font-size: 11px; font-weight: 600; margin-bottom: 8px; }
+    ul, ol { padding-left: 18px; color: var(--muted); }
+    li { margin-bottom: 3px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .card { background: #f8faf8; border: 1px solid #e3e8e3; border-radius: 8px; padding: 10px 12px; }
+    .card strong { color: var(--green-dark); font-size: 12px; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 8px; }
+    th, td { border: 1px solid #e5e7eb; padding: 6px 8px; text-align: left; }
+    th { background: #f0f4f2; color: var(--green-dark); font-weight: 700; }
+    .highlight { background: #e8f5ed; }
+    .note { font-size: 11px; color: var(--muted); margin-top: 6px; }
+    .hero { background: linear-gradient(135deg, var(--green-mid), var(--green-light)); color: #fff; border-radius: 12px; padding: 16px 18px; display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+    .hero h1 { color: #fff; font-size: 22px; margin: 0; }
+    .hero p { margin: 2px 0 0 0; font-size: 12px; opacity: 0.9; }
+    .hero img { width: 100px; background: #fff; padding: 8px; border-radius: 8px; }
+    .tag { display: inline-block; background: #e8f5ed; color: var(--green-dark); padding: 3px 8px; border-radius: 999px; font-size: 10px; font-weight: 600; margin: 2px 4px 2px 0; }
+    .red { color: #D32F2F; }
+    .green { color: #1B7F4E; }
   </style>
 </head>
 <body>
-  <div class="deck">
-    <div class="hero">
-      <img src="../MyConsulting_Network_Logo_PNG.png" alt="MyConsulting Network" style="width: 140px; height: auto; border-radius: 8px; background: white; padding: 10px;">
-      <div>
-        <h1>Mike Meeting — Fri 3:00 PM</h1>
-        <p>MyConsulting Network | Prepared for Mike</p>
-      </div>
-    </div>
+<div class="deck">
 
-    <div class="slide">
-      <div class="pill">Logistics</div>
-      <h1>Mike Meeting — Fri 3:00 PM</h1>
-      <ul>
-        <li>Attendees: Mike; our team (Ben, Taylor, others as needed)</li>
-        <li>Location: Mike’s shop; his new hire will cover the desk</li>
-        <li>Goal: Deep dive without interruptions; align decisions and next steps</li>
-      </ul>
-      <div class="tag-row">
-        <span class="tag">Google Form before meeting</span>
-        <span class="tag">Legal-name docs for eBay appeal</span>
-        <span class="tag">Bring any current promos</span>
-      </div>
+  <!-- SLIDE 1: COVER -->
+  <div class="hero">
+    <img src="../MyConsulting_Network_Logo_PNG.png" alt="MyCo">
+    <div>
+      <h1>Gadget Fix Growth Plan</h1>
+      <p>MyCo Consulting Network | Friday 3:00 PM @ Kent</p>
+      <p style="margin-top:6px;"><span class="tag">Ethan (CEO)</span><span class="tag">Ranvir (CFO)</span><span class="tag">Ben (Marketing)</span><span class="tag">Taylor (Analyst)</span></p>
     </div>
-
-    <div class="slide">
-      <div class="pill">Context: Current vs. Goals</div>
-      <div class="grid">
-        <div class="card">
-          <strong>Current State</strong>
-          <ul>
-            <li>~3 repairs/week</li>
-            <li>Limited marketing/online presence</li>
-            <li>Sole proprietor + new hire</li>
-            <li>Revenue: ~$1,300/mo</li>
-          </ul>
-        </div>
-        <div class="card">
-          <strong>Growth Goals</strong>
-          <ul>
-            <li>10+ repairs/week (Goal)</li>
-            <li>Marketplace arbitrage focus</li>
-            <li>Carrier partnerships (3-5 target)</li>
-            <li>Revenue: ~$4,800/mo target</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="slide">
-      <div class="pill">The Opportunity: Trade-In Arbitrage</div>
-      <div class="note">Example: iPhone 16 Pro Max</div>
-      <table>
-        <thead>
-          <tr>
-            <th>Scenario</th>
-            <th>Value</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Trade-in w/ Cracked Screen</td>
-            <td style="color: #D32F2F;">$168</td>
-            <td>Low value from carrier</td>
-          </tr>
-          <tr>
-            <td>Trade-in w/ Good Screen</td>
-            <td style="color: #1B7F4E;">$670</td>
-            <td>Full value after repair</td>
-          </tr>
-          <tr>
-            <td><strong>Repair Cost</strong></td>
-            <td><strong>$179</strong></td>
-            <td>Customer pays Mike</td>
-          </tr>
-          <tr>
-            <td><strong>Net Customer Profit</strong></td>
-            <td style="color: #1B7F4E; font-weight: bold;">+$323</td>
-            <td>Win-Win outcome</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="slide">
-      <div class="pill">Carrier Partnership Strategy</div>
-      <ul>
-        <li><strong>Pitch:</strong> "Send us cracked phone customers -> We fix them -> You close the upgrade."</li>
-        <li><strong>Target List:</strong>
-          <ul>
-            <li>Priority 1: T-Mobile, Verizon, AT&T (Kent Station)</li>
-            <li>Priority 2: Best Buy, Costco, Target</li>
-          </ul>
-        </li>
-        <li><strong>Taylor's Role:</strong> 10+ store visits, pitch script, leave-behind flyers.</li>
-      </ul>
-    </div>
-
-    <div class="slide">
-      <div class="pill">Proposal & Pricing Options</div>
-      <table>
-        <thead>
-          <tr>
-            <th>Package</th>
-            <th>Cost</th>
-            <th>Includes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Bronze Tier</strong><br>(Recommended)</td>
-            <td>$400/mo</td>
-            <td>1 Project/mo, Monthly Strategy Call, PM Access</td>
-          </tr>
-          <tr>
-            <td><strong>Starter Bundle</strong><br>(One-time)</td>
-            <td>$660</td>
-            <td>Website ($100), Business Plan ($500), Setup ($60)</td>
-          </tr>
-          <tr>
-            <td><strong>Partnership Ops</strong><br>(Optional)</td>
-            <td>$560</td>
-            <td>Taylor's outreach (10+ visits), materials, tracking</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="slide">
-      <div class="pill">Objectives</div>
-      <ul>
-        <li>Confirm progress and unblock dependencies (incl. Google Form completion)</li>
-        <li>Align pricing/plan and operational priorities for the next phase</li>
-        <li>Surface risks (marketplace compliance, hiring ramp) and support needed</li>
-        <li>Lock owners, deadlines, and follow-up cadence</li>
-      </ul>
-    </div>
-
-    <div class="slide">
-      <div class="pill">Agenda (60–75 mins)</div>
-      <ul>
-        <li>Quick updates (5–10): Form status, wins, blockers</li>
-        <li>Progress review (10): Done/not done vs. plan; current metrics</li>
-        <li>Pricing/plan alignment (10–15): Offer stack, pricing, promos; trade-in vs. repair mix; near-term targets</li>
-        <li>Storefront/ops checklist (10–15): Intake, labeling/chain of custody, parts/PO flow, returns/DOA, warranty clarity, daily close</li>
-        <li>Marketplace compliance & appeals (10–15): eBay ban (legal-name mismatch); name/address consistency; bank/ID verification; invoice readiness; appeal vs. new account; backups (Shopify/local)</li>
-        <li>Hiring/onboarding (5–10): Coverage plan; SOPs; training priorities; KPIs (desk/tech)</li>
-        <li>Marketing (5–10): Local awareness; site/landing updates; Google Business Profile hygiene; funnel experiments</li>
-        <li>Wrap (5): Decisions, owners, deadlines; schedule next touchpoint</li>
-      </ul>
-    </div>
-
-    <div class="slide">
-      <div class="pill">Compliance quick hits (for team)</div>
-      <div class="grid">
-        <div class="card">
-          <strong>Root issue</strong>
-          <ul>
-            <li>eBay ban for not using legal business name</li>
-          </ul>
-        </div>
-        <div class="card">
-          <strong>Immediate docs</strong>
-          <ul>
-            <li>Legal business name, EIN, business registration</li>
-            <li>Matching bank info, photo ID, proof of address</li>
-            <li>Supplier invoices for active listings</li>
-          </ul>
-        </div>
-        <div class="card">
-          <strong>Hygiene</strong>
-          <ul>
-            <li>Name/address match everywhere</li>
-            <li>Verified payments; tracking on all orders</li>
-            <li>Honest grading; clear returns/warranty</li>
-            <li>2FA and access control</li>
-          </ul>
-        </div>
-        <div class="card">
-          <strong>Paths</strong>
-          <ul>
-            <li>Appeal current account with full docs</li>
-            <li>If denied: new account only after clearance; clean devices/IPs</li>
-            <li>Maintain backup channels (Shopify/local)</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="slide">
-      <div class="pill">Ops checklist focus</div>
-      <ul>
-        <li>Intake → label → log serials → chain of custody</li>
-        <li>Parts/PO flow: sourcing, receiving, QA, stocking, returns to supplier</li>
-        <li>Returns/DOA: criteria, restock flow, documentation</li>
-        <li>Warranty clarity: terms, in-store scripting, printed/posted</li>
-        <li>Daily close: cash/POS/payout reconciliation; ticket/status hygiene</li>
-      </ul>
-    </div>
-
-    <div class="slide">
-      <div class="pill">Pricing & offer alignment</div>
-      <ul>
-        <li>Trade-in vs. repair mix targets</li>
-        <li>Current promos and margin guardrails</li>
-        <li>Bundles/upsells: cases, screens, batteries, warranties</li>
-      </ul>
-    </div>
-
-    <div class="slide">
-      <div class="pill">Hiring & onboarding</div>
-      <ul>
-        <li>Coverage plan and schedule for the new hire</li>
-        <li>SOP packet and shadowing plan</li>
-        <li>KPIs — Desk: throughput, NPS/CSAT, intake accuracy</li>
-        <li>KPIs — Tech: TAT, QC pass rate, redo rate</li>
-      </ul>
-    </div>
-
-    <div class="slide">
-      <div class="pill">Marketing quick plan</div>
-      <ul>
-        <li>Local: flyers/door hangers; cross-promos with nearby businesses</li>
-        <li>Digital: Google Business Profile cleanup; review asks; landing updates</li>
-        <li>Experiments: simple funnel tests; track leads → visits → conversions</li>
-      </ul>
-    </div>
-
-    <div class="slide">
-      <div class="pill">Decisions & Next Steps (Worksheet)</div>
-      <table>
-        <thead>
-          <tr>
-            <th>Key Decision / Action</th>
-            <th>Owner</th>
-            <th>Due Date</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>eBay Appeal Strategy</strong><br><span class="note">Appeal vs. New Account?</span></td>
-            <td>________________</td>
-            <td>___/___</td>
-            <td>_______________________</td>
-          </tr>
-          <tr>
-            <td><strong>Finalize Offer Stack</strong><br><span class="note">Trade-in % vs. Repair Prices</span></td>
-            <td>________________</td>
-            <td>___/___</td>
-            <td>_______________________</td>
-          </tr>
-          <tr>
-            <td><strong>New Hire Onboarding</strong><br><span class="note">Who runs training?</span></td>
-            <td>________________</td>
-            <td>___/___</td>
-            <td>_______________________</td>
-          </tr>
-          <tr>
-            <td><strong>Google Business Profile</strong><br><span class="note">Update hours/photos</span></td>
-            <td>________________</td>
-            <td>___/___</td>
-            <td>_______________________</td>
-          </tr>
-        </tbody>
-      </table>
-      
-      <div style="margin-top: 20px;"><strong>Risks & Mitigation</strong></div>
-      <table>
-        <thead>
-          <tr>
-            <th>Risk</th>
-            <th>Mitigation Plan</th>
-            <th>Owner</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>eBay Account Ban</strong></td>
-            <td>Gather legal docs; draft appeal; prep backup Shopify</td>
-            <td>________________</td>
-          </tr>
-          <tr>
-            <td><strong>Hiring Ramp-up</strong></td>
-            <td>SOPs for "Chain of Custody" & "Intake" ready day 1</td>
-            <td>________________</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="note">Team: Fill this out live. Copy to notes doc for post-meeting sync.</div>
-    </div>
-
   </div>
+
+  <!-- SLIDE 2: EXECUTIVE SUMMARY -->
+  <div class="slide">
+    <div class="pill">Executive Summary</div>
+    <h1>The Opportunity</h1>
+    <p>Mike owns <strong>Gadget Fix</strong>, a phone repair shop in Kent, WA. He needs help with marketing, partnerships, and growth. We identified a <strong>Trade-In Value Arbitrage</strong> opportunity that pays for itself.</p>
+    <h2>What Mike Wants</h2>
+    <ul>
+      <li>Increase repairs from <strong>3/week → 10+/week</strong></li>
+      <li>Carrier partnerships for referrals</li>
+      <li>Professional website + online presence</li>
+      <li>Business plan for future banking/expansion</li>
+    </ul>
+    <h2>Our Value Proposition</h2>
+    <p>We provide <strong>PMaaS (Project Management as a Service)</strong>: Mike tells us the problem, we figure out how to solve it and execute. He gets results without doing the work.</p>
+  </div>
+
+  <!-- SLIDE 3: CLIENT PROFILE -->
+  <div class="slide">
+    <div class="pill">Client Profile</div>
+    <h1>Mike & Gadget Fix</h1>
+    <div class="grid">
+      <div class="card">
+        <strong>Business Details</strong>
+        <ul>
+          <li>Name: Gadget Fix</li>
+          <li>Location: Kent, WA (Kent Station)</li>
+          <li>Services: iPhone screen repair, battery replacement</li>
+          <li>Volume: ~3 repairs/week</li>
+          <li>Pricing: Competitive ($80-180)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>Strengths</strong>
+        <ul>
+          <li>30+ years experience</li>
+          <li>90% business from referrals</li>
+          <li>Quality work + 90-day warranty</li>
+          <li>Connected (knows other owners)</li>
+          <li>Willing to invest</li>
+        </ul>
+      </div>
+    </div>
+    <h2>Key Challenges</h2>
+    <ul style="display:flex; flex-wrap:wrap; gap:6px; list-style:none; padding:0;">
+      <li class="tag">No website</li>
+      <li class="tag">No systematic marketing</li>
+      <li class="tag">eBay store banned (legal name issue)</li>
+      <li class="tag">Limited budget</li>
+      <li class="tag">Hiring new employee</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 4: THE CORE STRATEGY -->
+  <div class="slide">
+    <div class="pill">Core Strategy</div>
+    <h1>"Fix It to Flip It" – Trade-In Arbitrage</h1>
+    <p>Most people trade in cracked phones for pennies. We show them the math:</p>
+    <table>
+      <thead><tr><th>Scenario (iPhone 16 Pro Max)</th><th>Value</th><th>Outcome</th></tr></thead>
+      <tbody>
+        <tr><td>A. Trade in Cracked</td><td class="red"><strong>$168</strong></td><td>Customer loses $500+ in value</td></tr>
+        <tr><td>B. Trade in Fixed</td><td class="green"><strong>$670</strong></td><td>Full value unlocked</td></tr>
+        <tr><td>Mike's Repair Cost</td><td>-$179</td><td>Revenue for Mike</td></tr>
+        <tr class="highlight"><td><strong>NET CUSTOMER PROFIT</strong></td><td class="green"><strong>+$323</strong></td><td><strong>Customer keeps $323 after paying Mike</strong></td></tr>
+      </tbody>
+    </table>
+    <p class="note"><strong>Our Job:</strong> Get this message in front of people BEFORE they walk into Verizon.</p>
+  </div>
+
+  <!-- SLIDE 5: EXECUTION TRACKS -->
+  <div class="slide">
+    <div class="pill">Battle Plan</div>
+    <h1>Three Execution Tracks</h1>
+    <div class="grid">
+      <div class="card">
+        <strong>Track 1: Digital Presence</strong>
+        <p style="font-size:11px; color:var(--muted);">Owner: Ranvir/Ben</p>
+        <ul>
+          <li>Mobile-first landing page (click-to-call)</li>
+          <li>Trade-In Calculator tool</li>
+          <li>Google Business Profile cleanup</li>
+          <li>SEO: "iPhone Repair Kent"</li>
+          <li>Social: "Did you know?" posts</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>Track 2: Carrier Partnerships</strong>
+        <p style="font-size:11px; color:var(--muted);">Owner: Taylor</p>
+        <ul>
+          <li><strong>Pitch:</strong> "Don't lose the upgrade. Send them to us."</li>
+          <li>Targets: T-Mobile, Verizon, AT&T (Kent)</li>
+          <li>Secondary: Best Buy, Costco</li>
+          <li>Optional: $5-10 referral bonus</li>
+          <li>Taylor visits 10+ stores in Week 1</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:10px;">
+      <strong>Track 3: Ops & Compliance</strong>
+      <p style="font-size:11px; color:var(--muted);">Owner: Ethan/Ranvir</p>
+      <ul style="display:flex; flex-wrap:wrap; gap:6px; list-style:none; padding:0;">
+        <li class="tag">eBay Appeal (legal name docs)</li>
+        <li class="tag">Hiring SOPs for new employee</li>
+        <li class="tag">Intake / Chain-of-Custody process</li>
+        <li class="tag">Warranty policy posted</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: PRICING OPTIONS -->
+  <div class="slide">
+    <div class="pill">The Offer</div>
+    <h1>Pricing Options for Mike</h1>
+    <div class="grid">
+      <div class="card" style="border:2px solid var(--green-mid);">
+        <strong style="color:var(--green-dark);">Option A: Bronze Subscription ✓</strong>
+        <div style="font-size:22px; font-weight:800; margin:8px 0;">$400/mo</div>
+        <p style="font-size:11px; color:var(--muted);">12-month commitment</p>
+        <ul>
+          <li>Dedicated PM (Ethan/Ranvir)</li>
+          <li>1 Major Project/mo</li>
+          <li>Monthly Strategy Call</li>
+          <li>Full Expert Network Access</li>
+          <li><strong>Adaptability:</strong> We pivot if strategy fails</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>Option B: Starter Bundle</strong>
+        <div style="font-size:22px; font-weight:800; margin:8px 0;">~$1,660</div>
+        <p style="font-size:11px; color:var(--muted);">One-time payment</p>
+        <ul>
+          <li>❌ No ongoing PM/Coaching</li>
+          <li>Website Build ($100 + $20/mo)</li>
+          <li>Business Plan ($500)</li>
+          <li>Partnership Ops ($560)</li>
+          <li>Marketing Strategy ($500)</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note"><strong>Recommendation:</strong> Bronze Subscription. PMaaS means we handle the chaos; Mike focuses on repairs.</p>
+  </div>
+
+  <!-- SLIDE 7: MEETING FLOW -->
+  <div class="slide">
+    <div class="pill">Meeting Flow</div>
+    <h1>45-Minute Agenda</h1>
+    <table>
+      <thead><tr><th>Time</th><th>Topic</th><th>Lead</th></tr></thead>
+      <tbody>
+        <tr><td>5 min</td><td><strong>Hook:</strong> "We found an opportunity that pays for itself." Demo calculator.</td><td>Ethan</td></tr>
+        <tr><td>7 min</td><td><strong>Website Demo:</strong> Mobile walkthrough, click-to-call, key features.</td><td>Ranvir</td></tr>
+        <tr><td>10 min</td><td><strong>Partnership Strategy:</strong> Carrier pitch, target list, Taylor's plan.</td><td>Taylor</td></tr>
+        <tr><td>5 min</td><td><strong>Business Plan:</strong> Hand over printed copy, growth projections.</td><td>Ranvir</td></tr>
+        <tr><td>10 min</td><td><strong>The Proposal:</strong> Bronze tier, compare options, handle objections.</td><td>Ethan</td></tr>
+        <tr><td>8 min</td><td><strong>Close:</strong> "What would make you say yes today?" Sign or schedule follow-up.</td><td>Ethan</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SLIDE 8: SUCCESS METRICS -->
+  <div class="slide">
+    <div class="pill">Success Metrics</div>
+    <h1>How We Measure Win</h1>
+    <div class="grid">
+      <div class="card">
+        <strong>Immediate (Meeting Day)</strong>
+        <ul>
+          <li>[ ] Mike signs Bronze subscription</li>
+          <li>[ ] Agreement signed</li>
+          <li>[ ] First payment received</li>
+          <li>[ ] Start date confirmed</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>Week 1-2</strong>
+        <ul>
+          <li>[ ] Website live with real info</li>
+          <li>[ ] Taylor visits 3+ carrier stores</li>
+          <li>[ ] 1+ partnership conversation started</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>30 Days</strong>
+        <ul>
+          <li>[ ] 5+ new Google reviews</li>
+          <li>[ ] 2+ carrier partnerships active</li>
+          <li>[ ] 50% increase in repairs (3→5+)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>90 Days</strong>
+        <ul>
+          <li>[ ] 5+ active partnerships</li>
+          <li>[ ] 10+ screen repairs per week</li>
+          <li>[ ] Mike refers 1+ other business</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 9: RISK MITIGATION -->
+  <div class="slide">
+    <div class="pill">Risk Mitigation</div>
+    <h1>What Could Go Wrong & Our Plan</h1>
+    <table>
+      <thead><tr><th>Risk</th><th>Mitigation</th></tr></thead>
+      <tbody>
+        <tr><td>Mike doesn't fill out form</td><td>Follow up with phone call after 2 days</td></tr>
+        <tr><td>Mike ghosts before meeting</td><td>Text + call, offer rescheduling</td></tr>
+        <tr><td>Mike wants lower price</td><td>Emphasize ROI (+$323/customer); offer project-only bundle</td></tr>
+        <tr><td>Carrier stores not interested</td><td>Have backup list of 10+ targets</td></tr>
+        <tr><td>Website needs major changes</td><td>Clarify it's a mockup; final after his input</td></tr>
+        <tr><td>Partnership project fails</td><td>Monthly subscription covers ongoing pivot</td></tr>
+        <tr><td>eBay appeal denied</td><td>Plan B: New clean account with full docs</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SLIDE 10: OBJECTION HANDLING -->
+  <div class="slide">
+    <div class="pill">Objection Handling</div>
+    <h1>If Mike Says...</h1>
+    <table>
+      <thead><tr><th>Objection</th><th>Response</th></tr></thead>
+      <tbody>
+        <tr><td>"I don't want another monthly bill."</td><td>"It's $13/day for a full PM team. 4 extra repairs/month pays for itself."</td></tr>
+        <tr><td>"Can I just buy the website?"</td><td>"Yes, that's the Starter Bundle (~$1,660). Subscription spreads cost + gives you us."</td></tr>
+        <tr><td>"$400 seems high."</td><td>"Most consultants charge $150/hr. You get a full team for ~3 hrs/mo cost."</td></tr>
+        <tr><td>"What if I don't need anything one month?"</td><td>"We pause dev but stay on-call. There's always optimization to do."</td></tr>
+        <tr><td>"I need to think about it."</td><td>"Totally fair. Let's schedule a follow-up for Monday. What's the blocker?"</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SLIDE 11: TEAM ROSTER -->
+  <div class="slide">
+    <div class="pill">The MyCo Team</div>
+    <h1>Who's Doing What</h1>
+    <table>
+      <thead><tr><th>Name</th><th>Role</th><th>Responsibility</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Ethan Lostroh</strong></td><td>CEO</td><td>Strategy, Sales Lead, Meeting Closer</td></tr>
+        <tr><td><strong>Ranvir Thind</strong></td><td>CFO</td><td>Operations, Finance, Tech Build (Website, Calculator)</td></tr>
+        <tr><td><strong>Ben Niewiadomski</strong></td><td>Strategy Consultant</td><td>Marketing Strategy, Content</td></tr>
+        <tr><td><strong>Taylor</strong></td><td>Analyst</td><td>Carrier Outreach, "Boots on the Ground"</td></tr>
+      </tbody>
+    </table>
+    <h2>Expert Network (On-Call)</h2>
+    <ul style="display:flex; flex-wrap:wrap; gap:6px; list-style:none; padding:0;">
+      <li class="tag">Pim (Design)</li>
+      <li class="tag">Mia (Marketing Design)</li>
+      <li class="tag">Ha Tien (UX)</li>
+      <li class="tag">Jonathan/Tawsif (Engineering)</li>
+      <li class="tag">Henos (SEO)</li>
+      <li class="tag">Ulysses (Business Analyst)</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 12: DELIVERABLES CHECKLIST -->
+  <div class="slide">
+    <div class="pill">Deliverables</div>
+    <h1>What Mike Gets</h1>
+    <table>
+      <thead><tr><th>#</th><th>Deliverable</th><th>Status</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Trade-In Calculator (HTML)</td><td>✅ Ready</td><td>HIGH</td></tr>
+        <tr><td>2</td><td>Landing Page (HTML)</td><td>✅ Ready</td><td>HIGH</td></tr>
+        <tr><td>3</td><td>Google Form (Updated)</td><td>✅ Ready</td><td>HIGH</td></tr>
+        <tr><td>4</td><td>Business Plan (PDF)</td><td>✅ Ready</td><td>MEDIUM</td></tr>
+        <tr><td>5</td><td>Carrier Pitch Materials</td><td>✅ Ready</td><td>MEDIUM</td></tr>
+        <tr><td>6</td><td>Marketplace Compliance Guide</td><td>✅ Ready</td><td>HIGH</td></tr>
+        <tr><td>7</td><td>This Slide Deck</td><td>✅ Ready</td><td>HIGH</td></tr>
+      </tbody>
+    </table>
+    <h2>Meeting Materials (Bring)</h2>
+    <ul style="display:flex; flex-wrap:wrap; gap:6px; list-style:none; padding:0;">
+      <li class="tag">Laptop (demo)</li>
+      <li class="tag">Printed Proposal (2x)</li>
+      <li class="tag">Printed Business Plan</li>
+      <li class="tag">Carrier Flyers (5x)</li>
+      <li class="tag">Payment Link</li>
+      <li class="tag">Business Cards</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 13: FUTURE OPPORTUNITIES -->
+  <div class="slide">
+    <div class="pill">Parking Lot</div>
+    <h1>Future Opportunities (After Mike)</h1>
+    <ul>
+      <li><strong>Issac (Gadget Rehab, Seattle):</strong> Mike's business partner considering selling his store. Potential client referral.</li>
+      <li><strong>Issac's Dad:</strong> Freelance architect on contract with BJ's Restaurant (remodels). Potential resource.</li>
+      <li><strong>Civil Engineer:</strong> Mike knows a freelancer on contract with WA Native American tribes. Potential resource.</li>
+    </ul>
+    <p class="note">These are leads for AFTER we finish with Mike. Do not pursue during this engagement.</p>
+  </div>
+
+  <!-- SLIDE 14: DECISION LOG -->
+  <div class="slide">
+    <div class="pill">Live Decision Log</div>
+    <h1>Fill During Meeting</h1>
+    <table>
+      <thead><tr><th>Decision</th><th>Outcome</th><th>Owner</th><th>Due</th></tr></thead>
+      <tbody>
+        <tr><td>Pricing Selection</td><td>[ ] Sub ($400/mo) [ ] Bundle ($1.6k)</td><td></td><td></td></tr>
+        <tr><td>Referral Bonus?</td><td>[ ] Yes ($___) [ ] No</td><td></td><td></td></tr>
+        <tr><td>eBay Strategy</td><td>[ ] Appeal [ ] Restart</td><td></td><td></td></tr>
+        <tr><td>Next Meeting Date</td><td>_______________</td><td></td><td></td></tr>
+        <tr><td>Other:</td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+    <h2>New Info / Risks Mentioned</h2>
+    <ul>
+      <li>_______________________________________________</li>
+      <li>_______________________________________________</li>
+    </ul>
+  </div>
+
+</div>
 </body>
 </html>
