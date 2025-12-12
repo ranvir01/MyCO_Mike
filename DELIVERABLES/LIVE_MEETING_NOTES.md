@@ -10,7 +10,7 @@
 # 1. 📅 LOGISTICS & AGENDA
 *   **Time:** Friday, 3:00 PM
 *   **Location:** Mike's Shop (Kent)
-*   **Attendees:** Mike, Ben, Taylor, [Your Name]
+*   **Attendees:** Mike, Ben, Taylor, Ethan, Ranvir
 *   **Goal:** Confirm progress, align pricing/ops, unlock next phase.
 
 **Agenda Checklist (Check off as we go):**
@@ -37,8 +37,8 @@
 
 | Topic | Decision / Action | Owner | Due Date |
 | :--- | :--- | :--- | :--- |
+| **Pricing Model** | [ ] Monthly Sub ($400/mo)<br>[ ] Project Bundle (One-time) | ________ | ________ |
 | **eBay Appeal** | [ ] Appeal Existing Account<br>[ ] Start New Account | ________ | ________ |
-| **Trade-In Offer** | [ ] Keep current pricing<br>[ ] Adjust margins | ________ | ________ |
 | **Carrier Targets** | [ ] T-Mobile<br>[ ] Verizon<br>[ ] AT&T<br>[ ] Best Buy | ________ | ________ |
 | **Google Profile** | [ ] Update Hours<br>[ ] Add Photos | ________ | ________ |
 
@@ -52,7 +52,15 @@
 
 # 3. 🧠 CONTEXT & STRATEGY (Reference Material)
 
+## 👥 The MyCo Team (Bios)
+*   **Ethan (CEO):** Strategy & Sales.
+*   **Ranvir (CFO):** Financials & Operations.
+*   **Ben (Marketing):** Strategy Consultant.
+*   **Taylor (Analyst):** Carrier Outreach & Partnerships.
+*   **Support:** Pim (Design), Mia (Marketing Design), Ha Tien (UX), Jonathan/Tawsif (Engineering), Henos (SEO), Ulysses (Business Analyst).
+
 ## 📊 Business Snapshot (Agent 2 Data)
+*   **Client:** Mike (Gadget Fix) | **Location:** Kent, WA
 *   **Current State:** ~3 repairs/week | ~$1,300/mo revenue | Sole Prop
 *   **Goal State:** 10+ repairs/week | ~$4,800/mo revenue | Partnership-driven
 *   **Core Strategy:** **Trade-In Arbitrage.** Position repair as a way to unlock $200+ in trade-in value.
@@ -76,13 +84,25 @@
     4.  Best Buy / Costco (Secondary)
 
 ## 💲 Proposal & Pricing Options (Agent 6)
-*We are recommending the Bronze Tier + Starter Bundle.*
+*We recommend the Subscription, but have a One-Time option ready.*
 
-| Package | Cost | What's Included |
-| :--- | :--- | :--- |
-| **Bronze Subscription** | **$400/mo** | 1 Project/mo, Monthly Strategy Call, PM Access. |
-| **Starter Bundle** | **$660 (One-time)** | Professional Website ($100), Business Plan ($500), Setup ($60). |
-| **Partnership Ops** | **$560 (Optional)** | Taylor's outreach (10+ store visits), materials, tracking. |
+### Option A: Bronze Subscription (Recommended)
+*   **Cost:** $400/mo (12-month commit)
+*   **Includes:**
+    *   Dedicated PM (Ethan/Ranvir)
+    *   1 Major Project/month (e.g., Website, Plan, Outreach)
+    *   Monthly Strategy Call
+    *   Access to full Expert Network
+*   **Why:** Best for long-term growth and adapting to changes.
+
+### Option B: Starter Project Bundle (One-Time)
+*   **Cost:** ~$1,600 one-time
+*   **Includes:**
+    *   Website Build ($100 + $20/mo hosting)
+    *   Business Plan Doc ($500)
+    *   Marketing Strategy ($500)
+    *   Partnership Ops (Taylor's time: $560)
+*   **Why:** Good if he just wants the assets and no ongoing coaching.
 
 ## 🛡️ Marketplace Compliance Guide
 *   **Root Issue:** eBay ban for Legal Business Name mismatch.
