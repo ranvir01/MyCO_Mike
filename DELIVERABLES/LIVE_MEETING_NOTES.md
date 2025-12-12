@@ -61,7 +61,7 @@ Most people trade in cracked phones for pennies. We show them the math:
 | :--- | :--- | :--- |
 | **Cost** | **$600 / month** (12-mo commit)
 | **Concept** | "Project Management as a Service" | "Pay for Deliverables" |
-| **Includes** | ✅ Dedicated PM (Ethan/Ranvir)<br>✅ 1 Major Project/mo<br>✅ Monthly Strategy Call<br>✅ Full Network Access | ❌ No PM<br>❌ Website Build + Calculator ($300)<br>❌ Business Plan ($500)<br>❌ Outreach ($560)<br>❌ Marketing Plan ($500) |
+| **Includes** | ✅ Dedicated PM (Ethan/Ranvir)<br>✅ 1 Major Project/mo<br>✅ Monthly Strategy Call<br>✅ Full Network Access | ❌ No PM<br>❌ Website Build + Calculator ($300)<br>❌ Business Plan ($500)<br>❌ Outreach Trial ($600)<br>❌ Marketing Plan ($500) |
 | **Why?** | **Adaptability.** If partnerships fail, we pivot to ads without new fees. | **Fixed Scope.** You get the files, you do the work. |
 
 ---
