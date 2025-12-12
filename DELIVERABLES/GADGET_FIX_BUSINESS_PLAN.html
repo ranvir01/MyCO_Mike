@@ -3,210 +3,382 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gadget Fix Business Plan | December 2024</title>
+  <title>Gadget Fix Business Plan | The Trade-In Arbitrage Opportunity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --green-dark: #0F5A35;
-      --green-mid: #1B7F4E;
-      --green-light: #56B365;
-      --gold: #FFC107;
-      --gold-dark: #E5AC00;
-      --text: #1f2933;
-      --muted: #4b5563;
-      --bg: #f5f7f5;
-      --white: #ffffff;
-      --border: #e5e7eb;
-      --success: #22c55e;
-      --warning: #f59e0b;
-      --danger: #ef4444;
+      --bg-dark: #0f172a;
+      --bg-card: #1e293b;
+      --bg-card-hover: #334155;
+      --green-glow: #4ade80;
+      --green-dark: #22c55e;
+      --green-muted: #166534;
+      --gold: #fbbf24;
+      --gold-dark: #f59e0b;
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --border: #334155;
+      --profit: #4ade80;
+      --loss: #f87171;
+      --warning: #fbbf24;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     @page {
       size: letter;
-      margin: 0.75in;
+      margin: 0.5in;
     }
 
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      font-size: 12px;
-      line-height: 1.5;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     .document {
-      max-width: 850px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 20px;
     }
 
-    /* Page breaks for print */
-    .page-break {
-      page-break-after: always;
-    }
-
-    .section {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 24px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(15,90,53,0.08);
-    }
-
-    .section:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Cover Page */
-    .cover {
-      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 50%, var(--green-light) 100%);
-      color: var(--white);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 60px 40px;
-      border-radius: 0;
-      margin: -20px -20px 20px -20px;
-    }
-
-    .cover-logo {
-      width: 120px;
-      height: 120px;
-      background: var(--white);
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+      border: 1px solid var(--green-glow);
       border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 32px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      padding: 60px 40px;
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .cover-logo img {
-      max-width: 90px;
-      max-height: 90px;
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(74, 222, 128, 0.08) 0%, transparent 50%);
+      animation: pulse 4s ease-in-out infinite;
     }
 
-    .cover-logo-text {
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--green-dark);
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.1); }
     }
 
-    .cover h1 {
-      font-size: 48px;
-      font-weight: 800;
-      margin-bottom: 8px;
-      letter-spacing: -1px;
+    .hero-content {
+      position: relative;
+      z-index: 2;
     }
 
-    .cover h2 {
-      font-size: 28px;
-      font-weight: 400;
-      opacity: 0.95;
-      margin-bottom: 40px;
-    }
-
-    .cover-meta {
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(10px);
-      border-radius: 12px;
-      padding: 24px 40px;
-      margin-top: 20px;
-    }
-
-    .cover-meta p {
-      font-size: 14px;
-      margin: 8px 0;
-      opacity: 0.9;
-    }
-
-    .cover-meta strong {
-      color: var(--gold);
-    }
-
-    /* Headers */
-    h1 { font-size: 26px; color: var(--green-dark); margin-bottom: 16px; font-weight: 700; }
-    h2 { font-size: 18px; color: var(--green-dark); margin: 20px 0 12px 0; font-weight: 600; border-bottom: 2px solid var(--border); padding-bottom: 6px; }
-    h3 { font-size: 14px; color: var(--green-mid); margin: 16px 0 8px 0; font-weight: 600; }
-
-    .section-badge {
+    .hero-badge {
       display: inline-block;
-      background: linear-gradient(135deg, var(--green-mid), var(--green-light));
-      color: var(--white);
-      font-size: 10px;
+      background: rgba(74, 222, 128, 0.15);
+      border: 1px solid var(--green-glow);
+      color: var(--green-glow);
+      font-size: 11px;
       font-weight: 700;
-      padding: 4px 12px;
+      padding: 6px 16px;
       border-radius: 20px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
     }
 
-    /* Tables */
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 900;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+
+    .hero h1 span {
+      color: var(--green-glow);
+    }
+
+    .hero-tagline {
+      font-size: 20px;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+
+    /* The Money Equation */
+    .money-equation {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin: 30px 0;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .eq-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 24px;
+      text-align: center;
+    }
+
+    .eq-box.broken {
+      border-color: var(--loss);
+      background: rgba(248, 113, 113, 0.1);
+    }
+
+    .eq-box.repair {
+      border-color: var(--gold);
+      background: rgba(251, 191, 36, 0.1);
+    }
+
+    .eq-box.fixed {
+      border-color: var(--green-glow);
+      background: rgba(74, 222, 128, 0.1);
+    }
+
+    .eq-box.profit {
+      border-color: var(--green-glow);
+      background: linear-gradient(135deg, rgba(74, 222, 128, 0.2), rgba(34, 197, 94, 0.3));
+      transform: scale(1.1);
+    }
+
+    .eq-label {
+      font-size: 10px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .eq-value {
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .eq-value.loss { color: var(--loss); }
+    .eq-value.gold { color: var(--gold); }
+    .eq-value.green { color: var(--green-glow); }
+
+    .eq-operator {
+      font-size: 28px;
+      color: var(--text-muted);
+    }
+
+    .eq-device {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+
+    /* ===== SECTION STYLES ===== */
+    .section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .section-icon {
+      font-size: 28px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--green-glow);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 24px 0 12px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--green-glow);
+      margin: 16px 0 8px 0;
+    }
+
+    p {
+      color: var(--text-secondary);
+      margin: 8px 0;
+    }
+
+    /* ===== HIGHLIGHT BOX ===== */
+    .highlight-box {
+      border: 1px solid var(--green-glow);
+      padding: 24px;
+      border-radius: 12px;
+      background: rgba(74, 222, 128, 0.08);
+      margin: 20px 0;
+    }
+
+    .highlight-box.gold {
+      border-color: var(--gold);
+      background: rgba(251, 191, 36, 0.08);
+    }
+
+    .highlight-box h3 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    /* ===== VOICEOVER QUOTE ===== */
+    .voiceover {
+      border-left: 4px solid var(--green-glow);
+      padding: 20px 24px;
+      background: rgba(74, 222, 128, 0.05);
+      margin: 20px 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+      font-style: italic;
+    }
+
+    .voiceover cite {
+      display: block;
+      font-size: 12px;
+      color: var(--text-muted);
+      font-style: normal;
+      margin-top: 8px;
+    }
+
+    /* ===== STAT GRID ===== */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .stat-box {
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .stat-box.glow {
+      border-color: var(--green-glow);
+      box-shadow: 0 0 20px rgba(74, 222, 128, 0.2);
+    }
+
+    .stat-value {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--green-glow);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    /* ===== TABLES ===== */
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 11px;
-      margin: 12px 0;
+      font-size: 13px;
+      margin: 16px 0;
     }
 
     th, td {
       border: 1px solid var(--border);
-      padding: 8px 10px;
+      padding: 12px 14px;
       text-align: left;
     }
 
     th {
-      background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
-      color: var(--white);
-      font-weight: 600;
-      font-size: 10px;
+      background: var(--bg-dark);
+      color: var(--green-glow);
+      font-weight: 700;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.3px;
-    }
-
-    tr:nth-child(even) {
-      background: #f8faf8;
+      letter-spacing: 0.5px;
     }
 
     tr:hover {
-      background: #f0f5f0;
+      background: rgba(74, 222, 128, 0.05);
     }
 
-    .highlight-row {
-      background: linear-gradient(135deg, rgba(86,179,101,0.15), rgba(86,179,101,0.05)) !important;
+    .row-highlight {
+      background: rgba(74, 222, 128, 0.1) !important;
+      border-left: 3px solid var(--green-glow);
+    }
+
+    .profit-cell {
+      color: var(--profit);
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    .loss-cell {
+      color: var(--loss);
       font-weight: 600;
     }
 
-    .profit { color: var(--success); font-weight: 700; }
-    .loss { color: var(--danger); font-weight: 600; }
-    .neutral { color: var(--muted); }
+    .check { color: var(--green-glow); }
+    .x-mark { color: var(--loss); }
 
-    /* Cards */
+    /* ===== CARD GRID ===== */
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 16px;
       margin: 16px 0;
     }
 
     .card {
-      background: var(--bg);
+      background: var(--bg-dark);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .card:hover {
+      border-color: var(--green-glow);
     }
 
     .card-title {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 700;
-      color: var(--green-dark);
-      margin-bottom: 8px;
+      color: var(--green-glow);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .card ul {
@@ -215,278 +387,161 @@
     }
 
     .card li {
-      font-size: 11px;
-      color: var(--muted);
-      margin: 4px 0;
+      color: var(--text-secondary);
+      font-size: 12px;
+      margin: 6px 0;
       padding-left: 16px;
       position: relative;
     }
 
     .card li::before {
-      content: "•";
-      color: var(--green-mid);
+      content: "→";
+      color: var(--green-glow);
       position: absolute;
       left: 0;
-      font-weight: bold;
     }
 
-    /* Stat boxes */
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 12px;
-      margin: 16px 0;
-    }
-
-    .stat-box {
-      background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
-      color: var(--white);
-      border-radius: 10px;
-      padding: 16px;
-      text-align: center;
-    }
-
-    .stat-box.gold {
-      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-      color: var(--text);
-    }
-
-    .stat-value {
-      font-size: 28px;
-      font-weight: 800;
-      display: block;
-    }
-
-    .stat-label {
+    /* ===== BADGE ===== */
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
       font-size: 10px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      opacity: 0.9;
+    }
+
+    .badge-green { background: rgba(74, 222, 128, 0.2); color: var(--green-glow); }
+    .badge-gold { background: rgba(251, 191, 36, 0.2); color: var(--gold); }
+    .badge-red { background: rgba(248, 113, 113, 0.2); color: var(--loss); }
+
+    /* ===== TIMELINE ===== */
+    .timeline {
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 12px 0 24px 20px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -20px;
+      top: 16px;
+      width: 12px;
+      height: 12px;
+      background: var(--green-glow);
+      border-radius: 50%;
+      border: 3px solid var(--bg-dark);
+    }
+
+    .timeline-date {
+      font-size: 11px;
+      color: var(--green-glow);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .timeline-content {
+      color: var(--text-secondary);
+      font-size: 13px;
       margin-top: 4px;
     }
 
-    /* Quote box */
-    .quote-box {
-      background: linear-gradient(135deg, var(--green-mid), var(--green-light));
-      color: var(--white);
-      border-radius: 12px;
-      padding: 24px;
-      margin: 16px 0;
-      text-align: center;
+    /* ===== PARTNER PITCH ===== */
+    .partner-script {
+      background: linear-gradient(135deg, var(--bg-dark), #1a2744);
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      padding: 28px;
+      margin: 20px 0;
     }
 
-    .quote-box blockquote {
+    .partner-script h3 {
+      color: var(--gold);
       font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 16px;
     }
 
-    .quote-box p {
+    .script-line {
+      display: flex;
+      gap: 12px;
+      margin: 12px 0;
       font-size: 13px;
-      opacity: 0.9;
     }
 
-    /* Progress/Milestone */
-    .milestone-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .milestone-list li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 11px;
-    }
-
-    .milestone-list li:last-child {
-      border-bottom: none;
-    }
-
-    .milestone-check {
-      width: 20px;
-      height: 20px;
-      border: 2px solid var(--green-mid);
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .script-emoji {
+      font-size: 20px;
       flex-shrink: 0;
     }
 
-    /* Risk matrix */
-    .risk-badge {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 12px;
-      font-size: 9px;
-      font-weight: 600;
-      text-transform: uppercase;
+    .script-text {
+      color: var(--text-secondary);
     }
 
-    .risk-low { background: #dcfce7; color: #166534; }
-    .risk-medium { background: #fef3c7; color: #92400e; }
-    .risk-high { background: #fee2e2; color: #991b1b; }
-    .risk-critical { background: #991b1b; color: white; }
-
-    /* TOC */
-    .toc {
-      background: var(--bg);
-      border-radius: 10px;
-      padding: 20px 24px;
-      margin: 16px 0;
+    .script-text strong {
+      color: var(--text-primary);
     }
 
-    .toc-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--green-dark);
+    /* ===== FOOTER ===== */
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    .footer-logo {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--green-glow);
       margin-bottom: 12px;
     }
 
-    .toc ol {
-      counter-reset: toc;
-      list-style: none;
-      padding: 0;
-    }
-
-    .toc li {
-      counter-increment: toc;
-      padding: 6px 0;
-      border-bottom: 1px dashed var(--border);
+    .footer p {
+      color: var(--text-muted);
       font-size: 12px;
     }
 
-    .toc li::before {
-      content: counter(toc) ".";
-      color: var(--green-mid);
-      font-weight: 700;
-      margin-right: 8px;
+    .footer-contact {
+      margin: 20px 0;
+      font-size: 14px;
+      color: var(--text-secondary);
     }
 
-    /* Lists */
-    ul, ol {
-      padding-left: 20px;
-      color: var(--muted);
+    /* ===== PAGE BREAKS ===== */
+    .page-break {
+      page-break-after: always;
     }
 
-    li {
-      margin: 4px 0;
-      font-size: 11px;
-    }
-
-    p {
-      color: var(--muted);
-      margin: 8px 0;
-      font-size: 12px;
-    }
-
-    strong {
-      color: var(--text);
-    }
-
-    /* Code/formula box */
-    .formula-box {
-      background: #1e293b;
-      color: #e2e8f0;
-      border-radius: 8px;
-      padding: 16px;
-      font-family: "Consolas", "Monaco", monospace;
-      font-size: 11px;
-      margin: 12px 0;
-      overflow-x: auto;
-    }
-
-    /* Positioning diagram */
-    .diagram {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 20px;
-      margin: 16px 0;
-      font-family: "Consolas", monospace;
-      font-size: 11px;
-      white-space: pre;
-      line-height: 1.4;
-      text-align: center;
-    }
-
-    /* Print styles */
+    /* ===== PRINT ===== */
     @media print {
-      body {
-        background: white;
-        font-size: 10px;
-      }
-
-      .document {
-        padding: 0;
-        max-width: none;
-      }
-
-      .section {
-        box-shadow: none;
-        border: 1px solid #ddd;
-        break-inside: avoid;
-      }
-
-      .cover {
-        min-height: auto;
-        padding: 80px 40px;
-        margin: 0;
-        border-radius: 0;
-      }
-
-      .stat-box, .quote-box {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-
-      th {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
+      body { background: #0f172a; }
+      .section, .hero { break-inside: avoid; }
+      .stat-box, .card { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     }
 
-    /* Info boxes */
-    .info-box {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      background: #f0fdf4;
-      border-left: 4px solid var(--green-mid);
-      border-radius: 0 8px 8px 0;
-      padding: 12px 16px;
-      margin: 12px 0;
-    }
-
-    .info-box.warning {
-      background: #fffbeb;
-      border-left-color: var(--warning);
-    }
-
-    .info-box-icon {
-      font-size: 18px;
-      flex-shrink: 0;
-    }
-
-    .info-box-content {
-      font-size: 11px;
-    }
-
-    .info-box-content strong {
-      color: var(--green-dark);
-    }
-
-    /* Footer */
-    .footer {
-      text-align: center;
-      padding: 20px;
-      color: var(--muted);
-      font-size: 10px;
-      border-top: 1px solid var(--border);
-      margin-top: 40px;
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .hero { padding: 40px 20px; }
+      .hero h1 { font-size: 28px; }
+      .money-equation { flex-direction: column; }
+      .eq-box.profit { transform: scale(1); }
+      .section { padding: 20px; }
     }
   </style>
 </head>
@@ -494,134 +549,143 @@
 
 <div class="document">
 
-  <!-- COVER PAGE -->
-  <div class="cover">
-    <div class="cover-logo">
-      <span class="cover-logo-text">GF</span>
-    </div>
-    <h1>GADGET FIX</h1>
-    <h2>Business Plan</h2>
-    <div class="cover-meta">
-      <p><strong>Prepared For:</strong> Mike, Owner</p>
-      <p><strong>Location:</strong> 621 Strander Blvd, Tukwila, WA 98188</p>
-      <p><strong>Date:</strong> December 2024</p>
-      <p><strong>Prepared By:</strong> MyCo Business Consulting</p>
+  <!-- ===== HERO: THE HOOK ===== -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">📱 Tukwila, WA | December 2024</div>
+      <h1>Don't Let a Cracked Screen<br>Cost You <span>$500</span></h1>
+      <p class="hero-tagline">We monetize the trade-in economy. One repair at a time.</p>
+
+      <!-- THE MONEY EQUATION -->
+      <div class="money-equation">
+        <div class="eq-box broken">
+          <div class="eq-label">📱 Cracked iPhone 16 Pro Max</div>
+          <div class="eq-value loss">$168</div>
+          <div class="eq-device">Apple Trade-In Value</div>
+        </div>
+        <span class="eq-operator">+</span>
+        <div class="eq-box repair">
+          <div class="eq-label">🔧 Gadget Fix Repair</div>
+          <div class="eq-value gold">$179</div>
+          <div class="eq-device">30-Minute Fix</div>
+        </div>
+        <span class="eq-operator">=</span>
+        <div class="eq-box fixed">
+          <div class="eq-label">✨ Fixed Phone Trade-In</div>
+          <div class="eq-value green">$670</div>
+          <div class="eq-device">Apple Trade-In Value</div>
+        </div>
+        <span class="eq-operator">→</span>
+        <div class="eq-box profit">
+          <div class="eq-label">💰 Customer Profit</div>
+          <div class="eq-value green">+$323</div>
+          <div class="eq-device">Net Gain After Repair</div>
+        </div>
+      </div>
+
+      <p style="color: var(--text-muted); font-size: 12px;">Source: Apple Trade-In values verified December 2024</p>
     </div>
   </div>
 
-  <div class="page-break"></div>
-
-  <!-- TABLE OF CONTENTS -->
+  <!-- ===== SECTION 1: THE OPPORTUNITY ===== -->
   <div class="section">
-    <span class="section-badge">Contents</span>
-    <h1>Table of Contents</h1>
-    <div class="toc">
-      <ol>
-        <li>Executive Summary</li>
-        <li>Company Description</li>
-        <li>Market Analysis</li>
-        <li>Services & Pricing</li>
-        <li>Marketing Strategy</li>
-        <li>Operations Plan</li>
-        <li>Management & Organization</li>
-        <li>Financial Projections</li>
-        <li>Growth Strategy</li>
-        <li>Risk Assessment</li>
-        <li>Appendix</li>
-      </ol>
-    </div>
-  </div>
-
-  <div class="page-break"></div>
-
-  <!-- 1. EXECUTIVE SUMMARY -->
-  <div class="section">
-    <span class="section-badge">Section 1</span>
-    <h1>Executive Summary</h1>
-
-    <h2>Business Overview</h2>
-    <p>Gadget Fix is a locally-owned phone repair shop located inside the <strong>Seattle Exchange at Southcenter</strong>, serving Tukwila, WA and the greater South Seattle metro area. We specialize in fast, affordable iPhone screen repairs and battery replacements, delivering quality service with industry-leading turnaround times of <strong>15-30 minutes</strong>.</p>
-
-    <div class="quote-box">
-      <blockquote>"Don't Just Fix Your Phone—Profit From It"</blockquote>
-      <p>Repair your cracked iPhone 16 Pro Max screen for $179, increase your trade-in value by $502. That's $323 back in your pocket.</p>
+    <div class="section-header">
+      <span class="section-icon">💰</span>
+      <span class="section-title">The Opportunity</span>
     </div>
 
-    <h2>The Trade-In Value Opportunity</h2>
-    <p>We've identified a significant market opportunity: <strong>trade-in value arbitrage</strong>. Many iPhone owners are unaware that repairing a cracked screen before trading in can yield substantial financial benefits:</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>iPhone Model</th>
-          <th>Cracked Value</th>
-          <th>Repair Cost</th>
-          <th>Fixed Value</th>
-          <th>Net Profit</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="highlight-row">
-          <td><strong>iPhone 16 Pro Max</strong></td>
-          <td>$168</td>
-          <td>$179</td>
-          <td>$670</td>
-          <td class="profit">+$323</td>
-        </tr>
-        <tr>
-          <td>iPhone 16 Pro</td>
-          <td>$150</td>
-          <td>$159</td>
-          <td>$580</td>
-          <td class="profit">+$271</td>
-        </tr>
-        <tr>
-          <td>iPhone 15 Pro Max</td>
-          <td>$120</td>
-          <td>$149</td>
-          <td>$400</td>
-          <td class="profit">+$131</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h2>Financial Highlights</h2>
-    <div class="stat-grid">
-      <div class="stat-box">
-        <span class="stat-value">3 → 10+</span>
-        <span class="stat-label">Weekly Repairs Goal</span>
-      </div>
-      <div class="stat-box gold">
-        <span class="stat-value">$57K+</span>
-        <span class="stat-label">12-Month Revenue Target</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-value">30%</span>
-        <span class="stat-label">From Partnerships</span>
-      </div>
+    <div class="voiceover">
+      "Apple pays the highest trade-in values for good-condition phones—but penalizes damage the most. That gap is our business."
     </div>
 
-    <h2>Growth Goals</h2>
+    <h2>The Trade-In Arbitrage Model</h2>
+    <p>Every carrier runs aggressive trade-in promotions. But there's a catch: <strong>damaged phones get crushed</strong>. A cracked screen can cost customers $300-$500 in lost trade-in value.</p>
+    <p>We fix that. Literally.</p>
+
+    <div class="highlight-box">
+      <h3>📊 The Math That Sells Itself</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Device</th>
+            <th>Cracked Value</th>
+            <th>Repair Cost</th>
+            <th>Fixed Value</th>
+            <th>Customer Profit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-highlight">
+            <td><strong>iPhone 16 Pro Max</strong></td>
+            <td class="loss-cell">$168</td>
+            <td>$179</td>
+            <td>$670</td>
+            <td class="profit-cell">+$323</td>
+          </tr>
+          <tr>
+            <td>iPhone 16 Pro</td>
+            <td class="loss-cell">$150</td>
+            <td>$159</td>
+            <td>$580</td>
+            <td class="profit-cell">+$271</td>
+          </tr>
+          <tr>
+            <td>iPhone 16</td>
+            <td class="loss-cell">$130</td>
+            <td>$139</td>
+            <td>$450</td>
+            <td class="profit-cell">+$181</td>
+          </tr>
+          <tr>
+            <td>iPhone 15 Pro Max</td>
+            <td class="loss-cell">$120</td>
+            <td>$149</td>
+            <td>$400</td>
+            <td class="profit-cell">+$131</td>
+          </tr>
+          <tr>
+            <td>iPhone 15 Pro</td>
+            <td class="loss-cell">$100</td>
+            <td>$129</td>
+            <td>$330</td>
+            <td class="profit-cell">+$101</td>
+          </tr>
+          <tr>
+            <td>iPhone 14 & Older</td>
+            <td class="loss-cell">$50-70</td>
+            <td>$99-119</td>
+            <td>$140-200</td>
+            <td><span class="badge badge-red">Not Recommended</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size: 11px; color: var(--text-muted);">We're honest about which repairs make financial sense. That builds trust.</p>
+    </div>
+
+    <h2>Why This Works</h2>
     <div class="card-grid">
       <div class="card">
-        <div class="card-title">Volume Growth</div>
+        <div class="card-title">📈 Rising Phone Prices</div>
         <ul>
-          <li>Triple weekly repairs from 3 to 10+</li>
-          <li>Achieve within 12 months</li>
+          <li>iPhone 16 Pro Max: $1,199 MSRP</li>
+          <li>Trade-in credits offset cost</li>
+          <li>Customers want maximum value</li>
         </ul>
       </div>
       <div class="card">
-        <div class="card-title">Partnerships</div>
+        <div class="card-title">⏰ Longer Upgrade Cycles</div>
         <ul>
-          <li>2-3 carrier store partnerships</li>
-          <li>30% revenue from referrals</li>
+          <li>Average: 3-4 years between phones</li>
+          <li>More time for damage to occur</li>
+          <li>Higher stakes at trade-in time</li>
         </ul>
       </div>
       <div class="card">
-        <div class="card-title">Digital Presence</div>
+        <div class="card-title">🌍 Right-to-Repair Era</div>
         <ul>
-          <li>Optimized website launch</li>
-          <li>Top 5 Google ranking locally</li>
+          <li>Legislation expanding access</li>
+          <li>Consumer awareness growing</li>
+          <li>Local repair shops winning</li>
         </ul>
       </div>
     </div>
@@ -629,391 +693,186 @@
 
   <div class="page-break"></div>
 
-  <!-- 2. COMPANY DESCRIPTION -->
+  <!-- ===== SECTION 2: THE SOLUTION ===== -->
   <div class="section">
-    <span class="section-badge">Section 2</span>
-    <h1>Company Description</h1>
-
-    <h2>Business Information</h2>
-    <table>
-      <tbody>
-        <tr><td><strong>Business Name</strong></td><td>Gadget Fix</td></tr>
-        <tr><td><strong>Legal Structure</strong></td><td>Sole Proprietorship</td></tr>
-        <tr><td><strong>Owner</strong></td><td>Mike</td></tr>
-        <tr><td><strong>Location</strong></td><td>621 Strander Blvd, Tukwila, WA 98188</td></tr>
-        <tr><td><strong>Phone</strong></td><td>(425) 666-9090</td></tr>
-        <tr><td><strong>Email</strong></td><td>contact@gadgetfixkent.com</td></tr>
-        <tr><td><strong>Website</strong></td><td>gadgetfixkent.com (in development)</td></tr>
-        <tr><td><strong>Year Established</strong></td><td>2020</td></tr>
-      </tbody>
-    </table>
-
-    <h2>History</h2>
-    <p>Mike brings over <strong>30 years of experience</strong> in electronics repair and technology services to Gadget Fix. Starting with a passion for fixing devices and helping people save money, Mike established Gadget Fix to serve the Tukwila and South Seattle community with honest, affordable phone repair services.</p>
-    <p>The business has grown primarily through word-of-mouth referrals, with approximately <strong>90% of current customers coming from personal recommendations</strong>—a testament to the quality of work and customer service provided.</p>
-
-    <h2>Services Offered</h2>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-title">Primary Services</div>
-        <ul>
-          <li>iPhone Screen Repair (iPhone 6-16)</li>
-          <li>Battery Replacement</li>
-          <li>Back Glass Repair</li>
-          <li>Charging Port Repair</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="card-title">Secondary Services</div>
-        <ul>
-          <li>Samsung Galaxy repair</li>
-          <li>iPad screen repair</li>
-          <li>Data backup/transfer</li>
-          <li>Trade-in consultation (FREE)</li>
-        </ul>
-      </div>
+    <div class="section-header">
+      <span class="section-icon">⚡</span>
+      <span class="section-title">The Solution</span>
     </div>
 
-    <h2>Competitive Differentiators</h2>
     <div class="stat-grid">
-      <div class="stat-box">
-        <span class="stat-value">15-30</span>
+      <div class="stat-box glow">
+        <span class="stat-value">30</span>
         <span class="stat-label">Minute Repairs</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-value">20-40%</span>
-        <span class="stat-label">Lower Than Chains</span>
       </div>
       <div class="stat-box">
         <span class="stat-value">90</span>
         <span class="stat-label">Day Warranty</span>
       </div>
-      <div class="stat-box gold">
-        <span class="stat-value">$323</span>
-        <span class="stat-label">Max Customer Profit</span>
+      <div class="stat-box">
+        <span class="stat-value">40%</span>
+        <span class="stat-label">Below Apple Pricing</span>
+      </div>
+      <div class="stat-box glow">
+        <span class="stat-value">7</span>
+        <span class="stat-label">Days a Week</span>
       </div>
     </div>
-  </div>
 
-  <div class="page-break"></div>
-
-  <!-- 3. MARKET ANALYSIS -->
-  <div class="section">
-    <span class="section-badge">Section 3</span>
-    <h1>Market Analysis</h1>
-
-    <h2>Industry Overview</h2>
-    <p>The U.S. smartphone repair market is valued at approximately <strong>$4.4 billion</strong> (2024) with projected growth of 4-5% annually through 2028.</p>
-
-    <h3>Key Industry Drivers</h3>
-    <ul>
-      <li><strong>Rising smartphone prices</strong> - iPhone 16 Pro Max starts at $1,199</li>
-      <li><strong>Longer upgrade cycles</strong> - Average 3-4 years between new phones</li>
-      <li><strong>Environmental awareness</strong> - Repair vs. replace mentality growing</li>
-      <li><strong>Right-to-repair legislation</strong> - Expanding consumer options</li>
-      <li><strong>Carrier trade-in programs</strong> - Creating demand for pre-repair services</li>
-    </ul>
-
-    <h2>Local Market: Tukwila/South Seattle</h2>
+    <h2>Business Information</h2>
     <table>
-      <thead>
-        <tr><th>Factor</th><th>Data</th></tr>
-      </thead>
       <tbody>
-        <tr><td>Service Area Population</td><td>300,000+</td></tr>
-        <tr><td>Metro Population</td><td>Seattle-Tacoma: 4+ million</td></tr>
-        <tr><td>Median Household Income</td><td>$79,000</td></tr>
-        <tr><td>iPhone Market Share</td><td>~55%</td></tr>
-        <tr><td>Estimated iPhones in Area</td><td>165,000+ devices</td></tr>
+        <tr><td><strong>Business Name</strong></td><td>Gadget Fix</td></tr>
+        <tr><td><strong>Location</strong></td><td>621 Strander Blvd, Tukwila, WA 98188 (Seattle Exchange @ Southcenter)</td></tr>
+        <tr><td><strong>Phone</strong></td><td>(425) 666-9090</td></tr>
+        <tr><td><strong>Hours</strong></td><td>11:00 AM - 7:00 PM, 7 Days a Week</td></tr>
+        <tr><td><strong>Owner</strong></td><td>Mike (30+ years repair experience)</td></tr>
       </tbody>
     </table>
 
-    <h2>Addressable Market</h2>
-    <div class="formula-box">
-Service area population:           300,000
-iPhone ownership rate:             55%
-Total iPhones:                     165,000
-Annual screen breakage rate:       10-15%
-Phones needing repair:             16,500-24,750
-Repair willingness rate:           40%
-<strong>Addressable repairs/year:          6,600-9,900
-Monthly addressable:               550-825
-Gadget Fix goal (1-2%):            13-25 repairs/week</strong>
-    </div>
-
-    <h2>Competitive Positioning</h2>
-    <div class="diagram">
-                    HIGH PRICE
-                        │
-         Apple Store ●  │  ● uBreakiFix
-                        │
-    SLOW ───────────────┼─────────────── FAST
-    SERVICE             │              SERVICE
-                        │
-                        │    ★ GADGET FIX
-         Low Quality ●  │    (Target Position)
-         Independents   │
-                        │
-                    LOW PRICE
-    </div>
-  </div>
-
-  <div class="page-break"></div>
-
-  <!-- 4. SERVICES & PRICING -->
-  <div class="section">
-    <span class="section-badge">Section 4</span>
-    <h1>Services & Pricing</h1>
-
-    <h2>iPhone Screen Repair Pricing</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Model</th>
-          <th>Price</th>
-          <th>Trade-In Profit</th>
-          <th>Margin</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="highlight-row">
-          <td><strong>iPhone 16 Pro Max</strong></td>
-          <td>$179</td>
-          <td class="profit">+$323</td>
-          <td>69%</td>
-        </tr>
-        <tr>
-          <td>iPhone 16 Pro</td>
-          <td>$159</td>
-          <td class="profit">+$271</td>
-          <td>69%</td>
-        </tr>
-        <tr>
-          <td>iPhone 16/16 Plus</td>
-          <td>$139</td>
-          <td class="profit">+$180</td>
-          <td>68%</td>
-        </tr>
-        <tr>
-          <td>iPhone 15 Pro Max</td>
-          <td>$149</td>
-          <td class="profit">+$131</td>
-          <td>70%</td>
-        </tr>
-        <tr>
-          <td>iPhone 15 Pro</td>
-          <td>$129</td>
-          <td class="profit">+$100</td>
-          <td>69%</td>
-        </tr>
-        <tr>
-          <td>iPhone 15/15 Plus</td>
-          <td>$109</td>
-          <td class="neutral">Limited ROI</td>
-          <td>68%</td>
-        </tr>
-        <tr>
-          <td>iPhone 14 Pro</td>
-          <td>$119</td>
-          <td class="loss">Not recommended</td>
-          <td>71%</td>
-        </tr>
-        <tr>
-          <td>iPhone 14</td>
-          <td>$99</td>
-          <td class="loss">Not recommended</td>
-          <td>70%</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h2>Other Services</h2>
+    <h2>Why Customers Choose Us</h2>
     <div class="card-grid">
       <div class="card">
-        <div class="card-title">Battery Replacement</div>
+        <div class="card-title">⚡ The "Lunch Break" Fix</div>
         <ul>
-          <li>iPhone 15/16 Series: $80</li>
-          <li>iPhone 13/14 Series: $70</li>
-          <li>iPhone 12 & Older: $60</li>
+          <li>Most repairs done in 15-30 minutes</li>
+          <li>Walk in, walk out same visit</li>
+          <li>No appointment needed</li>
         </ul>
       </div>
       <div class="card">
-        <div class="card-title">Additional Services</div>
+        <div class="card-title">💎 Quality Guaranteed</div>
         <ul>
-          <li>Back Glass Repair: $80-150</li>
-          <li>Charging Port: $60-90</li>
-          <li>Data Backup: $40</li>
-          <li>Trade-In Consult: FREE</li>
+          <li>Premium aftermarket parts</li>
+          <li>15-point quality inspection</li>
+          <li>90-day warranty coverage</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">🎯 Honest Advice</div>
+        <ul>
+          <li>We show the trade-in math</li>
+          <li>Tell you if repair doesn't make sense</li>
+          <li>No pressure, just facts</li>
         </ul>
       </div>
     </div>
 
-    <h2>Warranty & Quality</h2>
-    <div class="info-box">
-      <span class="info-box-icon">✓</span>
-      <div class="info-box-content">
-        <strong>90-Day Warranty</strong> on all screen repairs. Covers defects in parts and workmanship. Free re-repair or full refund within warranty period.
-      </div>
-    </div>
-
-    <div class="stat-grid">
-      <div class="stat-box">
-        <span class="stat-value">15-30</span>
-        <span class="stat-label">Minute Turnaround</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-value">15</span>
-        <span class="stat-label">Point QC Check</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-value">Premium</span>
-        <span class="stat-label">Quality Parts</span>
-      </div>
-    </div>
+    <h2>Competitor Comparison</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Provider</th>
+          <th>Price (16 Pro Max)</th>
+          <th>Wait Time</th>
+          <th>Warranty</th>
+          <th>Local Owner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-highlight">
+          <td><strong>Gadget Fix</strong></td>
+          <td class="profit-cell">$179</td>
+          <td>15-30 min <span class="check">✓</span></td>
+          <td>90 days <span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td>Apple Store</td>
+          <td>$379</td>
+          <td>2-5 days <span class="x-mark">✗</span></td>
+          <td>90 days</td>
+          <td><span class="x-mark">✗</span></td>
+        </tr>
+        <tr>
+          <td>uBreakiFix</td>
+          <td>$280</td>
+          <td>1-2 hours</td>
+          <td>Lifetime</td>
+          <td><span class="x-mark">✗</span></td>
+        </tr>
+        <tr>
+          <td>Best Buy</td>
+          <td>$350</td>
+          <td>Same day</td>
+          <td>30 days</td>
+          <td><span class="x-mark">✗</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Bottom Line:</strong> Save $100-200 vs. competitors, get it done in 30 minutes, support local.</p>
   </div>
 
   <div class="page-break"></div>
 
-  <!-- 5. MARKETING STRATEGY -->
+  <!-- ===== SECTION 3: THE PARTNER PITCH ===== -->
   <div class="section">
-    <span class="section-badge">Section 5</span>
-    <h1>Marketing Strategy</h1>
-
-    <div class="quote-box">
-      <blockquote>"Repair Before You Trade-In"</blockquote>
-      <p>Turn Your Cracked Screen Into $300+ Cash</p>
+    <div class="section-header">
+      <span class="section-icon">🤝</span>
+      <span class="section-title">The Partner Pitch</span>
     </div>
 
-    <h2>Marketing Channels</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Channel</th>
-          <th>Priority</th>
-          <th>Investment</th>
-          <th>Expected Result</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Website & SEO</strong></td>
-          <td><span class="risk-badge risk-high" style="background:#dcfce7;color:#166534;">HIGH</span></td>
-          <td>$500-1K setup + $100/mo</td>
-          <td>25% new customers</td>
-        </tr>
-        <tr>
-          <td><strong>Carrier Partnerships</strong></td>
-          <td><span class="risk-badge risk-high" style="background:#dcfce7;color:#166534;">HIGH</span></td>
-          <td>Time + 10-15% referral fee</td>
-          <td>30% revenue</td>
-        </tr>
-        <tr>
-          <td><strong>Google My Business</strong></td>
-          <td><span class="risk-badge risk-high" style="background:#dcfce7;color:#166534;">HIGH</span></td>
-          <td>Free + time</td>
-          <td>Top 3 local ranking</td>
-        </tr>
-        <tr>
-          <td><strong>Social Media</strong></td>
-          <td><span class="risk-badge risk-medium">MEDIUM</span></td>
-          <td>$50/mo + 3 hrs/week</td>
-          <td>15% new customers</td>
-        </tr>
-        <tr>
-          <td><strong>Local Advertising</strong></td>
-          <td><span class="risk-badge risk-low">LOW</span></td>
-          <td>$100-200/mo seasonal</td>
-          <td>10% walk-in traffic</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h2>6-Month Marketing Calendar</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Month</th>
-          <th>Focus</th>
-          <th>Activities</th>
-          <th>Budget</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>Foundation</td><td>Website launch, GMB optimization</td><td>$800</td></tr>
-        <tr><td>2</td><td>Partnerships</td><td>Sign first carrier partner</td><td>$200</td></tr>
-        <tr><td>3</td><td>Content</td><td>Blog, photos, reviews</td><td>$100</td></tr>
-        <tr><td>4</td><td>Social Push</td><td>FB/IG ads campaign</td><td>$300</td></tr>
-        <tr><td>5</td><td>Local</td><td>Nextdoor, community outreach</td><td>$150</td></tr>
-        <tr><td>6</td><td>Review</td><td>Analyze, optimize</td><td>$200</td></tr>
-        <tr class="highlight-row"><td colspan="3"><strong>Total 6-Month Investment</strong></td><td><strong>$1,750</strong></td></tr>
-      </tbody>
-    </table>
-
-    <h2>Customer Acquisition Metrics</h2>
-    <div class="stat-grid">
-      <div class="stat-box">
-        <span class="stat-value">&lt;$20</span>
-        <span class="stat-label">Target CAC</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-value">$120-150</span>
-        <span class="stat-label">Customer LTV</span>
-      </div>
-      <div class="stat-box gold">
-        <span class="stat-value">6:1</span>
-        <span class="stat-label">LTV:CAC Ratio</span>
-      </div>
+    <div class="voiceover">
+      "We don't just want referrals. We save carrier reps their commissions."
+      <cite>— The 'Save-the-Sale' Strategy</cite>
     </div>
-  </div>
 
-  <div class="page-break"></div>
+    <div class="partner-script">
+      <h3>🎯 Why Carrier Reps Send Us Traffic</h3>
+      
+      <div class="script-line">
+        <span class="script-emoji">😤</span>
+        <div class="script-text">
+          <strong>The Problem:</strong> Customer walks in with a cracked iPhone 16. They want to upgrade. Carrier system flags the damage. Trade-in denied. Customer leaves frustrated. <strong>Rep loses the commission.</strong>
+        </div>
+      </div>
 
-  <!-- 6. OPERATIONS PLAN -->
-  <div class="section">
-    <span class="section-badge">Section 6</span>
-    <h1>Operations Plan</h1>
+      <div class="script-line">
+        <span class="script-emoji">💡</span>
+        <div class="script-text">
+          <strong>The Solution:</strong> Rep says: "Go to Gadget Fix at Southcenter. They'll fix it in 30 minutes. Come back today and we'll complete your upgrade."
+        </div>
+      </div>
 
-    <h2>Location Details</h2>
-    <table>
-      <tbody>
-        <tr><td><strong>Address</strong></td><td>621 Strander Blvd, Tukwila, WA 98188</td></tr>
-        <tr><td><strong>Location Type</strong></td><td>Seattle Exchange at Southcenter (indoor marketplace)</td></tr>
-        <tr><td><strong>Square Footage</strong></td><td>Approximately 200 sq ft booth/kiosk</td></tr>
-        <tr><td><strong>Lease Terms</strong></td><td>Month-to-month marketplace vendor agreement</td></tr>
-        <tr><td><strong>Parking</strong></td><td>Free parking available in Southcenter lot</td></tr>
-        <tr><td><strong>Foot Traffic</strong></td><td>Moderate-high (shared with marketplace vendors)</td></tr>
-      </tbody>
-    </table>
+      <div class="script-line">
+        <span class="script-emoji">🎉</span>
+        <div class="script-text">
+          <strong>The Result:</strong> Customer returns same day with a fixed phone. Trade-in approved. Upgrade complete. <strong>Rep gets paid. Customer saves $323. We get paid.</strong>
+        </div>
+      </div>
 
-    <h2>Hours of Operation</h2>
-    <div class="info-box">
-      <span class="info-box-icon">🕐</span>
-      <div class="info-box-content">
-        <strong>Open 7 Days a Week</strong><br>
-        Monday - Sunday: 11:00 AM - 7:00 PM
+      <div class="script-line">
+        <span class="script-emoji">💵</span>
+        <div class="script-text">
+          <strong>The Bonus:</strong> $15-20 referral fee per successful repair. That's lunch money for sending a text.
+        </div>
       </div>
     </div>
 
-    <h2>Quality Control Process</h2>
+    <h2>Target Partners</h2>
     <div class="card-grid">
       <div class="card">
-        <div class="card-title">Pre-Repair Checklist</div>
+        <div class="card-title">📱 T-Mobile / Metro</div>
         <ul>
-          <li>Document device condition (photos)</li>
-          <li>Verify customer complaint</li>
-          <li>Check for additional issues</li>
-          <li>Provide accurate quote</li>
-          <li>Get written authorization</li>
+          <li>Southcenter location</li>
+          <li>High trade-in volume</li>
+          <li>Commission-driven staff</li>
         </ul>
       </div>
       <div class="card">
-        <div class="card-title">Post-Repair Checklist</div>
+        <div class="card-title">📱 Verizon / AT&T</div>
         <ul>
-          <li>Touch screen test (all areas)</li>
-          <li>Display quality verification</li>
-          <li>Face ID functionality</li>
-          <li>Speaker/microphone test</li>
-          <li>Camera test (front + rear)</li>
+          <li>Authorized retailers</li>
+          <li>Premium device focus</li>
+          <li>Trade-in promo heavy</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">🏪 Best Buy / Costco</div>
+        <ul>
+          <li>High foot traffic</li>
+          <li>Multi-carrier options</li>
+          <li>Big-box partnerships</li>
         </ul>
       </div>
     </div>
@@ -1021,15 +880,90 @@ Gadget Fix goal (1-2%):            13-25 repairs/week</strong>
 
   <div class="page-break"></div>
 
-  <!-- 8. FINANCIAL PROJECTIONS -->
+  <!-- ===== SECTION 4: THE MARKET ===== -->
   <div class="section">
-    <span class="section-badge">Section 8</span>
-    <h1>Financial Projections</h1>
+    <div class="section-header">
+      <span class="section-icon">🌍</span>
+      <span class="section-title">The Market</span>
+    </div>
 
-    <h2>Current Baseline</h2>
     <div class="stat-grid">
       <div class="stat-box">
-        <span class="stat-value">3</span>
+        <span class="stat-value">$4.4B</span>
+        <span class="stat-label">US Repair Market (2024)</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-value">300K</span>
+        <span class="stat-label">Service Area Population</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-value">165K</span>
+        <span class="stat-label">iPhones in Area</span>
+      </div>
+      <div class="stat-box glow">
+        <span class="stat-value">825</span>
+        <span class="stat-label">Monthly Repair Demand</span>
+      </div>
+    </div>
+
+    <h2>Location Advantage</h2>
+    <div class="highlight-box">
+      <h3>📍 Seattle Exchange @ Southcenter</h3>
+      <p><strong>621 Strander Blvd, Tukwila, WA 98188</strong></p>
+      <ul style="margin-top: 12px;">
+        <li>Indoor marketplace with built-in foot traffic</li>
+        <li>Free parking in Southcenter lot</li>
+        <li>Near major carriers, Best Buy, Costco</li>
+        <li>Central to Tukwila, Kent, Renton, SeaTac</li>
+      </ul>
+    </div>
+
+    <h2>Target Customers</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">🎯 The Upgrader</div>
+        <ul>
+          <li>Owns iPhone 15/16 with damage</li>
+          <li>Wants to maximize trade-in</li>
+          <li>Motivated by clear ROI</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">👨‍👩‍👧 The Practical Parent</div>
+        <ul>
+          <li>Kid cracked the phone</li>
+          <li>Budget-conscious</li>
+          <li>Needs fast, affordable fix</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">⏰ The Last-Minute Seller</div>
+        <ul>
+          <li>Promo ending soon</li>
+          <li>Needs same-day service</li>
+          <li>Values convenience</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ===== SECTION 5: THE FINANCIAL ROADMAP ===== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">📈</span>
+      <span class="section-title">Financial Roadmap</span>
+    </div>
+
+    <div class="voiceover">
+      "From 3 repairs a week to 10+. From break-even to $2,300/month profit."
+    </div>
+
+    <h2>Current → Target</h2>
+    <div class="stat-grid">
+      <div class="stat-box">
+        <span class="stat-value">3 → 10</span>
         <span class="stat-label">Weekly Repairs</span>
       </div>
       <div class="stat-box">
@@ -1037,134 +971,147 @@ Gadget Fix goal (1-2%):            13-25 repairs/week</strong>
         <span class="stat-label">Avg Ticket</span>
       </div>
       <div class="stat-box">
-        <span class="stat-value">$1,690</span>
-        <span class="stat-label">Monthly Revenue</span>
-      </div>
-      <div class="stat-box gold">
         <span class="stat-value">70%</span>
         <span class="stat-label">Gross Margin</span>
       </div>
+      <div class="stat-box glow">
+        <span class="stat-value">$57K</span>
+        <span class="stat-label">Year 1 Target</span>
+      </div>
     </div>
 
-    <h2>12-Month Revenue Projection</h2>
+    <h2>12-Month Projection</h2>
     <table>
       <thead>
         <tr>
-          <th>Month</th>
+          <th>Quarter</th>
           <th>Weekly Repairs</th>
           <th>Avg Ticket</th>
           <th>Monthly Revenue</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td>3</td><td>$130</td><td>$1,690</td></tr>
-        <tr><td>2</td><td>4</td><td>$130</td><td>$2,250</td></tr>
-        <tr><td>3</td><td>4</td><td>$135</td><td>$2,350</td></tr>
-        <tr><td>4</td><td>5</td><td>$135</td><td>$2,925</td></tr>
-        <tr><td>5</td><td>5</td><td>$135</td><td>$2,925</td></tr>
-        <tr><td>6</td><td>6</td><td>$140</td><td>$3,640</td></tr>
-        <tr><td>7</td><td>6</td><td>$140</td><td>$3,640</td></tr>
-        <tr><td>8</td><td>7</td><td>$140</td><td>$4,250</td></tr>
-        <tr><td>9</td><td>7</td><td>$140</td><td>$4,250</td></tr>
-        <tr><td>10</td><td>8</td><td>$140</td><td>$4,850</td></tr>
-        <tr><td>11</td><td>8</td><td>$145</td><td>$5,030</td></tr>
-        <tr><td>12</td><td>8</td><td>$145</td><td>$5,030</td></tr>
-        <tr class="highlight-row"><td><strong>Year 1</strong></td><td><strong>Avg: 5.9</strong></td><td><strong>$138</strong></td><td><strong>$42,830</strong></td></tr>
+        <tr>
+          <td>Q1 (Mo 1-3)</td>
+          <td>3-4</td>
+          <td>$130</td>
+          <td>$1,700 - $2,350</td>
+        </tr>
+        <tr>
+          <td>Q2 (Mo 4-6)</td>
+          <td>5-6</td>
+          <td>$135</td>
+          <td>$2,900 - $3,640</td>
+        </tr>
+        <tr>
+          <td>Q3 (Mo 7-9)</td>
+          <td>6-7</td>
+          <td>$140</td>
+          <td>$3,640 - $4,250</td>
+        </tr>
+        <tr class="row-highlight">
+          <td><strong>Q4 (Mo 10-12)</strong></td>
+          <td><strong>8-10</strong></td>
+          <td><strong>$145</strong></td>
+          <td class="profit-cell"><strong>$4,850 - $6,300</strong></td>
+        </tr>
       </tbody>
     </table>
 
     <h2>Break-Even Analysis</h2>
-    <div class="formula-box">
-Monthly Fixed Costs:         $1,300
-Average Ticket:              $130
-Parts Cost (30%):            $39
-Gross Profit per Repair:     $91
-
-<strong>Break-Even = $1,300 ÷ $91 = 14.3 repairs/month = 3.6/week</strong>
-
-Current volume (3/week):     AT break-even
-Target volume (10/week):     $2,340/month NET PROFIT
-    </div>
-
-    <div class="info-box">
-      <span class="info-box-icon">💡</span>
-      <div class="info-box-content">
-        <strong>Key Insight:</strong> Reaching 10 repairs/week would generate $2,340/month in net profit after all fixed costs.
+    <div class="highlight-box">
+      <div style="font-family: monospace; font-size: 13px; line-height: 1.8;">
+        Monthly Fixed Costs:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$1,300<br>
+        Gross Profit per Repair:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$91 (70% of $130)<br>
+        <strong>Break-Even:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14.3 repairs/month = 3.6/week</strong><br><br>
+        At 10 repairs/week:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$3,640 gross profit<br>
+        <span style="color: var(--green-glow);"><strong>Net Profit:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$2,340/month</strong></span>
       </div>
     </div>
   </div>
 
   <div class="page-break"></div>
 
-  <!-- 9. GROWTH STRATEGY -->
+  <!-- ===== SECTION 6: THE ROADMAP ===== -->
   <div class="section">
-    <span class="section-badge">Section 9</span>
-    <h1>Growth Strategy</h1>
+    <div class="section-header">
+      <span class="section-icon">🚀</span>
+      <span class="section-title">The Roadmap</span>
+    </div>
 
-    <h2>Phase 1: Foundation & Volume (Months 0-6)</h2>
-    <p><strong>Objective:</strong> Triple weekly repair volume from 3 to 9</p>
+    <h2>Phase 1: Foundation (Months 1-6)</h2>
+    <p><strong>Goal:</strong> Triple weekly repairs from 3 to 9</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">Month 1</div>
+        <div class="timeline-content">Website live with trade-in calculator. Google Business optimized.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Month 2-3</div>
+        <div class="timeline-content">First carrier partnership signed. 20+ Google reviews collected.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Month 4-6</div>
+        <div class="timeline-content">Social media push. 6-9 repairs/week achieved.</div>
+      </div>
+    </div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Initiative</th>
-          <th>Timeline</th>
-          <th>Success Metric</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Website with trade-in calculator</td><td>Month 1</td><td>100+ monthly visitors</td></tr>
-        <tr><td>Google My Business optimization</td><td>Month 1</td><td>Top 5 local ranking</td></tr>
-        <tr><td>First carrier partnership</td><td>Month 3</td><td>5+ referrals/month</td></tr>
-        <tr><td>Review generation campaign</td><td>Month 2-6</td><td>20+ five-star reviews</td></tr>
-      </tbody>
-    </table>
+    <h2>Phase 2: Scale (Months 6-12)</h2>
+    <p><strong>Goal:</strong> 10+ repairs/week, 30% from partnerships</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">Month 7-8</div>
+        <div class="timeline-content">3 carrier partnerships active. Paid ads launched.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Month 9-10</div>
+        <div class="timeline-content">iPhone launch season push. 10+ repairs/week consistent.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Month 11-12</div>
+        <div class="timeline-content">Evaluate part-time hire. $5,000+/month revenue.</div>
+      </div>
+    </div>
 
-    <h2>Phase 2: Partnerships & Optimization (Months 6-12)</h2>
-    <p><strong>Objective:</strong> Reach 10+ repairs/week with 30% from partnerships</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Initiative</th>
-          <th>Timeline</th>
-          <th>Success Metric</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Expand to 3 carrier partnerships</td><td>Month 8</td><td>15+ referrals/month</td></tr>
-        <tr><td>Launch paid advertising</td><td>Month 7</td><td>CAC under $25</td></tr>
-        <tr><td>Hire part-time help (if needed)</td><td>Month 9</td><td>Handle 15+ repairs/week</td></tr>
-        <tr><td>Customer loyalty program</td><td>Month 7</td><td>20% repeat customers</td></tr>
-      </tbody>
-    </table>
-
-    <h2>Phase 3: Expansion Consideration (Months 12-24)</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Expansion Option</th>
-          <th>Investment</th>
-          <th>Risk</th>
-          <th>Potential</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Second location</td><td>$15-30K</td><td><span class="risk-badge risk-high">High</span></td><td>2x revenue</td></tr>
-        <tr><td>Mobile repair service</td><td>$5-10K</td><td><span class="risk-badge risk-medium">Medium</span></td><td>+30% revenue</td></tr>
-        <tr><td>Partnership white-label</td><td>Low</td><td><span class="risk-badge risk-low">Low</span></td><td>+20% revenue</td></tr>
-      </tbody>
-    </table>
+    <h2>Phase 3: Expansion (Year 2)</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">🏪 Second Location</div>
+        <ul>
+          <li>Investment: $15-30K</li>
+          <li>Potential: 2x revenue</li>
+          <li>Risk: High</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">🚗 Mobile Service</div>
+        <ul>
+          <li>Investment: $5-10K</li>
+          <li>Potential: +30% revenue</li>
+          <li>Risk: Medium</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">🏢 B2B Fleet</div>
+        <ul>
+          <li>Investment: Low</li>
+          <li>Potential: +20% revenue</li>
+          <li>Risk: Low</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <div class="page-break"></div>
 
-  <!-- 10. RISK ASSESSMENT -->
+  <!-- ===== SECTION 7: RISK & CONTINUITY ===== -->
   <div class="section">
-    <span class="section-badge">Section 10</span>
-    <h1>Risk Assessment</h1>
+    <div class="section-header">
+      <span class="section-icon">🛡️</span>
+      <span class="section-title">Risk & Continuity</span>
+    </div>
 
-    <h2>Market Risks</h2>
+    <h2>Risk Matrix</h2>
     <table>
       <thead>
         <tr>
@@ -1177,267 +1124,55 @@ Target volume (10/week):     $2,340/month NET PROFIT
       <tbody>
         <tr>
           <td>Trade-in programs eliminated</td>
-          <td><span class="risk-badge risk-low">Low</span></td>
-          <td><span class="risk-badge risk-high">High</span></td>
-          <td>Diversify marketing message</td>
+          <td><span class="badge badge-green">Low</span></td>
+          <td><span class="badge badge-red">High</span></td>
+          <td>Diversify messaging beyond trade-in</td>
         </tr>
         <tr>
-          <td>New competitor enters market</td>
-          <td><span class="risk-badge risk-medium">Medium</span></td>
-          <td><span class="risk-badge risk-medium">Medium</span></td>
-          <td>Build brand loyalty first</td>
+          <td>New competitor enters</td>
+          <td><span class="badge badge-gold">Medium</span></td>
+          <td><span class="badge badge-gold">Medium</span></td>
+          <td>Lock in partnerships first, build brand loyalty</td>
         </tr>
         <tr>
-          <td>Smartphone durability improves</td>
-          <td><span class="risk-badge risk-low">Low</span></td>
-          <td><span class="risk-badge risk-high">High</span></td>
-          <td>Expand device types</td>
-        </tr>
-        <tr>
-          <td>Economic downturn</td>
-          <td><span class="risk-badge risk-medium">Medium</span></td>
-          <td><span class="risk-badge risk-medium">Medium</span></td>
-          <td>"Repair saves money" messaging</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h2>Operational Risks</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Risk</th>
-          <th>Probability</th>
-          <th>Impact</th>
-          <th>Mitigation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Parts supply chain disruption</td>
-          <td><span class="risk-badge risk-medium">Medium</span></td>
-          <td><span class="risk-badge risk-high">High</span></td>
-          <td>Multiple suppliers, stock inventory</td>
-        </tr>
-        <tr>
-          <td>Quality issue damages reputation</td>
-          <td><span class="risk-badge risk-low">Low</span></td>
-          <td><span class="risk-badge risk-high">High</span></td>
-          <td>Strict QC, excellent warranty</td>
+          <td>Supply chain disruption</td>
+          <td><span class="badge badge-gold">Medium</span></td>
+          <td><span class="badge badge-red">High</span></td>
+          <td>Maintain 2-3 supplier relationships</td>
         </tr>
         <tr>
           <td>Owner unable to work</td>
-          <td><span class="risk-badge risk-low">Low</span></td>
-          <td><span class="risk-badge risk-critical">Critical</span></td>
-          <td>Build backup technician relationship</td>
+          <td><span class="badge badge-green">Low</span></td>
+          <td><span class="badge badge-red">Critical</span></td>
+          <td>See Continuity Plan below</td>
         </tr>
       </tbody>
     </table>
 
-    <h2>Risk Mitigation Priorities</h2>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-title">✅ Immediate Actions</div>
-        <ul>
-          <li>Maintain 2-3 supplier relationships</li>
-          <li>Build 3-month expense reserve</li>
-          <li>Document all processes</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="card-title">✅ Ongoing Actions</div>
-        <ul>
-          <li>Track marketing ROI from Day 1</li>
-          <li>Diversify marketing channels</li>
-          <li>Maintain marketplace relationship</li>
-        </ul>
-      </div>
+    <div class="highlight-box gold">
+      <h3>🔄 Business Continuity Plan</h3>
+      <p><strong>If Mike is temporarily unable to work:</strong></p>
+      <ul style="margin-top: 12px;">
+        <li><strong>Backup Technician:</strong> On-call agreement with Isaac (Gadget Rehab, Seattle) for emergency coverage</li>
+        <li><strong>Process Documentation:</strong> All repair SOPs documented for temporary staff</li>
+        <li><strong>Customer Communication:</strong> Voicemail/text auto-reply with expected return date</li>
+        <li><strong>Partnership Continuity:</strong> Carrier partners notified with timeline</li>
+      </ul>
     </div>
   </div>
 
-  <div class="page-break"></div>
-
-  <!-- APPENDIX A -->
-  <div class="section">
-    <span class="section-badge">Appendix A</span>
-    <h1>Trade-In Value Data (December 2024)</h1>
-    <p><em>Source: Apple Trade-In, MacRumors research, verified November 2024</em></p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>iPhone Model</th>
-          <th>Cracked (Apple)</th>
-          <th>Good (Apple)</th>
-          <th>Repair Cost</th>
-          <th>Net Profit</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="highlight-row">
-          <td><strong>iPhone 16 Pro Max</strong></td>
-          <td>$168</td>
-          <td>$670</td>
-          <td>$179</td>
-          <td class="profit"><strong>+$323</strong></td>
-        </tr>
-        <tr>
-          <td>iPhone 16 Pro</td>
-          <td>$150</td>
-          <td>$580</td>
-          <td>$159</td>
-          <td class="profit">+$271</td>
-        </tr>
-        <tr>
-          <td>iPhone 16 Plus</td>
-          <td>$140</td>
-          <td>$500</td>
-          <td>$139</td>
-          <td class="profit">+$221</td>
-        </tr>
-        <tr>
-          <td>iPhone 16</td>
-          <td>$130</td>
-          <td>$450</td>
-          <td>$139</td>
-          <td class="profit">+$181</td>
-        </tr>
-        <tr>
-          <td>iPhone 15 Pro Max</td>
-          <td>$120</td>
-          <td>$400</td>
-          <td>$149</td>
-          <td class="profit">+$131</td>
-        </tr>
-        <tr>
-          <td>iPhone 15 Pro</td>
-          <td>$100</td>
-          <td>$330</td>
-          <td>$129</td>
-          <td class="profit">+$101</td>
-        </tr>
-        <tr>
-          <td>iPhone 15 Plus</td>
-          <td>$90</td>
-          <td>$270</td>
-          <td>$109</td>
-          <td class="profit">+$71</td>
-        </tr>
-        <tr>
-          <td>iPhone 15</td>
-          <td>$80</td>
-          <td>$240</td>
-          <td>$109</td>
-          <td class="profit">+$51</td>
-        </tr>
-        <tr>
-          <td>iPhone 14 Pro Max</td>
-          <td>$70</td>
-          <td>$200</td>
-          <td>$119</td>
-          <td class="neutral">+$11</td>
-        </tr>
-        <tr>
-          <td>iPhone 14 Pro</td>
-          <td>$60</td>
-          <td>$170</td>
-          <td>$119</td>
-          <td class="loss">-$9</td>
-        </tr>
-        <tr>
-          <td>iPhone 14</td>
-          <td>$50</td>
-          <td>$140</td>
-          <td>$99</td>
-          <td class="loss">-$9</td>
-        </tr>
-        <tr>
-          <td>iPhone 13 Series</td>
-          <td>$30-50</td>
-          <td>$80-120</td>
-          <td>$89</td>
-          <td class="loss">Not recommended</td>
-        </tr>
-        <tr>
-          <td>iPhone 12 & Older</td>
-          <td>$0-30</td>
-          <td>$20-60</td>
-          <td>$79</td>
-          <td class="loss">Not recommended</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="info-box">
-      <span class="info-box-icon">💡</span>
-      <div class="info-box-content">
-        <strong>Key Insight:</strong> iPhone 15-16 series are the sweet spot for trade-in repair ROI. Be honest with customers about older models where repair doesn't make financial sense for trade-in purposes.
-      </div>
-    </div>
-  </div>
-
-  <!-- APPENDIX B -->
-  <div class="section">
-    <span class="section-badge">Appendix B</span>
-    <h1>Competitor Pricing Comparison</h1>
-    <p><em>Prices as of December 2024 for iPhone 16 Pro Max screen repair</em></p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Provider</th>
-          <th>Price</th>
-          <th>Wait Time</th>
-          <th>Warranty</th>
-          <th>Savings vs Gadget Fix</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="highlight-row">
-          <td><strong>Gadget Fix</strong></td>
-          <td><strong>$179</strong></td>
-          <td>15-30 min</td>
-          <td>90 days</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>Apple Store</td>
-          <td>$379</td>
-          <td>2-5 days</td>
-          <td>90 days</td>
-          <td class="profit">Save $200 (53%)</td>
-        </tr>
-        <tr>
-          <td>uBreakiFix</td>
-          <td>$280</td>
-          <td>1-2 hours</td>
-          <td>Lifetime</td>
-          <td class="profit">Save $101 (36%)</td>
-        </tr>
-        <tr>
-          <td>CPR Phone Repair</td>
-          <td>$250</td>
-          <td>1-2 hours</td>
-          <td>Limited</td>
-          <td class="profit">Save $71 (28%)</td>
-        </tr>
-        <tr>
-          <td>Best Buy</td>
-          <td>$350</td>
-          <td>Same day</td>
-          <td>30 days</td>
-          <td class="profit">Save $171 (49%)</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- FOOTER -->
+  <!-- ===== FOOTER ===== -->
   <div class="footer">
-    <p><strong>Gadget Fix</strong> | 621 Strander Blvd, Tukwila, WA 98188 | (425) 666-9090</p>
-    <p>Open Daily: 11:00 AM - 7:00 PM</p>
-    <p style="margin-top: 12px;">This business plan was prepared by <strong>MyCo Business Consulting</strong> | December 2024</p>
-    <p>Version 2.0 | All projections are estimates based on available market data.</p>
+    <div class="footer-logo">GADGET FIX</div>
+    <div class="footer-contact">
+      📍 621 Strander Blvd, Tukwila, WA 98188<br>
+      📱 (425) 666-9090<br>
+      🕐 Open Daily: 11:00 AM - 7:00 PM
+    </div>
+    <p style="margin-top: 20px;">
+      Business Plan prepared by <strong style="color: var(--green-glow);">MyCo Business Consulting</strong><br>
+      December 2024 | Version 3.0 - "Trailer Edition"
+    </p>
   </div>
 
 </div>
