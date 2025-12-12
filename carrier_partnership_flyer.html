@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gadget Fix - Carrier Partnership Flyer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #2E7D32;
+      --primary-dark: #1B5E20;
+      --accent: #FFC107;
+      --accent-dark: #F9A825;
+      --text: #1a1a1a;
+      --text-muted: #555;
+      --bg-light: #f8fdf8;
+      --white: #ffffff;
+    }
+
+    @page {
+      size: letter;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: white;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .page {
+      width: 8.5in;
+      height: 11in;
+      padding: 0.5in;
+      margin: 0 auto;
+      background: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: white;
+      padding: 24px 28px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .logo-icon {
+      font-size: 28px;
+      margin-bottom: 4px;
+    }
+
+    .logo-text {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .tagline {
+      font-size: 14px;
+      opacity: 0.9;
+      font-weight: 500;
+    }
+
+    .header-badge {
+      background: var(--accent);
+      color: var(--text);
+      padding: 10px 18px;
+      border-radius: 50px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* Content sections */
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .section {
+      background: var(--bg-light);
+      border-radius: 12px;
+      padding: 20px 24px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .section p {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* Math Box */
+    .math-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      border-left: none;
+      padding: 24px;
+    }
+
+    .math-section .section-title {
+      color: var(--accent);
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .math-example {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .math-item {
+      background: rgba(255,255,255,0.15);
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .math-operator {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .math-result {
+      background: var(--accent) !important;
+      color: var(--text);
+      font-size: 16px;
+      padding: 12px 20px;
+    }
+
+    .math-subtext {
+      text-align: center;
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .benefit-icon {
+      width: 24px;
+      height: 24px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--text);
+      color: white;
+      padding: 20px 24px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .qr-section {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .qr-placeholder {
+      width: 80px;
+      height: 80px;
+      background: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: var(--text);
+      font-size: 10px;
+      font-weight: 600;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .qr-text {
+      font-size: 12px;
+      opacity: 0.9;
+      max-width: 120px;
+    }
+
+    .contact-info {
+      text-align: right;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .contact-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-icon {
+      font-size: 16px;
+    }
+
+    .phone-number {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .footer-tagline {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      font-style: italic;
+      opacity: 0.8;
+    }
+
+    .footer-wrapper {
+      position: relative;
+    }
+
+    .bottom-tagline {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 12px;
+      padding: 12px;
+      background: linear-gradient(90deg, transparent, rgba(46,125,50,0.1), transparent);
+      border-radius: 8px;
+    }
+
+    /* Print optimizations */
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      
+      .page {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+      }
+    }
+
+    /* Screen preview */
+    @media screen {
+      body {
+        background: #e0e0e0;
+        padding: 20px;
+      }
+      
+      .page {
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <div class="logo-icon">🔧</div>
+        <div class="logo-text">GADGET FIX</div>
+        <div class="tagline">Your Partner for Trade-In Ready Repairs</div>
+      </div>
+      <div class="header-badge">15-30 MIN REPAIRS</div>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+      <!-- Problem Section -->
+      <section class="section">
+        <h2 class="section-title">❌ The Problem</h2>
+        <p>
+          Customer wants to upgrade, but their phone has a cracked screen. 
+          At your store, they get $262 for a damaged iPhone 16 Pro Max.
+          At Apple (fixed), they'd get $670. <strong>That's $408 they're losing.</strong>
+        </p>
+      </section>
+
+      <!-- Solution Section -->
+      <section class="section">
+        <h2 class="section-title">✅ The Solution</h2>
+        <p>
+          Send them to Gadget Fix. We're nearby — just minutes away. 
+          <strong>20 minute repair.</strong> At your store: cracked=$262, fixed=$525. 
+          At Apple: cracked=$168, fixed=$670. Either way, <strong>everyone wins.</strong>
+        </p>
+      </section>
+
+      <!-- Math Section -->
+      <section class="section math-section">
+        <h2 class="section-title">💰 Real Research — iPhone 16 Pro Max at Apple</h2>
+        <div class="math-example">
+          <span class="math-item">Trade-in (cracked): $168</span>
+          <span class="math-operator">→</span>
+          <span class="math-item">Repair: $179</span>
+          <span class="math-operator">→</span>
+          <span class="math-item">Trade-in (fixed): $670</span>
+          <span class="math-operator">=</span>
+          <span class="math-item math-result">+$323 PROFIT!</span>
+        </div>
+        <p class="math-subtext">
+          We researched Apple, AT&T, Verizon, T-Mobile & Best Buy. Apple pays the most — that's your opportunity.
+        </p>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="section">
+        <h2 class="section-title">🤝 Why Partner With Us</h2>
+        <div class="benefits-grid">
+          <div class="benefit">
+            <span class="benefit-icon">⚡</span>
+            <span>Fast: 15-30 min repairs</span>
+          </div>
+          <div class="benefit">
+            <span class="benefit-icon">📍</span>
+            <span>Nearby: Walking distance</span>
+          </div>
+          <div class="benefit">
+            <span class="benefit-icon">⭐</span>
+            <span>Professional service</span>
+          </div>
+          <div class="benefit">
+            <span class="benefit-icon">🛡️</span>
+            <span>90-day warranty</span>
+          </div>
+          <div class="benefit">
+            <span class="benefit-icon">💵</span>
+            <span>Optional referral bonus</span>
+          </div>
+          <div class="benefit">
+            <span class="benefit-icon">📈</span>
+            <span>YOU close more sales</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tagline -->
+      <div class="bottom-tagline">
+        "Real research. Real savings. Up to $500 more at Apple trade-in."
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="qr-section">
+        <div class="qr-placeholder">
+          [QR CODE]<br>
+          <small>Trade-In Calculator</small>
+        </div>
+        <div class="qr-text">
+          Scan to see how much MORE your customers can get
+        </div>
+      </div>
+      <div class="contact-info">
+        <div class="contact-item phone-number">
+          <span class="contact-icon">📞</span>
+          (253) 639-4343
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          Kent Station Area, Kent WA
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">🌐</span>
+          gadgetfixkent.com
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+

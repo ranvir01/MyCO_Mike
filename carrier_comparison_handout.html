@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Handout - Fix Your Screen, Get More Money</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: 5.5in 8.5in;
+            margin: 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --green-dark: #1B5E20;
+            --green-main: #2E7D32;
+            --green-light: #388E3C;
+            --green-accent: #4CAF50;
+            --green-pale: #E8F5E9;
+            --red-main: #C62828;
+            --gold: #FFB300;
+            --gray-dark: #424242;
+            --gray-mid: #757575;
+            --gray-light: #E0E0E0;
+            --white: #FFFFFF;
+            --bg-cream: #FAFAFA;
+        }
+        
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            background: #f0f0f0;
+        }
+        
+        .page-container {
+            width: 8.5in;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .handout {
+            width: 5.5in;
+            height: 8.5in;
+            background: var(--white);
+            padding: 0.35in;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .handout::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--green-dark), var(--green-main), var(--green-light));
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 0.3in;
+            padding-top: 0.15in;
+        }
+        
+        .header .emoji {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 12px;
+        }
+        
+        .header h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--green-dark);
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+        
+        .header h1 span {
+            display: block;
+            color: var(--gray-dark);
+            font-size: 22px;
+        }
+        
+        /* Calculator Form */
+        .calculator-form {
+            background: var(--bg-cream);
+            border: 2px solid var(--gray-light);
+            border-radius: 16px;
+            padding: 0.25in;
+            margin-bottom: 0.25in;
+        }
+        
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 2px dashed var(--gray-light);
+        }
+        
+        .form-row:last-child {
+            border-bottom: none;
+        }
+        
+        .form-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-dark);
+        }
+        
+        .form-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gray-mid);
+            min-width: 120px;
+            text-align: right;
+            border-bottom: 2px solid var(--gray-dark);
+            padding-bottom: 4px;
+        }
+        
+        .form-row.highlight {
+            background: var(--green-pale);
+            margin: 0 -0.25in;
+            padding: 16px 0.25in;
+            border-bottom: none;
+            border-radius: 0 0 12px 12px;
+        }
+        
+        .form-row.highlight .form-label {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--green-dark);
+        }
+        
+        .form-row.highlight .form-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--green-main);
+            border-bottom-color: var(--green-main);
+        }
+        
+        /* Benefits List */
+        .benefits {
+            margin-bottom: 0.25in;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+        
+        .benefit-item:last-child {
+            border-bottom: none;
+        }
+        
+        .benefit-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--green-pale);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .benefit-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-dark);
+        }
+        
+        .benefit-text strong {
+            color: var(--green-dark);
+        }
+        
+        /* Apple Recommendation */
+        .apple-rec {
+            background: linear-gradient(135deg, #000 0%, #333 100%);
+            color: var(--white);
+            padding: 16px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 0.25in;
+        }
+        
+        .apple-logo {
+            font-size: 32px;
+        }
+        
+        .apple-text h3 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--gold);
+        }
+        
+        .apple-text p {
+            font-size: 13px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        /* QR Code Section */
+        .qr-section {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--bg-cream);
+            border: 2px solid var(--gray-light);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: auto;
+        }
+        
+        .qr-code {
+            width: 80px;
+            height: 80px;
+            background: var(--white);
+            border: 2px solid var(--gray-light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: var(--gray-mid);
+            text-align: center;
+            padding: 8px;
+        }
+        
+        .qr-text {
+            flex: 1;
+        }
+        
+        .qr-text h4 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--green-dark);
+            margin-bottom: 4px;
+        }
+        
+        .qr-text p {
+            font-size: 11px;
+            color: var(--gray-mid);
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding-top: 0.2in;
+            border-top: 2px solid var(--green-main);
+            margin-top: 0.2in;
+        }
+        
+        .footer .brand {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--green-main);
+            margin-bottom: 8px;
+        }
+        
+        .footer .contact-row {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-dark);
+            margin-bottom: 4px;
+        }
+        
+        .footer .location {
+            font-size: 13px;
+            color: var(--gray-mid);
+        }
+        
+        /* Print: Two per page */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .page-container {
+                width: 11in;
+                height: 8.5in;
+            }
+            
+            .handout {
+                page-break-inside: avoid;
+            }
+        }
+        
+        /* Cut line for printing 2-up */
+        .handout.with-cut-line {
+            border-right: 1px dashed var(--gray-mid);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <!-- Handout 1 -->
+        <div class="handout with-cut-line">
+            <!-- Header -->
+            <header class="header">
+                <span class="emoji">🔧</span>
+                <h1>FIX YOUR SCREEN,<span>GET MORE FOR TRADE-IN!</span></h1>
+            </header>
+            
+            <!-- Calculator Form -->
+            <section class="calculator-form">
+                <div class="form-row">
+                    <span class="form-label">📱 Your Phone:</span>
+                    <span class="form-value">________________</span>
+                </div>
+                <div class="form-row">
+                    <span class="form-label">💔 Cracked Value:</span>
+                    <span class="form-value">$ ___________</span>
+                </div>
+                <div class="form-row">
+                    <span class="form-label">✨ Fixed Value:</span>
+                    <span class="form-value">$ ___________</span>
+                </div>
+                <div class="form-row">
+                    <span class="form-label">🔧 Our Repair Cost:</span>
+                    <span class="form-value">$ ___________</span>
+                </div>
+                <div class="form-row highlight">
+                    <span class="form-label">💰 YOU SAVE:</span>
+                    <span class="form-value">$ ___________</span>
+                </div>
+            </section>
+            
+            <!-- Benefits -->
+            <section class="benefits">
+                <div class="benefit-item">
+                    <div class="benefit-icon">✅</div>
+                    <div class="benefit-text"><strong>Best trade-in:</strong> Apple Trade-In Program</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">⏱️</div>
+                    <div class="benefit-text"><strong>Repair time:</strong> 15-30 minutes while you wait</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🛡️</div>
+                    <div class="benefit-text"><strong>90-day warranty</strong> on all screen repairs</div>
+                </div>
+            </section>
+            
+            <!-- Apple Recommendation -->
+            <div class="apple-rec">
+                <div class="apple-logo"></div>
+                <div class="apple-text">
+                    <h3>⭐ PRO TIP</h3>
+                    <p>Apple pays up to 3x more for phones in "Good" condition vs cracked screens!</p>
+                </div>
+            </div>
+            
+            <!-- QR Code -->
+            <div class="qr-section">
+                <div class="qr-code">
+                    [QR CODE]<br>
+                    <small>Trade-In Calculator</small>
+                </div>
+                <div class="qr-text">
+                    <h4>📲 Check Your Trade-In Value Online</h4>
+                    <p>Scan to use our free calculator and see exactly how much you'll save by fixing your screen first.</p>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="brand">🔧 GADGET FIX</div>
+                <div class="contact-row">📞 (253) 639-4343</div>
+                <div class="location">📍 Kent Station, Kent WA</div>
+            </footer>
+        </div>
+        
+        <!-- Handout 2 (duplicate for 2-up printing) -->
+        <div class="handout">
+            <!-- Header -->
+            <header class="header">
+                <span class="emoji">🔧</span>
+                <h1>FIX YOUR SCREEN,<span>GET MORE FOR TRADE-IN!</span></h1>
+            </header>
+            
+            <!-- Calculator Form -->
+            <section class="calculator-form">
+                <div class="form-row">
+                    <span class="form-label">📱 Your Phone:</span>
+                    <span class="form-value">________________</span>
+                </div>
+                <div class="form-row">
+                    <span class="form-label">💔 Cracked Value:</span>
+                    <span class="form-value">$ ___________</span>
+                </div>
+                <div class="form-row">
+                    <span class="form-label">✨ Fixed Value:</span>
+                    <span class="form-value">$ ___________</span>
+                </div>
+                <div class="form-row">
+                    <span class="form-label">🔧 Our Repair Cost:</span>
+                    <span class="form-value">$ ___________</span>
+                </div>
+                <div class="form-row highlight">
+                    <span class="form-label">💰 YOU SAVE:</span>
+                    <span class="form-value">$ ___________</span>
+                </div>
+            </section>
+            
+            <!-- Benefits -->
+            <section class="benefits">
+                <div class="benefit-item">
+                    <div class="benefit-icon">✅</div>
+                    <div class="benefit-text"><strong>Best trade-in:</strong> Apple Trade-In Program</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">⏱️</div>
+                    <div class="benefit-text"><strong>Repair time:</strong> 15-30 minutes while you wait</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🛡️</div>
+                    <div class="benefit-text"><strong>90-day warranty</strong> on all screen repairs</div>
+                </div>
+            </section>
+            
+            <!-- Apple Recommendation -->
+            <div class="apple-rec">
+                <div class="apple-logo"></div>
+                <div class="apple-text">
+                    <h3>⭐ PRO TIP</h3>
+                    <p>Apple pays up to 3x more for phones in "Good" condition vs cracked screens!</p>
+                </div>
+            </div>
+            
+            <!-- QR Code -->
+            <div class="qr-section">
+                <div class="qr-code">
+                    [QR CODE]<br>
+                    <small>Trade-In Calculator</small>
+                </div>
+                <div class="qr-text">
+                    <h4>📲 Check Your Trade-In Value Online</h4>
+                    <p>Scan to use our free calculator and see exactly how much you'll save by fixing your screen first.</p>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="brand">🔧 GADGET FIX</div>
+                <div class="contact-row">📞 (253) 639-4343</div>
+                <div class="location">📍 Kent Station, Kent WA</div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
+

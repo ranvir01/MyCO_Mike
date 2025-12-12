@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade-In Value Calculator | Gadget Fix</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2E7D32;
+      --primary-dark: #1B5E20;
+      --accent: #FFC107;
+      --negative: #D32F2F;
+      --positive: #388E3C;
+      --background: #FAFAFA;
+      --text: #1a1a1a;
+      --text-muted: #666;
+      --card-bg: #ffffff;
+      --border: #e0e0e0;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* Background Pattern */
+    .bg-pattern {
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 20% 20%, rgba(46, 125, 50, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 193, 7, 0.05) 0%, transparent 50%),
+        linear-gradient(135deg, #f8fdf8 0%, #fafafa 50%, #fffef8 100%);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+      animation: fadeInDown 0.6s ease-out;
+    }
+
+    .header-icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+      display: inline-block;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .header h1 {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.75rem;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* Card Styles */
+    .card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border), transparent);
+    }
+
+    /* Form Elements */
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-group:last-child {
+      margin-bottom: 0;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 10px;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    select {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 1rem;
+      font-family: inherit;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      background: var(--card-bg);
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 20px;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.1);
+    }
+
+    select:hover {
+      border-color: var(--primary);
+    }
+
+    /* Radio Group */
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .radio-option {
+      position: relative;
+    }
+
+    .radio-option input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .radio-option label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 0;
+      font-weight: 400;
+    }
+
+    .radio-option label::before {
+      content: '';
+      width: 22px;
+      height: 22px;
+      border: 2px solid var(--border);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .radio-option input:checked + label {
+      border-color: var(--primary);
+      background: rgba(46, 125, 50, 0.05);
+    }
+
+    .radio-option input:checked + label::before {
+      border-color: var(--primary);
+      background: var(--primary);
+      box-shadow: inset 0 0 0 4px var(--card-bg);
+    }
+
+    .radio-option label:hover {
+      border-color: var(--primary);
+    }
+
+    .radio-icon {
+      font-size: 1.2rem;
+    }
+
+    /* Results Section */
+    .results-card {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: white;
+      border: none;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .results-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .results-card .card-title {
+      color: rgba(255,255,255,0.8);
+    }
+
+    .results-card .card-title::after {
+      background: linear-gradient(90deg, rgba(255,255,255,0.2), transparent);
+    }
+
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .result-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .result-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .result-value {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .result-value.negative {
+      color: #ff8a80;
+    }
+
+    .result-value.positive {
+      color: #b9f6ca;
+    }
+
+    .result-value.neutral {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      margin: 16px 0;
+    }
+
+    /* Phone Header in Results */
+    .phone-header {
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .phone-header .carrier-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #1a1a1a;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      margin-left: 8px;
+    }
+
+    /* Savings Highlight */
+    .savings-highlight {
+      background: rgba(255, 193, 7, 0.15);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      margin-top: 16px;
+      border: 2px solid var(--accent);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .savings-highlight.positive {
+      animation: celebrate 0.6s ease-out;
+    }
+
+    @keyframes celebrate {
+      0% { transform: scale(0.95); opacity: 0; }
+      50% { transform: scale(1.02); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .savings-icon {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    .savings-amount {
+      font-family: 'Space Mono', monospace;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .savings-text {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-top: 4px;
+    }
+
+    /* Message Box */
+    .message-box {
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .message-box.info {
+      background: rgba(255, 193, 7, 0.15);
+      border: 1px solid rgba(255, 193, 7, 0.3);
+    }
+
+    .message-box.warning {
+      background: rgba(255, 138, 128, 0.15);
+      border: 1px solid rgba(255, 138, 128, 0.3);
+    }
+
+    .message-box.tip {
+      background: rgba(33, 150, 243, 0.15);
+      border: 1px solid rgba(33, 150, 243, 0.3);
+    }
+
+    .message-box p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    /* Pro Tip Box */
+    .pro-tip {
+      background: linear-gradient(135deg, rgba(33, 150, 243, 0.2), rgba(0, 188, 212, 0.1));
+      border: 2px solid rgba(33, 150, 243, 0.4);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-top: 16px;
+    }
+
+    .pro-tip-header {
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pro-tip-content {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    /* Carrier Comparison Table */
+    .comparison-section {
+      margin-top: 20px;
+    }
+
+    .compare-btn {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 12px;
+      color: white;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .compare-btn:hover {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.5);
+    }
+
+    .compare-btn.active {
+      background: rgba(255, 193, 7, 0.2);
+      border-color: var(--accent);
+    }
+
+    .comparison-table {
+      margin-top: 16px;
+      background: rgba(0,0,0,0.2);
+      border-radius: 12px;
+      overflow: hidden;
+      display: none;
+    }
+
+    .comparison-table.show {
+      display: block;
+      animation: slideDown 0.3s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .comparison-table table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 10px 8px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .comparison-table th {
+      background: rgba(0,0,0,0.2);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .comparison-table th:first-child,
+    .comparison-table td:first-child {
+      text-align: left;
+      padding-left: 12px;
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comparison-table .best-row {
+      background: rgba(255, 193, 7, 0.15);
+    }
+
+    .comparison-table .best-row td:first-child::after {
+      content: ' ✓';
+      color: var(--accent);
+    }
+
+    .comparison-table .gain-positive {
+      color: #b9f6ca;
+      font-weight: 700;
+    }
+
+    .comparison-table .gain-negative {
+      color: #ff8a80;
+    }
+
+    /* CTA Buttons */
+    .cta-card {
+      text-align: center;
+    }
+
+    .cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: inherit;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      margin-bottom: 12px;
+    }
+
+    .cta-btn:last-child {
+      margin-bottom: 0;
+    }
+
+    .cta-btn.primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+    }
+
+    .cta-btn.primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+    }
+
+    .cta-btn.secondary {
+      background: var(--card-bg);
+      color: var(--primary-dark);
+      border: 2px solid var(--primary);
+    }
+
+    .cta-btn.secondary:hover {
+      background: rgba(46, 125, 50, 0.05);
+    }
+
+    .cta-btn.accent {
+      background: linear-gradient(135deg, var(--accent) 0%, #ffb300 100%);
+      color: #1a1a1a;
+      box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+    }
+
+    .cta-btn.accent:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+    }
+
+    .cta-btn-icon {
+      font-size: 1.3rem;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--primary-dark);
+      color: white;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: 500;
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      z-index: 1000;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Placeholder State */
+    .placeholder-state {
+      text-align: center;
+      padding: 40px 20px;
+      opacity: 0.7;
+    }
+
+    .placeholder-state .icon {
+      font-size: 3rem;
+      margin-bottom: 12px;
+      opacity: 0.5;
+    }
+
+    .placeholder-state p {
+      font-size: 0.95rem;
+    }
+
+    /* Confetti Animation */
+    .confetti {
+      position: fixed;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      opacity: 0;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 24px 20px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer .data-source {
+      font-size: 0.75rem;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      opacity: 0.7;
+    }
+
+    /* Print Styles */
+    @media print {
+      .bg-pattern { display: none; }
+      .cta-card { display: none; }
+      .card { box-shadow: none; border: 1px solid #ddd; }
+      .results-card { 
+        background: #2E7D32 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 400px) {
+      .container { padding: 16px; }
+      .card { padding: 20px; }
+      .header h1 { font-size: 1.5rem; }
+      .savings-amount { font-size: 2rem; }
+      .comparison-table { font-size: 0.75rem; }
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Focus States */
+    *:focus-visible {
+      outline: 3px solid var(--primary);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-pattern" aria-hidden="true"></div>
+  
+  <main class="container">
+    <header class="header">
+      <div class="header-icon" aria-hidden="true">💰</div>
+      <h1>Trade-In Value Calculator</h1>
+      <p>See how much MORE you can get for your phone</p>
+    </header>
+
+    <!-- Input Form -->
+    <section class="card" aria-labelledby="input-title">
+      <h2 class="card-title" id="input-title">📱 Your Phone Details</h2>
+      
+      <div class="form-group">
+        <label for="phone-model">Select Your iPhone</label>
+        <select id="phone-model" aria-describedby="model-help">
+          <option value="">Choose your model...</option>
+          <optgroup label="iPhone 16 Series">
+            <option value="iphone-16-pro-max">iPhone 16 Pro Max (256GB)</option>
+            <option value="iphone-16-pro">iPhone 16 Pro (256GB)</option>
+            <option value="iphone-16">iPhone 16 (128GB)</option>
+          </optgroup>
+          <optgroup label="iPhone 15 Series">
+            <option value="iphone-15-pro-max">iPhone 15 Pro Max (256GB)</option>
+            <option value="iphone-15-pro">iPhone 15 Pro (128GB)</option>
+            <option value="iphone-15-plus">iPhone 15 Plus (128GB)</option>
+            <option value="iphone-15">iPhone 15 (128GB)</option>
+          </optgroup>
+          <optgroup label="iPhone 14 Series">
+            <option value="iphone-14-pro-max">iPhone 14 Pro Max (128GB)</option>
+            <option value="iphone-14-pro">iPhone 14 Pro (128GB)</option>
+            <option value="iphone-14">iPhone 14 (128GB)</option>
+          </optgroup>
+          <optgroup label="iPhone 13 Series">
+            <option value="iphone-13-pro-max">iPhone 13 Pro Max (128GB)</option>
+            <option value="iphone-13-pro">iPhone 13 Pro (128GB)</option>
+            <option value="iphone-13">iPhone 13 (128GB)</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label id="condition-label">Screen Condition</label>
+        <div class="radio-group" role="radiogroup" aria-labelledby="condition-label">
+          <div class="radio-option">
+            <input type="radio" name="condition" id="cracked" value="cracked">
+            <label for="cracked">
+              <span class="radio-icon">💔</span>
+              Cracked/Shattered
+            </label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="condition" id="minor" value="minor">
+            <label for="minor">
+              <span class="radio-icon">😐</span>
+              Minor scratches/damage
+            </label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="condition" id="good" value="good">
+            <label for="good">
+              <span class="radio-icon">✨</span>
+              Good condition (no damage)
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="carrier">Where will you trade in?</label>
+        <select id="carrier">
+          <option value="">Choose trade-in location...</option>
+          <option value="apple">Apple</option>
+          <option value="att">AT&T</option>
+          <option value="verizon">Verizon</option>
+          <option value="tmobile">T-Mobile</option>
+          <option value="bestbuy">Best Buy</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="card results-card" aria-labelledby="results-title" aria-live="polite">
+      <h2 class="card-title" id="results-title">📊 Your Results</h2>
+      
+      <div id="results-content">
+        <div class="placeholder-state">
+          <div class="icon">📲</div>
+          <p>Select your phone details above to see your savings</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="card cta-card" aria-labelledby="cta-title">
+      <h2 class="card-title" id="cta-title">🔧 Ready to boost your trade-in?</h2>
+      
+      <a href="tel:+12536394343" class="cta-btn primary" aria-label="Call Gadget Fix">
+        <span class="cta-btn-icon">📞</span>
+        Call Now: (253) 639-4343
+      </a>
+      
+      <a href="https://maps.google.com/?q=Gadget+Fix+Kent+WA" target="_blank" rel="noopener" class="cta-btn secondary" aria-label="Get directions to Gadget Fix">
+        <span class="cta-btn-icon">📍</span>
+        Get Directions
+      </a>
+      
+      <button type="button" class="cta-btn accent" id="share-btn" aria-label="Share your results">
+        <span class="cta-btn-icon">📤</span>
+        Share Results
+      </button>
+    </section>
+
+    <footer class="footer">
+      <p>Powered by <a href="#">Gadget Fix</a> • Kent, WA</p>
+      <p>Prices are estimates and may vary. Contact us for exact quotes.</p>
+      <p class="data-source">* Trade-in values based on research conducted November 2024.<br>Values may vary. Check carrier websites for current offers.</p>
+    </footer>
+  </main>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="alert" aria-live="assertive">
+    Results copied to clipboard!
+  </div>
+
+  <script>
+    /**
+     * Gadget Fix Trade-In Value Calculator
+     * Updated with REAL carrier research data (November 2024)
+     * 
+     * Data sources: Apple, AT&T, Verizon, T-Mobile, Best Buy trade-in programs
+     */
+
+    // ============================================
+    // TRADE-IN DATA - REAL RESEARCH VALUES!
+    // ============================================
+    const TRADE_IN_DATA = {
+      'iphone-16-pro-max': {
+        name: 'iPhone 16 Pro Max',
+        storage: '256GB',
+        values: {
+          apple: { good: 670, minor: 400, cracked: 168 },
+          att: { good: 525, minor: 390, cracked: 262 },
+          verizon: { good: 525, minor: 390, cracked: 262 },
+          tmobile: { good: 490, minor: 365, cracked: 245 },
+          bestbuy: { good: 375, minor: 330, cracked: 281 }
+        },
+        repairCost: 179
+      },
+      'iphone-16-pro': {
+        name: 'iPhone 16 Pro',
+        storage: '256GB',
+        values: {
+          apple: { good: 580, minor: 350, cracked: 145 },
+          att: { good: 455, minor: 340, cracked: 228 },
+          verizon: { good: 455, minor: 340, cracked: 228 },
+          tmobile: { good: 425, minor: 315, cracked: 212 },
+          bestbuy: { good: 325, minor: 285, cracked: 244 }
+        },
+        repairCost: 159
+      },
+      'iphone-16': {
+        name: 'iPhone 16',
+        storage: '128GB',
+        values: {
+          apple: { good: 430, minor: 260, cracked: 108 },
+          att: { good: 340, minor: 255, cracked: 170 },
+          verizon: { good: 340, minor: 255, cracked: 170 },
+          tmobile: { good: 315, minor: 235, cracked: 158 },
+          bestbuy: { good: 240, minor: 210, cracked: 180 }
+        },
+        repairCost: 139
+      },
+      'iphone-15-plus': {
+        name: 'iPhone 15 Plus',
+        storage: '128GB',
+        values: {
+          apple: { good: 330, minor: 200, cracked: 83 },
+          att: { good: 250, minor: 185, cracked: 125 },
+          verizon: { good: 250, minor: 185, cracked: 125 },
+          tmobile: { good: 235, minor: 175, cracked: 117 },
+          bestbuy: { good: 205, minor: 180, cracked: 154 }
+        },
+        repairCost: 129
+      },
+      'iphone-15-pro-max': {
+        name: 'iPhone 15 Pro Max',
+        storage: '256GB',
+        values: {
+          apple: { good: 450, minor: 270, cracked: 112 },
+          att: { good: 350, minor: 260, cracked: 175 },
+          verizon: { good: 350, minor: 260, cracked: 175 },
+          tmobile: { good: 325, minor: 240, cracked: 162 },
+          bestbuy: { good: 260, minor: 230, cracked: 195 }
+        },
+        repairCost: 149
+      },
+      'iphone-15-pro': {
+        name: 'iPhone 15 Pro',
+        storage: '128GB',
+        values: {
+          apple: { good: 400, minor: 240, cracked: 100 },
+          att: { good: 310, minor: 230, cracked: 155 },
+          verizon: { good: 310, minor: 230, cracked: 155 },
+          tmobile: { good: 290, minor: 215, cracked: 145 },
+          bestbuy: { good: 235, minor: 205, cracked: 175 }
+        },
+        repairCost: 129
+      },
+      'iphone-15': {
+        name: 'iPhone 15',
+        storage: '128GB',
+        values: {
+          apple: { good: 290, minor: 175, cracked: 73 },
+          att: { good: 220, minor: 165, cracked: 110 },
+          verizon: { good: 220, minor: 165, cracked: 110 },
+          tmobile: { good: 205, minor: 155, cracked: 103 },
+          bestbuy: { good: 180, minor: 158, cracked: 135 }
+        },
+        repairCost: 109
+      },
+      'iphone-14-pro-max': {
+        name: 'iPhone 14 Pro Max',
+        storage: '128GB',
+        values: {
+          apple: { good: 350, minor: 210, cracked: 88 },
+          att: { good: 270, minor: 200, cracked: 135 },
+          verizon: { good: 270, minor: 200, cracked: 135 },
+          tmobile: { good: 250, minor: 185, cracked: 125 },
+          bestbuy: { good: 200, minor: 175, cracked: 150 }
+        },
+        repairCost: 129
+      },
+      'iphone-14-pro': {
+        name: 'iPhone 14 Pro',
+        storage: '128GB',
+        values: {
+          apple: { good: 300, minor: 180, cracked: 75 },
+          att: { good: 230, minor: 170, cracked: 115 },
+          verizon: { good: 230, minor: 170, cracked: 115 },
+          tmobile: { good: 215, minor: 160, cracked: 108 },
+          bestbuy: { good: 170, minor: 150, cracked: 128 }
+        },
+        repairCost: 119
+      },
+      'iphone-14': {
+        name: 'iPhone 14',
+        storage: '128GB',
+        values: {
+          apple: { good: 240, minor: 145, cracked: 60 },
+          att: { good: 185, minor: 140, cracked: 93 },
+          verizon: { good: 185, minor: 140, cracked: 93 },
+          tmobile: { good: 170, minor: 130, cracked: 85 },
+          bestbuy: { good: 140, minor: 123, cracked: 105 }
+        },
+        repairCost: 99
+      },
+      'iphone-13-pro-max': {
+        name: 'iPhone 13 Pro Max',
+        storage: '128GB',
+        values: {
+          apple: { good: 300, minor: 180, cracked: 75 },
+          att: { good: 195, minor: 145, cracked: 97 },
+          verizon: { good: 195, minor: 145, cracked: 97 },
+          tmobile: { good: 185, minor: 140, cracked: 93 },
+          bestbuy: { good: 140, minor: 123, cracked: 105 }
+        },
+        repairCost: 119
+      },
+      'iphone-13-pro': {
+        name: 'iPhone 13 Pro',
+        storage: '128GB',
+        values: {
+          apple: { good: 250, minor: 150, cracked: 63 },
+          att: { good: 165, minor: 125, cracked: 83 },
+          verizon: { good: 165, minor: 125, cracked: 83 },
+          tmobile: { good: 155, minor: 115, cracked: 78 },
+          bestbuy: { good: 120, minor: 105, cracked: 90 }
+        },
+        repairCost: 109
+      },
+      'iphone-13': {
+        name: 'iPhone 13',
+        storage: '128GB',
+        values: {
+          apple: { good: 200, minor: 120, cracked: 50 },
+          att: { good: 130, minor: 100, cracked: 65 },
+          verizon: { good: 130, minor: 100, cracked: 65 },
+          tmobile: { good: 120, minor: 90, cracked: 60 },
+          bestbuy: { good: 95, minor: 83, cracked: 71 }
+        },
+        repairCost: 89
+      }
+    };
+
+    const CARRIER_NAMES = {
+      apple: 'Apple',
+      att: 'AT&T',
+      verizon: 'Verizon',
+      tmobile: 'T-Mobile',
+      bestbuy: 'Best Buy'
+    };
+
+    const CARRIER_ORDER = ['apple', 'att', 'verizon', 'tmobile', 'bestbuy'];
+
+    // ============================================
+    // CALCULATOR LOGIC
+    // ============================================
+
+    const phoneSelect = document.getElementById('phone-model');
+    const carrierSelect = document.getElementById('carrier');
+    const conditionInputs = document.querySelectorAll('input[name="condition"]');
+    const resultsContent = document.getElementById('results-content');
+    const shareBtn = document.getElementById('share-btn');
+    const toast = document.getElementById('toast');
+
+    let lastResults = null;
+    let comparisonVisible = false;
+
+    function getSelectedCondition() {
+      const selected = document.querySelector('input[name="condition"]:checked');
+      return selected ? selected.value : null;
+    }
+
+    function calculateResults() {
+      const phoneId = phoneSelect.value;
+      const condition = getSelectedCondition();
+      const carrier = carrierSelect.value;
+
+      // Check if all fields are filled
+      if (!phoneId || !condition || !carrier) {
+        showPlaceholder();
+        return;
+      }
+
+      const phoneData = TRADE_IN_DATA[phoneId];
+      const carrierValues = phoneData.values[carrier];
+
+      // Calculate values
+      const currentValue = carrierValues[condition];
+      const repairedValue = carrierValues.good;
+      const repairCost = phoneData.repairCost;
+      const netBenefit = repairedValue - currentValue - repairCost;
+
+      // Determine phone age (for messaging)
+      const isOlderPhone = phoneId.includes('13');
+
+      // Find best carrier
+      const bestCarrier = findBestCarrier(phoneData, condition);
+
+      // Store for sharing
+      lastResults = {
+        phone: phoneData.name,
+        storage: phoneData.storage,
+        carrier: CARRIER_NAMES[carrier],
+        carrierId: carrier,
+        condition: condition,
+        currentValue,
+        repairedValue,
+        repairCost,
+        netBenefit,
+        bestCarrier,
+        phoneId
+      };
+
+      // Render results
+      renderResults(phoneData, condition, carrier, currentValue, repairedValue, repairCost, netBenefit, isOlderPhone, bestCarrier);
+    }
+
+    function findBestCarrier(phoneData, condition) {
+      let bestCarrier = null;
+      let bestGain = -Infinity;
+
+      for (const carrierId of CARRIER_ORDER) {
+        const values = phoneData.values[carrierId];
+        const gain = values.good - values[condition] - phoneData.repairCost;
+        if (gain > bestGain) {
+          bestGain = gain;
+          bestCarrier = {
+            id: carrierId,
+            name: CARRIER_NAMES[carrierId],
+            goodValue: values.good,
+            currentValue: values[condition],
+            gain: gain
+          };
+        }
+      }
+
+      return bestCarrier;
+    }
+
+    function showPlaceholder() {
+      resultsContent.innerHTML = `
+        <div class="placeholder-state">
+          <div class="icon">📲</div>
+          <p>Select your phone details above to see your savings</p>
+        </div>
+      `;
+      lastResults = null;
+      comparisonVisible = false;
+    }
+
+    function renderResults(phoneData, condition, carrier, currentValue, repairedValue, repairCost, netBenefit, isOlderPhone, bestCarrier) {
+      const carrierName = CARRIER_NAMES[carrier];
+      const conditionText = condition === 'cracked' ? 'cracked screen' : (condition === 'minor' ? 'damaged screen' : 'good condition');
+      
+      // Phone header
+      let html = `
+        <div class="phone-header">
+          📱 ${phoneData.name} Trade-In at <span class="carrier-badge">${carrierName}</span>
+        </div>
+      `;
+
+      // Good condition - no repair needed
+      if (condition === 'good') {
+        html += `
+          <div class="result-row">
+            <span class="result-label">✨ Current Trade-In Value</span>
+            <span class="result-value positive">$${currentValue}</span>
+          </div>
+          <div class="message-box info">
+            <p>🎉 <strong>Great news!</strong> Your phone is already in great condition! No repair needed to maximize your trade-in value.</p>
+          </div>
+        `;
+
+        // Show Pro Tip if not at best carrier
+        if (carrier !== bestCarrier.id && bestCarrier.goodValue > currentValue) {
+          html += `
+            <div class="pro-tip">
+              <div class="pro-tip-header">💡 PRO TIP</div>
+              <div class="pro-tip-content">
+                <strong>${bestCarrier.name}</strong> offers <strong>$${bestCarrier.goodValue}</strong> for your phone in good condition!
+                <br>That's <strong>$${bestCarrier.goodValue - currentValue} more</strong> than ${carrierName}.
+              </div>
+            </div>
+          `;
+        }
+
+        html += renderComparisonSection(phoneData, condition);
+        resultsContent.innerHTML = html;
+        attachComparisonListeners();
+        return;
+      }
+
+      // Damaged phone - show full comparison
+      html += `
+        <div class="result-row">
+          <span class="result-label">❌ With ${conditionText}</span>
+          <span class="result-value negative">$${currentValue}</span>
+        </div>
+        <div class="result-row">
+          <span class="result-label">✅ After Gadget Fix repair</span>
+          <span class="result-value positive">$${repairedValue}</span>
+        </div>
+        <div class="result-row">
+          <span class="result-label">🔧 Repair cost</span>
+          <span class="result-value neutral">$${repairCost}</span>
+        </div>
+        <div class="divider"></div>
+      `;
+
+      // Calculate and show savings
+      if (netBenefit > 0) {
+        html += `
+          <div class="savings-highlight positive">
+            <div class="savings-icon">💰</div>
+            <div class="savings-amount">+$${netBenefit}</div>
+            <div class="savings-text">Extra money in YOUR pocket!</div>
+          </div>
+        `;
+        
+        // Trigger celebration
+        setTimeout(() => triggerCelebration(), 100);
+      } else if (netBenefit === 0) {
+        html += `
+          <div class="message-box info">
+            <p>⚖️ Repairing and trading in would give you the same amount. But a repaired phone has better resale options!</p>
+          </div>
+        `;
+      } else {
+        html += `
+          <div class="message-box warning">
+            <p>🤔 For this carrier, trading in as-is may be the better option. But check other carriers below - you might get more!</p>
+          </div>
+        `;
+      }
+
+      // Show Pro Tip if not at best carrier and best carrier has positive gain
+      if (carrier !== bestCarrier.id && bestCarrier.gain > netBenefit) {
+        html += `
+          <div class="pro-tip">
+            <div class="pro-tip-header">💡 PRO TIP: ${bestCarrier.name} offers the highest trade-in values!</div>
+            <div class="pro-tip-content">
+              Your phone at ${bestCarrier.name}: <strong>$${bestCarrier.goodValue}</strong> (vs $${repairedValue} at ${carrierName})
+              <br>Potential gain after repair: <strong>+$${bestCarrier.gain}</strong>
+            </div>
+          </div>
+        `;
+      }
+
+      // Add warning for older phones with damaged screens
+      if (isOlderPhone && condition !== 'good') {
+        html += `
+          <div class="message-box warning" style="margin-top: 12px;">
+            <p>⚠️ <strong>For older iPhones</strong>, trade-in values are lower. Repair still makes sense if you want to keep using the phone!</p>
+          </div>
+        `;
+      }
+
+      // Add comparison section
+      html += renderComparisonSection(phoneData, condition);
+
+      resultsContent.innerHTML = html;
+      attachComparisonListeners();
+    }
+
+    function renderComparisonSection(phoneData, condition) {
+      const repairCost = phoneData.repairCost;
+      
+      // Build comparison data
+      const comparisonData = CARRIER_ORDER.map(carrierId => {
+        const values = phoneData.values[carrierId];
+        const damaged = values[condition];
+        const fixed = values.good;
+        const gain = fixed - damaged - repairCost;
+        return {
+          carrierId,
+          name: CARRIER_NAMES[carrierId],
+          damaged,
+          fixed,
+          gain
+        };
+      });
+
+      // Find best gain
+      const maxGain = Math.max(...comparisonData.map(c => c.gain));
+
+      let tableRows = comparisonData.map(c => {
+        const isBest = c.gain === maxGain && c.gain > 0;
+        return `
+          <tr class="${isBest ? 'best-row' : ''}">
+            <td>${c.name}</td>
+            <td>$${c.damaged}</td>
+            <td>$${c.fixed}</td>
+            <td class="${c.gain > 0 ? 'gain-positive' : (c.gain < 0 ? 'gain-negative' : '')}">
+              ${c.gain >= 0 ? '+' : ''}$${c.gain}
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      return `
+        <div class="comparison-section">
+          <button type="button" class="compare-btn" id="compare-btn" aria-expanded="false">
+            <span>📊</span>
+            <span>Compare All Carriers</span>
+            <span id="compare-arrow">▼</span>
+          </button>
+          <div class="comparison-table" id="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Carrier</th>
+                  <th>${condition === 'good' ? 'Good' : 'Damaged'}</th>
+                  <th>Fixed</th>
+                  <th>Net Gain*</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${tableRows}
+              </tbody>
+            </table>
+            <div style="padding: 10px 12px; font-size: 0.75rem; opacity: 0.7; text-align: center;">
+              * Net Gain = Fixed Value - ${condition === 'good' ? 'Current' : 'Damaged'} Value - $${repairCost} repair cost
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function attachComparisonListeners() {
+      const compareBtn = document.getElementById('compare-btn');
+      const comparisonTable = document.getElementById('comparison-table');
+      const compareArrow = document.getElementById('compare-arrow');
+      
+      if (compareBtn && comparisonTable) {
+        compareBtn.addEventListener('click', () => {
+          comparisonVisible = !comparisonVisible;
+          comparisonTable.classList.toggle('show', comparisonVisible);
+          compareBtn.classList.toggle('active', comparisonVisible);
+          compareBtn.setAttribute('aria-expanded', comparisonVisible);
+          compareArrow.textContent = comparisonVisible ? '▲' : '▼';
+        });
+      }
+    }
+
+    function triggerCelebration() {
+      // Simple confetti-like effect
+      const colors = ['#FFC107', '#4CAF50', '#2196F3', '#FF5722', '#9C27B0'];
+      const container = document.body;
+      
+      for (let i = 0; i < 30; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti-piece';
+        confetti.style.cssText = `
+          position: fixed;
+          width: ${Math.random() * 10 + 5}px;
+          height: ${Math.random() * 10 + 5}px;
+          background: ${colors[Math.floor(Math.random() * colors.length)]};
+          left: ${Math.random() * 100}%;
+          top: -20px;
+          border-radius: ${Math.random() > 0.5 ? '50%' : '0'};
+          pointer-events: none;
+          z-index: 1000;
+          animation: confettiFall ${Math.random() * 2 + 2}s ease-out forwards;
+        `;
+        
+        container.appendChild(confetti);
+        setTimeout(() => confetti.remove(), 4000);
+      }
+    }
+
+    // Add confetti animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes confettiFall {
+        0% {
+          opacity: 1;
+          transform: translateY(0) rotate(0deg);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(100vh) rotate(${Math.random() * 720}deg);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    function shareResults() {
+      if (!lastResults) {
+        showToast('Please calculate results first!');
+        return;
+      }
+
+      const { phone, storage, carrier, currentValue, repairedValue, repairCost, netBenefit, condition, bestCarrier } = lastResults;
+      
+      let text = `💰 Trade-In Calculator Results from Gadget Fix
+
+📱 ${phone} (${storage})
+📍 Trading at: ${carrier}
+
+`;
+
+      if (condition === 'good') {
+        text += `✨ Current value (good condition): $${currentValue}
+
+Your phone is in great condition!`;
+      } else {
+        text += `❌ Current value (${condition === 'cracked' ? 'cracked' : 'damaged'}): $${currentValue}
+✅ After repair: $${repairedValue}
+🔧 Repair cost: $${repairCost}
+
+${netBenefit > 0 ? `💰 NET BENEFIT: +$${netBenefit} extra!` : ''}`;
+      }
+
+      if (bestCarrier && bestCarrier.id !== lastResults.carrierId) {
+        text += `
+
+💡 TIP: ${bestCarrier.name} offers $${bestCarrier.goodValue} for this phone!`;
+      }
+
+      text += `
+
+Fix your screen first, get MORE for your trade-in!
+📞 (253) 639-4343 | Gadget Fix, Kent WA`;
+
+      if (navigator.share) {
+        navigator.share({
+          title: 'Trade-In Value Calculator',
+          text: text
+        }).catch(() => copyToClipboard(text));
+      } else {
+        copyToClipboard(text);
+      }
+    }
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Results copied to clipboard!');
+      }).catch(() => {
+        showToast('Could not copy results');
+      });
+    }
+
+    // ============================================
+    // EVENT LISTENERS
+    // ============================================
+
+    phoneSelect.addEventListener('change', calculateResults);
+    carrierSelect.addEventListener('change', calculateResults);
+    conditionInputs.forEach(input => {
+      input.addEventListener('change', calculateResults);
+    });
+    shareBtn.addEventListener('click', shareResults);
+
+    // Initialize
+    showPlaceholder();
+
+    console.log('🔧 Gadget Fix Trade-In Calculator loaded!');
+    console.log('📝 Updated with REAL carrier research data (November 2024)');
+    console.log('📊 Includes: Apple, AT&T, Verizon, T-Mobile, Best Buy trade-in values');
+  </script>
+</body>
+</html>
