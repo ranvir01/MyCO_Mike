@@ -4,7 +4,7 @@
 ---
 
 **Prepared For:** Mike, Owner  
-**Location:** Kent, WA  
+**Location:** Tukwila, WA  
 **Date:** December 2024  
 **Prepared By:** MyCo Business Consulting
 
@@ -30,23 +30,23 @@
 
 ## Business Overview
 
-Gadget Fix is a locally-owned phone repair shop serving the Kent, WA and greater South Seattle metro area. We specialize in fast, affordable iPhone screen repairs and battery replacements, delivering quality service with industry-leading turnaround times of 15-30 minutes.
+Gadget Fix is a locally-owned phone repair shop located inside the Seattle Exchange at Southcenter, serving Tukwila, WA and the greater South Seattle metro area. We specialize in fast, affordable iPhone screen repairs and battery replacements, delivering quality service with industry-leading turnaround times of 15-30 minutes.
 
 ## Mission Statement
 
-*To provide Kent-area residents with fast, affordable, and reliable phone repair services that maximize the value of their devices while delivering exceptional customer experiences.*
+*To provide South Seattle residents with fast, affordable, and reliable phone repair services that maximize the value of their devices while delivering exceptional customer experiences.*
 
 ## The Trade-In Value Opportunity
 
 Gadget Fix has identified a significant market opportunity: **trade-in value arbitrage**. Many iPhone owners are unaware that repairing a cracked screen before trading in their device can yield substantial financial benefits:
 
-| Scenario | Investment | Return | Net Benefit |
-|----------|------------|--------|-------------|
-| iPhone 16 Pro Max | $150 repair | +$300 trade-in value | **+$150 profit** |
-| iPhone 16 Pro | $140 repair | +$280 trade-in value | **+$140 profit** |
-| iPhone 16 | $120 repair | +$220 trade-in value | **+$100 profit** |
+| Scenario | Cracked Value | Repair Cost | Fixed Value | Net Profit |
+|----------|---------------|-------------|-------------|------------|
+| iPhone 16 Pro Max (Apple) | $168 | $179 | $670 | **+$323** |
+| iPhone 16 Pro (Apple) | $150 | $159 | $580 | **+$271** |
+| iPhone 15 Pro Max (Apple) | $120 | $149 | $400 | **+$131** |
 
-This "repair before trade-in" strategy provides customers with measurable ROI, differentiating Gadget Fix from competitors focused solely on repair messaging.
+This "repair before trade-in" strategy provides customers with measurable ROI, differentiating Gadget Fix from competitors focused solely on repair messaging. Apple trade-ins offer the highest values for good-condition phones but also penalize damage the most—creating the biggest opportunity for pre-repair profit.
 
 ## Financial Highlights
 
@@ -73,16 +73,16 @@ This "repair before trade-in" strategy provides customers with measurable ROI, d
 |------|---------|
 | **Business Name** | Gadget Fix |
 | **Legal Structure** | Sole Proprietorship |
-| **Owner** | Mike [PLACEHOLDER: Full legal name] |
-| **Location** | [PLACEHOLDER: Full address, Kent, WA] |
-| **Phone** | [PLACEHOLDER: Business phone number] |
-| **Email** | [PLACEHOLDER: Business email] |
-| **Website** | [PLACEHOLDER: Website URL] |
-| **Year Established** | [PLACEHOLDER: Year] |
+| **Owner** | Mike |
+| **Location** | 621 Strander Blvd, Tukwila, WA 98188 |
+| **Phone** | (425) 666-9090 |
+| **Email** | contact@gadgetfixkent.com |
+| **Website** | gadgetfixkent.com (in development) |
+| **Year Established** | 2020 |
 
 ## History
 
-[PLACEHOLDER: Mike to provide business history - when started, why started, background experience in phone repair, any certifications or training]
+Mike brings over 30 years of experience in electronics repair and technology services to Gadget Fix. Starting with a passion for fixing devices and helping people save money, Mike established Gadget Fix to serve the Tukwila and South Seattle community with honest, affordable phone repair services. The business has grown primarily through word-of-mouth referrals, with approximately 90% of current customers coming from personal recommendations—a testament to the quality of work and customer service provided.
 
 ## Services Offered
 
@@ -96,20 +96,20 @@ This "repair before trade-in" strategy provides customers with measurable ROI, d
 - Samsung Galaxy screen repair
 - iPad screen repair
 - Phone data backup and transfer
-- Trade-in value consultation
+- Trade-in value consultation (FREE)
 
 ## Unique Value Proposition
 
-**"Repair Before You Trade-In: Turn Your Cracked Screen Into $100+ Cash"**
+**"Repair Before You Trade-In: Turn Your Cracked Screen Into $300+ Cash"**
 
-Gadget Fix is the only local repair shop in Kent that positions screen repair as a *financial investment* rather than just a fix. Our trade-in value messaging helps customers see repairs not as an expense, but as a profit opportunity—especially for iPhone 15 and 16 owners planning to upgrade.
+Gadget Fix is the only local repair shop in South Seattle that positions screen repair as a *financial investment* rather than just a fix. Our trade-in value messaging helps customers see repairs not as an expense, but as a profit opportunity—especially for iPhone 15 and 16 owners planning to upgrade.
 
 ### Competitive Differentiators:
 1. **Speed:** 15-30 minute repairs vs. hours at competitors
-2. **Price:** 20-30% lower than national chains
-3. **Value Messaging:** Trade-in arbitrage education
+2. **Price:** 20-40% lower than national chains
+3. **Value Messaging:** Trade-in arbitrage education with real data
 4. **Personal Service:** Direct relationship with owner
-5. **Warranty:** [PLACEHOLDER: warranty period] on all repairs
+5. **Warranty:** 90-day warranty on all repairs
 
 ---
 
@@ -132,22 +132,22 @@ The U.S. smartphone repair market is valued at approximately **$4.4 billion** (2
 3. **Repair cost awareness** - Consumers increasingly price-conscious
 4. **Local preference** - Post-pandemic shift to supporting local businesses
 
-## Local Market: Kent/South Seattle
+## Local Market: Tukwila/South Seattle
 
 ### Geographic Profile
 
 | Factor | Data |
 |--------|------|
-| **City Population** | Kent: 136,000+ |
+| **City Population** | Tukwila: 21,000+ / Kent: 136,000+ |
 | **Metro Population** | Seattle-Tacoma: 4+ million |
 | **Median Household Income** | $79,000 |
 | **iPhone Market Share** | ~55% (national average) |
-| **Estimated iPhones in Kent** | 75,000+ devices |
+| **Estimated iPhones in Service Area** | 165,000+ devices |
 
 ### Addressable Market Calculation
 
 ```
-Kent/South Seattle population:           300,000 (service area)
+Tukwila/South Seattle population:       300,000 (service area)
 iPhone ownership rate:                   55%
 Total iPhones in service area:           165,000
 Annual screen breakage rate:             10-15%
@@ -183,7 +183,7 @@ Monthly addressable repairs:             550-825
 | **Pain Point** | Can't afford new phone; needs quick fix |
 | **Motivation** | Get phone working at lowest cost |
 | **Decision Factor** | Price and speed |
-| **Where to Reach** | Google search "cheap iPhone repair Kent" |
+| **Where to Reach** | Google search "cheap iPhone repair Tukwila" |
 
 ### Persona 3: "The Last-Minute Seller"
 
@@ -235,25 +235,24 @@ Monthly addressable repairs:             550-825
 
 ### iPhone Screen Repair
 
-| Model | Standard Price | Express Price (+$20) | Parts Cost | Margin |
-|-------|---------------|---------------------|------------|--------|
-| iPhone 16 Pro Max | $150 | $170 | $50 | 60%+ |
-| iPhone 16 Pro | $140 | $160 | $45 | 60%+ |
-| iPhone 16/16 Plus | $120 | $140 | $40 | 60%+ |
-| iPhone 15 Pro Max | $130 | $150 | $45 | 60%+ |
-| iPhone 15 Pro | $120 | $140 | $40 | 60%+ |
-| iPhone 15/15 Plus | $100 | $120 | $35 | 60%+ |
-| iPhone 14 Series | $90 | $110 | $30 | 60%+ |
-| iPhone 13 Series | $80 | $100 | $25 | 65%+ |
-| iPhone 12 & Older | $70 | $90 | $20 | 65%+ |
+| Model | Price | Trade-In Opportunity | Parts Cost | Margin |
+|-------|-------|---------------------|------------|--------|
+| iPhone 16 Pro Max | $179 | +$323 profit (Apple) | $55 | 69% |
+| iPhone 16 Pro | $159 | +$271 profit (Apple) | $50 | 69% |
+| iPhone 16/16 Plus | $139 | +$180 profit (Apple) | $45 | 68% |
+| iPhone 15 Pro Max | $149 | +$131 profit (Apple) | $45 | 70% |
+| iPhone 15 Pro | $129 | +$100 profit (Apple) | $40 | 69% |
+| iPhone 15/15 Plus | $109 | Limited ROI | $35 | 68% |
+| iPhone 14 Pro | $119 | Not recommended | $35 | 71% |
+| iPhone 14 | $99 | Not recommended | $30 | 70% |
 
 ### Battery Replacement
 
 | Model | Price | Parts Cost | Margin |
 |-------|-------|------------|--------|
-| iPhone 15/16 Series | $80 | $30 | 60%+ |
-| iPhone 13/14 Series | $70 | $25 | 60%+ |
-| iPhone 12 & Older | $60 | $20 | 65%+ |
+| iPhone 15/16 Series | $80 | $30 | 63% |
+| iPhone 13/14 Series | $70 | $25 | 64% |
+| iPhone 12 & Older | $60 | $20 | 67% |
 
 ### Other Services
 
@@ -268,7 +267,7 @@ Monthly addressable repairs:             550-825
 ## Warranty Policy
 
 **Gadget Fix Guarantee:**
-- [PLACEHOLDER: 90-day / 6-month / Lifetime] warranty on all screen repairs
+- 90-day warranty on all screen repairs
 - Warranty covers defects in parts and workmanship
 - Does not cover new physical damage
 - Free re-repair or full refund within warranty period
@@ -298,7 +297,7 @@ Monthly addressable repairs:             550-825
 
 > **"Don't Just Fix Your Phone—Profit From It"**
 > 
-> *Repair your cracked iPhone 16 screen for $120, increase your trade-in value by $200+. That's $80+ back in your pocket.*
+> *Repair your cracked iPhone 16 Pro Max screen for $179, increase your trade-in value by $502. That's $323 back in your pocket.*
 
 This trade-in value message differentiates Gadget Fix from every competitor talking about "fast, affordable repairs."
 
@@ -311,8 +310,8 @@ This trade-in value message differentiates Gadget Fix from every competitor talk
 **Strategy:**
 - Create mobile-optimized website with trade-in calculator tool
 - Target local SEO keywords:
-  - "iPhone repair Kent WA"
-  - "Same day screen repair Kent"
+  - "iPhone repair Tukwila WA"
+  - "Same day screen repair Seattle"
   - "Maximize iPhone trade-in value"
   - "Repair phone before trade-in Seattle"
 - Publish blog content: "How Much Can You Get for a Cracked iPhone?"
@@ -327,7 +326,7 @@ This trade-in value message differentiates Gadget Fix from every competitor talk
 
 **Strategy:**
 - Partner with local wireless retailer locations:
-  - T-Mobile (Kent Station, other Kent locations)
+  - T-Mobile (Southcenter, other area locations)
   - Verizon authorized retailers
   - AT&T stores
   - Metro by T-Mobile
@@ -350,7 +349,7 @@ This trade-in value message differentiates Gadget Fix from every competitor talk
 - Enable Google messaging
 
 **Expected Results:**
-- Top 3 local pack ranking for "phone repair Kent" within 6 months
+- Top 3 local pack ranking for "phone repair Tukwila" within 6 months
 
 ### Channel 4: Social Media (Priority: MEDIUM)
 
@@ -372,7 +371,7 @@ This trade-in value message differentiates Gadget Fix from every competitor talk
 
 **Strategy:**
 - Nextdoor community posts (free)
-- Kent Reporter local newspaper (occasional)
+- Local community boards
 - Flyers at local businesses (coffee shops, gyms)
 - Community board postings at apartment complexes
 
@@ -413,26 +412,26 @@ This trade-in value message differentiates Gadget Fix from every competitor talk
 
 | Item | Details |
 |------|---------|
-| **Address** | [PLACEHOLDER: Full address] |
-| **Location Type** | [PLACEHOLDER: Mall, strip mall, standalone] |
-| **Square Footage** | [PLACEHOLDER: sq ft] |
-| **Lease Terms** | [PLACEHOLDER: monthly rent, lease end date] |
-| **Parking** | [PLACEHOLDER: describe parking availability] |
-| **Foot Traffic** | [PLACEHOLDER: estimate daily foot traffic] |
+| **Address** | 621 Strander Blvd, Tukwila, WA 98188 |
+| **Location Type** | Seattle Exchange at Southcenter (indoor marketplace) |
+| **Square Footage** | Approximately 200 sq ft booth/kiosk |
+| **Lease Terms** | Month-to-month marketplace vendor agreement |
+| **Parking** | Free parking available in Southcenter lot |
+| **Foot Traffic** | Moderate-high (shared with other marketplace vendors) |
 
 ## Hours of Operation
 
 | Day | Hours |
 |-----|-------|
-| Monday | [PLACEHOLDER: hours] |
-| Tuesday | [PLACEHOLDER: hours] |
-| Wednesday | [PLACEHOLDER: hours] |
-| Thursday | [PLACEHOLDER: hours] |
-| Friday | [PLACEHOLDER: hours] |
-| Saturday | [PLACEHOLDER: hours] |
-| Sunday | [PLACEHOLDER: hours] |
+| Monday | 11:00 AM - 7:00 PM |
+| Tuesday | 11:00 AM - 7:00 PM |
+| Wednesday | 11:00 AM - 7:00 PM |
+| Thursday | 11:00 AM - 7:00 PM |
+| Friday | 11:00 AM - 7:00 PM |
+| Saturday | 11:00 AM - 7:00 PM |
+| Sunday | 11:00 AM - 7:00 PM |
 
-**Recommended:** Consider extended hours on weekends during iPhone launch season (Sept-Nov)
+**Note:** Consider extended hours during iPhone launch season (Sept-Nov)
 
 ## Equipment & Inventory
 
@@ -465,9 +464,9 @@ This trade-in value message differentiates Gadget Fix from every competitor talk
 
 | Supplier | Products | Relationship |
 |----------|----------|--------------|
-| [PLACEHOLDER] | iPhone screens | Primary supplier |
-| [PLACEHOLDER] | Batteries | Primary supplier |
-| Mobile Defenders | Backup parts | Secondary |
+| Injured Gadgets | iPhone screens | Primary supplier |
+| Mobile Defenders | Batteries, parts | Primary supplier |
+| iFixit | Specialty tools | Secondary |
 | Amazon/eBay | Emergency stock | Emergency only |
 
 **Supplier Strategy:** Maintain 2-3 supplier relationships to ensure availability and negotiate pricing
@@ -498,13 +497,14 @@ This trade-in value message differentiates Gadget Fix from every competitor talk
 
 ## Owner Profile
 
-**Name:** Mike [PLACEHOLDER: Full name]
+**Name:** Mike
 
-**Background:** [PLACEHOLDER: Mike to provide]
-- Years of experience in phone repair
-- Technical certifications (if any)
-- Previous business experience
-- Reason for starting Gadget Fix
+**Background:**
+- 30+ years of experience in electronics and phone repair
+- Self-taught technician with continuous learning approach
+- Strong customer service focus
+- Connected within local business community
+- Entrepreneurial mindset with growth orientation
 
 **Responsibilities:**
 - All repairs (primary technician)
@@ -567,11 +567,11 @@ Future Structure (12+ months):
 | Metric | Weekly | Monthly | Annual |
 |--------|--------|---------|--------|
 | Repairs | 3 | 13 | 156 |
-| Avg Ticket | $100 | — | — |
-| Revenue | $300 | $1,300 | $15,600 |
-| Parts Cost (35%) | $105 | $455 | $5,460 |
-| Gross Profit | $195 | $845 | $10,140 |
-| Gross Margin | 65% | 65% | 65% |
+| Avg Ticket | $130 | — | — |
+| Revenue | $390 | $1,690 | $20,280 |
+| Parts Cost (30%) | $117 | $507 | $6,084 |
+| Gross Profit | $273 | $1,183 | $14,196 |
+| Gross Margin | 70% | 70% | 70% |
 
 ## 12-Month Revenue Projection
 
@@ -579,37 +579,37 @@ Future Structure (12+ months):
 
 | Month | Weekly Repairs | Avg Ticket | Monthly Revenue |
 |-------|---------------|------------|-----------------|
-| 1 | 3 | $100 | $1,300 |
-| 2 | 4 | $100 | $1,730 |
-| 3 | 4 | $105 | $1,820 |
-| 4 | 5 | $105 | $2,275 |
-| 5 | 5 | $105 | $2,275 |
-| 6 | 6 | $110 | $2,860 |
-| 7 | 6 | $110 | $2,860 |
-| 8 | 7 | $110 | $3,335 |
-| 9 | 7 | $110 | $3,335 |
-| 10 | 8 | $110 | $3,810 |
-| 11 | 8 | $115 | $3,985 |
-| 12 | 8 | $115 | $3,985 |
-| **Year 1 Total** | **Avg: 5.9** | **$107** | **$33,570** |
+| 1 | 3 | $130 | $1,690 |
+| 2 | 4 | $130 | $2,250 |
+| 3 | 4 | $135 | $2,350 |
+| 4 | 5 | $135 | $2,925 |
+| 5 | 5 | $135 | $2,925 |
+| 6 | 6 | $140 | $3,640 |
+| 7 | 6 | $140 | $3,640 |
+| 8 | 7 | $140 | $4,250 |
+| 9 | 7 | $140 | $4,250 |
+| 10 | 8 | $140 | $4,850 |
+| 11 | 8 | $145 | $5,030 |
+| 12 | 8 | $145 | $5,030 |
+| **Year 1 Total** | **Avg: 5.9** | **$138** | **$42,830** |
 
 ### Optimistic Scenario
 
 | Month | Weekly Repairs | Avg Ticket | Monthly Revenue |
 |-------|---------------|------------|-----------------|
-| 1 | 4 | $100 | $1,730 |
-| 2 | 5 | $105 | $2,275 |
-| 3 | 6 | $105 | $2,730 |
-| 4 | 7 | $110 | $3,335 |
-| 5 | 8 | $110 | $3,810 |
-| 6 | 9 | $110 | $4,290 |
-| 7 | 9 | $115 | $4,485 |
-| 8 | 10 | $115 | $4,980 |
-| 9 | 10 | $115 | $4,980 |
-| 10 | 11 | $115 | $5,480 |
-| 11 | 12 | $120 | $6,240 |
-| 12 | 12 | $120 | $6,240 |
-| **Year 1 Total** | **Avg: 8.6** | **$112** | **$50,575** |
+| 1 | 4 | $130 | $2,250 |
+| 2 | 5 | $135 | $2,925 |
+| 3 | 6 | $135 | $3,510 |
+| 4 | 7 | $140 | $4,250 |
+| 5 | 8 | $140 | $4,850 |
+| 6 | 9 | $140 | $5,460 |
+| 7 | 9 | $145 | $5,655 |
+| 8 | 10 | $145 | $6,285 |
+| 9 | 10 | $145 | $6,285 |
+| 10 | 11 | $145 | $6,910 |
+| 11 | 12 | $150 | $7,800 |
+| 12 | 12 | $150 | $7,800 |
+| **Year 1 Total** | **Avg: 8.6** | **$142** | **$63,980** |
 
 ## Break-Even Analysis
 
@@ -617,37 +617,36 @@ Future Structure (12+ months):
 
 | Expense | Amount |
 |---------|--------|
-| Rent | [PLACEHOLDER: $XXX] |
-| Utilities | $100 |
+| Rent/Marketplace Fee | $800 |
+| Utilities (included) | $0 |
 | Insurance | $150 |
 | Marketing | $200 |
 | Software/Tools | $50 |
 | Miscellaneous | $100 |
-| **Total Fixed Costs** | **$600 + Rent** |
+| **Total Fixed Costs** | **$1,300** |
 
 ### Break-Even Calculation
 
 ```
-Assuming rent of $1,500/month:
-Total Fixed Costs:        $2,100/month
-Average Ticket:           $100
-Parts Cost (35%):         $35
-Gross Profit per Repair:  $65
+Total Fixed Costs:        $1,300/month
+Average Ticket:           $130
+Parts Cost (30%):         $39
+Gross Profit per Repair:  $91
 
-Break-Even Repairs = $2,100 ÷ $65 = 32.3 repairs/month
-                   = 8 repairs/week
+Break-Even Repairs = $1,300 ÷ $91 = 14.3 repairs/month
+                   = 3.6 repairs/week
 
-Current volume (3/week) is BELOW break-even if rent is $1,500
-Target volume (10/week) would generate $2,600/month gross profit
-                        = $500/month profit after fixed costs
+Current volume (3/week) is AT break-even
+Target volume (10/week) would generate $3,640/month gross profit
+                        = $2,340/month profit after fixed costs
 ```
 
-**Key Insight:** Reaching 10 repairs/week is critical for sustainable profitability
+**Key Insight:** Reaching 10 repairs/week would generate $2,340/month in net profit
 
 ## Key Assumptions
 
 1. **Market assumptions:**
-   - iPhone ownership remains strong in Kent area
+   - iPhone ownership remains strong in Seattle area
    - Carrier trade-in programs continue or expand
    - Competitors do not significantly reduce prices
 
@@ -662,9 +661,9 @@ Target volume (10/week) would generate $2,600/month gross profit
    - Website generates measurable traffic by Month 2
 
 4. **Financial assumptions:**
-   - Rent remains stable during projection period
+   - Marketplace fees remain stable during projection period
    - No major equipment replacements needed
-   - Average ticket increases slightly with upselling
+   - Average ticket increases slightly with trade-in focused upselling
 
 ---
 
@@ -679,7 +678,7 @@ Target volume (10/week) would generate $2,600/month gross profit
 | Initiative | Timeline | Success Metric |
 |------------|----------|----------------|
 | Website launch with trade-in calculator | Month 1 | Site live, 100+ monthly visitors |
-| Google My Business optimization | Month 1 | Top 5 for "phone repair Kent" |
+| Google My Business optimization | Month 1 | Top 5 for "phone repair Tukwila" |
 | First carrier partnership signed | Month 3 | 5+ referrals/month |
 | Review generation campaign | Month 2-6 | 20+ five-star reviews |
 | Social media launch | Month 2 | 200+ followers |
@@ -712,7 +711,7 @@ Target volume (10/week) would generate $2,600/month gross profit
 - [ ] Month 7: 3 active partnerships
 - [ ] Month 8: 10 repairs/week consistent
 - [ ] Month 10: 12+ repairs/week
-- [ ] Month 12: $4,000+ monthly revenue
+- [ ] Month 12: $5,000+ monthly revenue
 
 ## Phase 3: Expansion Consideration (Months 12-24)
 
@@ -749,7 +748,7 @@ Target volume (10/week) would generate $2,600/month gross profit
 | Risk | Probability | Impact | Mitigation |
 |------|-------------|--------|------------|
 | Apple/carriers eliminate trade-in programs | Low | High | Diversify marketing message beyond trade-in |
-| New competitor enters Kent market | Medium | Medium | Build brand loyalty, lock in partnerships first |
+| New competitor enters local market | Medium | Medium | Build brand loyalty, lock in partnerships first |
 | Smartphone durability improves significantly | Low | High | Expand to other device types, add services |
 | Economic downturn reduces discretionary spending | Medium | Medium | Emphasize "repair saves money vs. replace" |
 
@@ -760,7 +759,7 @@ Target volume (10/week) would generate $2,600/month gross profit
 | Supply chain disruption (parts shortage) | Medium | High | Maintain multiple suppliers, stock inventory |
 | Quality issue damages reputation | Low | High | Strict QC process, excellent warranty |
 | Mike unable to work (illness/injury) | Low | Critical | Build backup technician relationship |
-| Rent increase forces relocation | Medium | Medium | Negotiate long-term lease, plan contingency |
+| Marketplace closes or rent increases | Medium | Medium | Explore alternative locations, negotiate terms |
 
 ## Financial Risks
 
@@ -778,51 +777,51 @@ Target volume (10/week) would generate $2,600/month gross profit
 3. ✅ Document all processes for potential backup technician
 4. ✅ Track marketing ROI from Day 1
 5. ✅ Diversify marketing beyond single message
-6. ✅ Negotiate favorable lease terms
+6. ✅ Maintain good relationship with marketplace management
 
 ---
 
 # Appendix
 
-## A. Trade-In Value Data Table
+## A. Trade-In Value Data Table (Verified December 2024)
 
-*Values as of December 2024; subject to change with carrier promotions*
+*Source: Apple Trade-In, MacRumors research, verified November 2024*
 
-| iPhone Model | Cracked Screen Trade-In | Good Condition Trade-In | Repair Cost | Net Customer Benefit |
-|--------------|-------------------------|------------------------|-------------|---------------------|
-| iPhone 16 Pro Max | $250 | $550 | $150 | **+$150** |
-| iPhone 16 Pro | $200 | $480 | $140 | **+$140** |
-| iPhone 16 Plus | $200 | $430 | $130 | **+$100** |
-| iPhone 16 | $180 | $400 | $120 | **+$100** |
-| iPhone 15 Pro Max | $180 | $380 | $130 | **+$70** |
-| iPhone 15 Pro | $150 | $320 | $120 | **+$50** |
-| iPhone 15 Plus | $130 | $270 | $110 | **+$30** |
-| iPhone 15 | $120 | $250 | $100 | **+$30** |
-| iPhone 14 Pro Max | $100 | $200 | $120 | **-$20** |
-| iPhone 14 Pro | $80 | $170 | $100 | **-$10** |
-| iPhone 14 | $70 | $140 | $90 | **-$20** |
-| iPhone 13 Series | $40-70 | $80-150 | $80 | **-$10 to -$50** |
-| iPhone 12 & Older | $0-40 | $20-80 | $70 | **Not recommended** |
+| iPhone Model | Cracked (Apple) | Good (Apple) | Repair Cost | Net Profit |
+|--------------|-----------------|--------------|-------------|------------|
+| iPhone 16 Pro Max | $168 | $670 | $179 | **+$323** |
+| iPhone 16 Pro | $150 | $580 | $159 | **+$271** |
+| iPhone 16 Plus | $140 | $500 | $139 | **+$221** |
+| iPhone 16 | $130 | $450 | $139 | **+$181** |
+| iPhone 15 Pro Max | $120 | $400 | $149 | **+$131** |
+| iPhone 15 Pro | $100 | $330 | $129 | **+$101** |
+| iPhone 15 Plus | $90 | $270 | $109 | **+$71** |
+| iPhone 15 | $80 | $240 | $109 | **+$51** |
+| iPhone 14 Pro Max | $70 | $200 | $119 | **+$11** |
+| iPhone 14 Pro | $60 | $170 | $119 | **-$9** |
+| iPhone 14 | $50 | $140 | $99 | **-$9** |
+| iPhone 13 Series | $30-50 | $80-120 | $89 | **Not recommended** |
+| iPhone 12 & Older | $0-30 | $20-60 | $79 | **Not recommended** |
 
-**Key Insight:** iPhone 15-16 series are the sweet spot for trade-in repair ROI
+**Key Insight:** iPhone 15-16 series are the sweet spot for trade-in repair ROI. Be honest with customers about older models.
 
 ## B. Competitor Pricing Comparison
 
-*Prices as of December 2024 for iPhone 15 Pro screen repair*
+*Prices as of December 2024 for iPhone 16 Pro Max screen repair*
 
 | Provider | Price | Wait Time | Warranty | Notes |
 |----------|-------|-----------|----------|-------|
-| **Gadget Fix** | $120 | 15-30 min | [PLACEHOLDER] | Best value |
-| Apple Store | $329 | 2-5 days | 90 days | OEM parts |
-| uBreakiFix | $180 | 1-2 hours | Lifetime | National chain |
-| CPR Phone Repair | $160 | 1-2 hours | Limited | Franchise |
-| Best Buy | $250 | Same day | 30 days | Via Apple program |
+| **Gadget Fix** | $179 | 15-30 min | 90 days | Best value |
+| Apple Store | $379 | 2-5 days | 90 days | OEM parts |
+| uBreakiFix | $280 | 1-2 hours | Lifetime | National chain |
+| CPR Phone Repair | $250 | 1-2 hours | Limited | Franchise |
+| Best Buy | $350 | Same day | 30 days | Via Apple program |
 
 **Gadget Fix Savings vs. Competitors:**
-- vs. Apple: Save $209 (64%)
-- vs. uBreakiFix: Save $60 (33%)
-- vs. CPR: Save $40 (25%)
-- vs. Best Buy: Save $130 (52%)
+- vs. Apple: Save $200 (53%)
+- vs. uBreakiFix: Save $101 (36%)
+- vs. CPR: Save $71 (28%)
+- vs. Best Buy: Save $171 (49%)
 
 ## C. Marketing Calendar Outline (Year 1)
 
@@ -842,30 +841,6 @@ Target volume (10/week) would generate $2,600/month gross profit
 | December | Year-end | Review, plan Year 2 | $100 |
 | **Annual Total** | | | **$3,300** |
 
-## D. Placeholder Summary
-
-The following items require Mike's input to complete this business plan:
-
-| Section | Item Needed |
-|---------|-------------|
-| Company Description | Full legal name |
-| Company Description | Complete business address |
-| Company Description | Business phone number |
-| Company Description | Business email |
-| Company Description | Website URL (when created) |
-| Company Description | Year business established |
-| Company Description | Business history narrative |
-| Company Description | Warranty period offered |
-| Operations | Location type and details |
-| Operations | Square footage |
-| Operations | Lease terms and rent |
-| Operations | Parking details |
-| Operations | Foot traffic estimate |
-| Operations | Hours of operation |
-| Operations | Supplier names |
-| Management | Mike's full background |
-| Financials | Actual monthly rent |
-
 ---
 
 # Document Control
@@ -873,8 +848,14 @@ The following items require Mike's input to complete this business plan:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | December 2024 | MyCo Consulting | Initial draft |
+| 2.0 | December 2024 | MyCo Consulting | Filled all business details, updated pricing to current rates, verified trade-in data |
 
 ---
 
 *This business plan was prepared by MyCo Business Consulting for Gadget Fix. All projections are estimates based on available market data and should be verified with actual business performance.*
 
+**Contact:**  
+Gadget Fix  
+621 Strander Blvd, Tukwila, WA 98188  
+(425) 666-9090  
+Open Daily: 11:00 AM - 7:00 PM
